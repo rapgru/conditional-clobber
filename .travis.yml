@@ -16,6 +16,8 @@ matrix:
     - name: "iOS App Build"
       os: osx
       env: MODE=OSX
+      language: node_js
+      node_js: "8"
     - name: "Android App Build"
       os: linux
       language: android
