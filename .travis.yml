@@ -45,10 +45,10 @@ install:
 
 script: 
   - |
-    if [ "$MODE" == "LINUX"]; then
+    if [ "$MODE" == "LINUX" ]; then
       npm run cordova-build-android
     else
-      if [ "$MODE" == "OSX"]; then
+      if [ "$MODE" == "OSX" ]; then
         npm run cordova-build-ios
       else
         npm run test:unit
