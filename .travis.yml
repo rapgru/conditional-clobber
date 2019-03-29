@@ -20,8 +20,13 @@ android:
 #      components:
 #        - android-28
 
-after_install:
-  -  npm install
+before_install:
+  -  |
+  # Using Ubuntu
+  curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - &&
+  sudo apt-get install -y nodejs
+install:
+  - npm install
 
 script: 
   - npm run cordova-build-android
