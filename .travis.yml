@@ -33,10 +33,10 @@ matrix:
 
 before_install:
   - |
-    if [ "$MODE" == "TEST" ]; then
-      echo "not installing node"
-    else
+    if [ "$MODE" == "LINUX" ]; then      
       curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && sudo apt-get install -y nodejs
+    else
+      echo "not installing node"
     fi
 
     
