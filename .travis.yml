@@ -1,0 +1,33 @@
+#language: node_js
+#node_js: "8"
+#os:
+#  - linux
+#  - osx
+
+os: linux
+language: android
+android:
+  components:
+    - android-28
+
+#matrix:
+#  include:
+#    - os: osx
+#      language: node_js
+#      node_js: "8"
+#    - os: linux
+#      android:
+#      components:
+#        - android-28
+
+after_install:
+  -  npm install
+
+script: 
+  - npm run cordova-build-android
+#script:
+#  - npm run electron:publish
+
+cache:
+  directories:
+    - node_modules
