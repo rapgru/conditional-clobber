@@ -31,11 +31,11 @@ matrix:
 
 before_install:
   - |
-  if [ "$MODE" == "TEST" ]; then
-    echo "not installing node"
-  else
-    curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && sudo apt-get install -y nodejs
-  fi
+    if [ "$MODE" == "TEST" ]; then
+      echo "not installing node"
+    else
+      curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && sudo apt-get install -y nodejs
+    fi
 
     
 install:
@@ -43,15 +43,15 @@ install:
 
 script: 
   - |
-  if [ "$MODE" == "LINUX"]; then
-    npm run cordova-build-android
-  else
-    if [ "$MODE" == "OSX"]; then
-      npm run cordova-build-ios
+    if [ "$MODE" == "LINUX"]; then
+      npm run cordova-build-android
     else
-      npm run test:unit
+      if [ "$MODE" == "OSX"]; then
+        npm run cordova-build-ios
+      else
+        npm run test:unit
+      fi
     fi
-  fi
 #script:
 #  - npm run electron:publish
 
