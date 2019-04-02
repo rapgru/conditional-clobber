@@ -1,0 +1,19 @@
+import Vue from 'vue';
+import Vuex from 'vuex';
+
+import general from '@/store/modules/general';
+import prediction from '@/store/modules/prediction';
+import travel from '@/store/modules/travel';
+
+Vue.use(Vuex);
+
+export default new Vuex.Store({
+  state: {
+    settings: {},
+  },
+  modules: {
+    general,
+    prediction,
+    travel,
+  },
+});
