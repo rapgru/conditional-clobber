@@ -2,8 +2,7 @@ import Vue from 'vue';
 import App from '@/App.vue';
 import router from '@/router';
 import store from '@/store/index';
-import WebworkerPromise from 'webworker-promise';
-import Example from '@/services/example/example.worker.js?1';
+import example from 'workerize-loader!@/services/example/example';
 
 Vue.config.productionTip = false;
 
@@ -13,5 +12,5 @@ new Vue({
   render: h => h(App),
 }).$mount('#app');
 
-const worker = new WebworkerPromise(new Example());
-worker.postMessage('ping').then(response => console.log(response));
+const inst = example();
+inst.expensive(1000).then(count => console.log(`Ran ${count} loops`));

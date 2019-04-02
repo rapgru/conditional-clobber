@@ -4,13 +4,16 @@ module.exports = {
   pluginOptions: {
     cordovaPath: 'src-cordova',
   },
-  chainWebpack: (config) => {
+  /* chainWebpack: (config) => {
     config.module
-      .rule('worker')
+      .rule('workerize')
       .test(/\.worker\.js$/)
-      .use('worker-loader')
-      .loader('worker-loader')
-      .tap(options => ({ inline: true }))
+      .use('workerize-loader')
+      .loader('workerize-loader')
       .end();
+  }, */
+  chainWebpack: (config) => {
+    config.output
+      .globalObject('this');
   },
 };
