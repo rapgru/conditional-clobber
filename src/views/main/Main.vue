@@ -1,6 +1,8 @@
 <template>
-  <div ref="content">
-    <h1>Main</h1>
+  <div ref="content" class="md-layout md-alignment-center-center">
+    <div class="md-layout-item">
+      <h1 class="md-title">Main</h1>
+    </div>
   </div>
 </template>
 
