@@ -1,6 +1,6 @@
 <template>
   <div ref="content">
-    <p>Main</p>
+    <h1>Main</h1>
   </div>
 </template>
 
@@ -30,6 +30,5 @@ export default {
   div {
     height: 100vh;
     width: 100%;
-    background-color: blue;
   }
 </style>

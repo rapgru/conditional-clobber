@@ -1,6 +1,6 @@
 <template>
   <div ref="content">
-    <p>Travel</p>
+    <h1>Travel</h1>
   </div>
 </template>
 
@@ -21,7 +21,6 @@ export default {
 
 <style lang="scss" scoped>
   div {
-    background-color: violet;
     height: 100vh;
     width: 100%;
   }

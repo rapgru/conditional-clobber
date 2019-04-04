@@ -1,6 +1,6 @@
 <template>
   <div ref="content">
-    <p>Impressum</p>
+    <h1>Impressum</h1>
   </div>
 </template>
 
@@ -24,6 +24,5 @@ export default {
   div {
     height: 100vh;
     width: 100%;
-    background-color: red;
   }
 </style>
