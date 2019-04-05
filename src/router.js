@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/main/Main.vue';
-import Travel from './views/travel/Travel.vue';
-import Settings from './views/settings/Settings.vue';
-import Impressum from './views/impressum/Impressum.vue';
+import Home from '@/views/main/Main.vue';
+import Travel from '@/views/travel/Travel.vue';
+import Settings from '@/views/settings/Settings.vue';
+import Impressum from '@/views/impressum/Impressum.vue';
 
 Vue.use(Router);
 

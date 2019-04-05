@@ -1,6 +1,7 @@
 <template>
   <div ref="content">
     <p>Main</p>
+    <button v-on:click="refresh"></button>
   </div>
 </template>
 
@@ -23,6 +24,12 @@ export default {
       this.$router.push('/travel');
     });
   },
+  methods:
+  {
+    refresh() {
+      this.$store.dispatch('refreshAll');
+    }
+  }
 };
 </script>
 
