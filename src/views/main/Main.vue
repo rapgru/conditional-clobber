@@ -1,7 +1,8 @@
 <template>
   <div ref="content">
     <p>Main</p>
-    <button v-on:click="refresh"></button>
+    <button v-on:click="refresh">Refresh</button>
+    <p style="color: black;"> {{ temp }} </p>
   </div>
 </template>
 
@@ -24,12 +25,18 @@ export default {
       this.$router.push('/travel');
     });
   },
+  computed: {
+    temp() {
+      alert('Hi ' + this.$store.state.prediction.temperatur);
+      return this.$store.state.prediction.temperatur;
+    },
+  },
   methods:
   {
     refresh() {
       this.$store.dispatch('refreshAll');
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -19,13 +19,16 @@ export default {
   actions: {
     refreshAll(context) {
       const url = 'https://api.darksky.net/forecast/5fe65e2763d6ddcef87f821ebaf028be/37.8267,-122.4233';
-      fetch(url, { mode: 'no-cors' })
-        .then(value => value.json())
+      cordovaFetch(url)
+        .then((response) => {
+          return response.json();
+        })
         .then((value) => {
-          console.log(JSON.stringify(value));
-          context.commit('setTemp', { temperatur: value.temperature });
+          alert(JSON.stringify(value));
+          alert(value.summary);
+          context.commit('setTemp', { temperatur: value["summary"] });
           // this.$store.commit('setRainPercentage', { rainPercentage: weatherForcast.rain });
-          context.commit('setIcon', { icon: value.icon });
+          context.commit('setIcon', { icon: value.current.icon });
         });
     },
   },
