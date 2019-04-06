@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --mode web",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "cordova-build-android": "vue-cli-service cordova-build-android",
@@ -15,7 +15,7 @@
     "cordova-serve-browser": "vue-cli-service cordova-serve-browser",
     "cordova-serve-ios": "vue-cli-service cordova-serve-ios",
     "cordova-serve-osx": "vue-cli-service cordova-serve-osx",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": " vue-cli-service test:unit"
   },
   "dependencies": {
     "vue": "^2.6.6",
@@ -34,6 +34,7 @@
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-eslint": "^10.0.1",
     "chai": "^4.1.2",
+    "cross-env": "^5.2.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "google-fonts-webpack-plugin": "^0.4.4",
