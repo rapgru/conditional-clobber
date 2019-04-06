@@ -1,4 +1,5 @@
-import darksky from '@/.../darksky-APP_TARGET';
+import darksky from '@/store/modules/darksky-APP_TARGET';
+import {vuexNestedMutations} from 'vuex-nested-mutations';
 
 export default {
   state: {
@@ -40,7 +41,7 @@ export default {
       },
     },
   },
-  mutations: {
+  mutations: vuexNestedMutations({
     weather: {
       currently: {
         setTime(state, time) {
@@ -136,18 +137,12 @@ export default {
         },
       },
     },
-  },
+  }),
   actions: {
-    refreshWeather() {
+    refreshWeather(context) {
       darksky((result) => {
         console.log(result);
       });
-    },
-    predictToday() {
-
-    },
-    predictTravel() {
-
     },
   },
 };
