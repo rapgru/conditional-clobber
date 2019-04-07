@@ -1,5 +1,5 @@
 import darksky from '@/store/modules/darksky-APP_TARGET';
-import {vuexNestedMutations} from 'vuex-nested-mutations';
+import { vuexNestedMutations } from 'vuex-nested-mutations';
 
 export default {
   state: {
