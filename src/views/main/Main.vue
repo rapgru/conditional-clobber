@@ -27,7 +27,6 @@ export default {
   },
   computed: {
     temp() {
-      alert('Hi ' + this.$store.state.prediction.temperatur);
       return this.$store.state.prediction.temperatur;
     },
   },

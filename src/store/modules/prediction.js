@@ -24,8 +24,7 @@ export default {
           return response.json();
         })
         .then((value) => {
-          alert(JSON.stringify(value));
-          alert(value.summary);
+          alert(value.currently.summary);
           context.commit('setTemp', { temperatur: value["summary"] });
           // this.$store.commit('setRainPercentage', { rainPercentage: weatherForcast.rain });
           context.commit('setIcon', { icon: value.current.icon });
