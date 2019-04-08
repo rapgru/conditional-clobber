@@ -1,4 +1,5 @@
-import darksky from '@/store/modules/darksky-WEB';
+import darksky from '@/store/modules/darksky-APP_TARGET';
+import {vuexNestedMutations} from 'vuex-nested-mutations';
 
 export default {
   state: {
@@ -40,38 +41,9 @@ export default {
       },
     },
   },
-  mutations: {
+  mutations: vuexNestedMutations({
     weather: {
       currently: {
-        setTime(state, time) {
-          state.weather.midday.time = time;
-        },
-        setSummary(state, summary) {
-          state.weather.midday.summary = summary;
-        },
-        setTemperature(state, temperature) {
-          state.weather.midday.temperature = temperature;
-        },
-        setWindSpeed(state, windSpeed) {
-          state.weather.midday.windSpeed = windSpeed;
-        },
-        setPrecipIntensity(state, precipIntensity) {
-          state.weather.midday.precipIntensity = precipIntensity;
-        },
-        setPrecipPercentage(state, precipPercentage) {
-          state.weather.midday.precipPercentage = precipPercentage;
-        },
-        setPrecipType(state, precipType) {
-          state.weather.midday.precipType = precipType;
-        },
-        setIcon(state, icon) {
-          state.weather.midday.icon = icon;
-        },
-        setCloudCover(state, cloudCover) {
-          state.weather.midday.cloudCover = cloudCover;
-        },
-      },
-      midday: {
         setTime(state, time) {
           state.weather.currently.time = time;
         },
@@ -100,54 +72,77 @@ export default {
           state.weather.currently.nearestStorm = nearestStorm;
         },
       },
-      daily: {
+      midday: {
         setTime(state, time) {
-          state.weather.currently.time = time;
+          state.weather.midday.time = time;
         },
         setSummary(state, summary) {
-          state.weather.currently.summary = summary;
+          state.weather.midday.summary = summary;
         },
-        setTemperatureHigh(state, temperatureHigh) {
-          state.weather.currently.temperature = temperatureHigh;
-        },
-        setTemperatureHighTime(state, temperatureHighTime) {
-          state.weather.currently.temperatureHighTime = temperatureHighTime;
-        },
-        setTemperatureLow(state, temperatureLow) {
-          state.weather.currently.temperatureLow = temperatureLow;
-        },
-        setTemperature(state, temperatureLowTime) {
-          state.weather.currently.temperatureLowTime = temperatureLowTime;
+        setTemperature(state, temperature) {
+          state.weather.midday.temperature = temperature;
         },
         setWindSpeed(state, windSpeed) {
-          state.weather.currently.windSpeed = windSpeed;
+          state.weather.midday.windSpeed = windSpeed;
         },
         setPrecipIntensity(state, precipIntensity) {
-          state.weather.currently.precipIntensity = precipIntensity;
+          state.weather.midday.precipIntensity = precipIntensity;
         },
         setPrecipPercentage(state, precipPercentage) {
-          state.weather.currently.precipPercentage = precipPercentage;
+          state.weather.midday.precipPercentage = precipPercentage;
         },
         setPrecipType(state, precipType) {
-          state.weather.currently.precipType = precipType;
+          state.weather.midday.precipType = precipType;
         },
         setIcon(state, icon) {
-          state.weather.currently.icon = icon;
+          state.weather.midday.icon = icon;
+        },
+        setCloudCover(state, cloudCover) {
+          state.weather.midday.cloudCover = cloudCover;
+        },
+      },
+      daily: {
+        setTime(state, time) {
+          state.weather.daily.time = time;
+        },
+        setSummary(state, summary) {
+          state.weather.daily.summary = summary;
+        },
+        setTemperatureHigh(state, temperatureHigh) {
+          state.weather.daily.temperature = temperatureHigh;
+        },
+        setTemperatureHighTime(state, temperatureHighTime) {
+          state.weather.daily.temperatureHighTime = temperatureHighTime;
+        },
+        setTemperatureLow(state, temperatureLow) {
+          state.weather.daily.temperatureLow = temperatureLow;
+        },
+        setTemperature(state, temperatureLowTime) {
+          state.weather.daily.temperatureLowTime = temperatureLowTime;
+        },
+        setWindSpeed(state, windSpeed) {
+          state.weather.daily.windSpeed = windSpeed;
+        },
+        setPrecipIntensity(state, precipIntensity) {
+          state.weather.daily.precipIntensity = precipIntensity;
+        },
+        setPrecipPercentage(state, precipPercentage) {
+          state.weather.daily.precipPercentage = precipPercentage;
+        },
+        setPrecipType(state, precipType) {
+          state.weather.daily.precipType = precipType;
+        },
+        setIcon(state, icon) {
+          state.weather.daily.icon = icon;
         },
       },
     },
-  },
+  }),
   actions: {
-    refreshWeather() {
+    refreshWeather(context) {
       darksky((result) => {
         console.log(result);
       });
-    },
-    predictToday() {
-
-    },
-    predictTravel() {
-
     },
   },
 };

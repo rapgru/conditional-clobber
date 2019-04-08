@@ -29,7 +29,7 @@ export default {
   methods: {
     refresh()
     {
-      this.$store.dispatch('refreshAll');
+      this.$store.commit('weather.currently.setTime', 1200);
     },
   },
 };

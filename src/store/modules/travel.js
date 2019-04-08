@@ -6,6 +6,8 @@ export default {
 
   },
   actions: {
+    predictTravel(context) {
 
+    },
   },
 };
