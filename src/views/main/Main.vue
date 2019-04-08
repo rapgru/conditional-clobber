@@ -1,5 +1,6 @@
 <template>
   <div ref="content" class="md-layout md-alignment-center-center">
+      <button class="testButton" v-on:click="refresh">Refresh</button>
     <div class="md-layout-item">
       <h1 class="md-title">Main</h1>
     </div>
@@ -24,6 +25,12 @@ export default {
     hammertime.on('swipeleft', () => {
       this.$router.push('/travel');
     });
+  },
+  methods: {
+    refresh()
+    {
+      this.$store.dispatch('refreshAll');
+    },
   },
 };
 </script>
