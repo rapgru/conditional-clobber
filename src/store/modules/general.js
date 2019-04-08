@@ -1,4 +1,4 @@
-import darksky from '@/.../darksky-APP_TARGET';
+import darksky from '@/store/modules/darksky-WEB';
 
 export default {
   state: {
