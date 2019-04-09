@@ -18,6 +18,8 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "raw-loader": "^2.0.0",
+    "svg.js": "^2.7.1",
     "vue": "^2.6.6",
     "vue-material": "^1.0.0-beta-10.2",
     "vue-router": "^3.0.1",
