@@ -1,4 +1,4 @@
-const GoogleFontsPlugin = require('google-fonts-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   lintOnSave: false,
@@ -9,5 +9,11 @@ module.exports = {
   chainWebpack: (config) => {
     config.output
       .globalObject('this');
+    config.plugin('conditional-build').use(webpack.NormalModuleReplacementPlugin, [
+      /(.*)-APP_TARGET(\.*)/,
+      (resource) => {
+        resource.request = resource.request.replace(/-APP_TARGET/, `-${process.env.APP_TARGET || 'APP'}`);
+      },
+    ]);
   },
 };
