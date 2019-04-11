@@ -57,7 +57,12 @@
       "@vue/airbnb"
     ],
     "rules": {
+<<<<<<< HEAD
       "no-param-reassign": "off"
+=======
+      "no-param-reassign": "off",
+      "import/prefer-default-export": "off"
+>>>>>>> Added svg.js and raw.loader Added renderPrediction
     },
     "parserOptions": {
       "parser": "babel-eslint"
