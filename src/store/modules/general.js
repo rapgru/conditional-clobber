@@ -10,10 +10,10 @@ export default {
         temperature: 0,
         windSpeed: 0,
         precipIntensity: 0,
-        precipPercentage: 0,
         precipType: 'none',
         icon: 'none',
         nearestStorm: 0,
+        cloudCover: 0,
       },
       midday: {
         time: 0,
@@ -59,9 +59,6 @@ export default {
         setPrecipIntensity(state, precipIntensity) {
           state.weather.currently.precipIntensity = precipIntensity;
         },
-        setPrecipPercentage(state, precipPercentage) {
-          state.weather.currently.precipPercentage = precipPercentage;
-        },
         setPrecipType(state, precipType) {
           state.weather.currently.precipType = precipType;
         },
@@ -70,6 +67,9 @@ export default {
         },
         setNearestStorm(state, nearestStorm) {
           state.weather.currently.nearestStorm = nearestStorm;
+        },
+        setCloudCover(state, cloudCover) {
+          state.weather.currently.cloudCover = cloudCover;
         },
       },
       midday: {
@@ -117,7 +117,7 @@ export default {
         setTemperatureLow(state, temperatureLow) {
           state.weather.daily.temperatureLow = temperatureLow;
         },
-        setTemperature(state, temperatureLowTime) {
+        setTemperatureLowTime(state, temperatureLowTime) {
           state.weather.daily.temperatureLowTime = temperatureLowTime;
         },
         setWindSpeed(state, windSpeed) {
@@ -141,7 +141,37 @@ export default {
   actions: {
     refreshWeather(context) {
       darksky((result) => {
-        console.log(result);
+        context.commit('weather.currently.setTime', result.currently.time);
+        context.commit('weather.currently.setSummary', result.currently.summary);
+        context.commit('weather.currently.setTemperature', result.currently.temperature);
+        context.commit('weather.currently.setWindSpeed', result.currently.windSpeed);
+        context.commit('weather.currently.setPrecipIntensity', result.currently.precipIntensity);
+        context.commit('weather.currently.setPrecipType', result.currently.precipType);
+        context.commit('weather.currently.setIcon', result.currently.icon);
+        context.commit('weather.currently.setNearestStorm', result.currently.nearestStormDistance);
+        context.commit('weather.currently.setCloudCover', result.currently.cloudCover);
+
+        context.commit('weather.midday.setTime', result.hourly.data[11].time);
+        context.commit('weather.midday.setSummary', result.hourly.data[11].summary);
+        context.commit('weather.midday.setTemperature', result.hourly.data[11].temperature);
+        context.commit('weather.midday.setWindSpeed', result.hourly.data[11].windSpeed);
+        context.commit('weather.midday.setPrecipIntensity', result.hourly.data[11].precipIntensity);
+        context.commit('weather.midday.setPrecipPercentage', result.hourly.data[11].precipProbability);
+        context.commit('weather.midday.setPrecipType', result.hourly.data[11].precipType);
+        context.commit('weather.midday.setIcon', result.hourly.data[11].icon);
+        context.commit('weather.midday.setCloudCover', result.hourly.data[11].cloudCover);
+
+        context.commit('weather.daily.setTime', result.daily.data[0].time);
+        context.commit('weather.daily.setSummary', result.daily.data[0].summary);
+        context.commit('weather.daily.setTemperatureHigh', result.daily.data[0].temperatureHigh);
+        context.commit('weather.daily.setTemperatureHighTime', result.daily.data[0].temperatureHighTime);
+        context.commit('weather.daily.setTemperatureLow', result.daily.data[0].temperatureLow);
+        context.commit('weather.daily.setTemperatureLowTime', result.daily.data[0].temperatureLowTime);
+        context.commit('weather.daily.setWindSpeed', result.daily.data[0].windSpeed);
+        context.commit('weather.daily.setPrecipIntensity', result.daily.data[0].precipIntensity);
+        context.commit('weather.daily.setPrecipPercentage', result.daily.data[0].precipProbability);
+        context.commit('weather.daily.setPrecipType', result.daily.data[0].precipType);
+        context.commit('weather.daily.setIcon', result.daily.data[0].icon);
       });
     },
   },

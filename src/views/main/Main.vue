@@ -3,6 +3,7 @@
       <button class="testButton" v-on:click="refresh">Refresh</button>
     <div class="md-layout-item">
       <h1 class="md-title">Main</h1>
+      <button class="testButton" v-on:click="refresh">Refresh</button>
     </div>
   </div>
 </template>
@@ -26,10 +27,10 @@ export default {
       this.$router.push('/travel');
     });
   },
-  methods: {
-    refresh()
-    {
-      this.$store.commit('weather.currently.setTime', 1200);
+  methods:
+  {
+    refresh() {
+      this.$store.dispatch('refreshWeather');
     },
   },
 };
