@@ -31,8 +31,13 @@ export default {
   {
     refresh() {
       this.$store.dispatch('refreshWeather');
+<<<<<<< HEAD
     },
   },
+=======
+    }
+  }
+>>>>>>> refreshWheater working correct
 };
 </script>
 
