@@ -39,6 +39,11 @@ export default {
         precipType: 'none',
         icon: 'none',
       },
+      raw: {
+        hourly: {
+          data: [{ temperature: 49 }],
+        },
+      },
     },
   },
   mutations: vuexNestedMutations({
@@ -136,12 +141,18 @@ export default {
           state.weather.currently.icon = icon;
         },
       },
+      raw: {
+        setRaw(state, raw) {
+          state.weather.raw = raw;
+        },
+      },
     },
   }),
   actions: {
     refreshWeather(context) {
       darksky((result) => {
         console.log(result);
+        context.commit('weather.raw.setRaw', result);
       });
     },
   },
