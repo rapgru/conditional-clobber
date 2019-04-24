@@ -12,7 +12,7 @@ export default {
   mutations: vuexNestedMutations({
     weather: {
       setRaw(state, raw) {
-        state.weather.raw = raw;
+        state.weather = raw;
       },
     },
   }),
