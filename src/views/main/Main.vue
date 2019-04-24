@@ -1,5 +1,6 @@
 <template>
   <div ref="content" class="md-layout md-alignment-center-center">
+      <button class="testButton" v-on:click="refresh">Refresh</button>
     <div class="md-layout-item">
       <h1 class="md-title">Main</h1>
       <button class="testButton" v-on:click="refresh">Refresh</button>
@@ -30,8 +31,8 @@ export default {
   {
     refresh() {
       this.$store.dispatch('refreshWeather');
-    }
-  }
+    },
+  },
 };
 </script>
 
