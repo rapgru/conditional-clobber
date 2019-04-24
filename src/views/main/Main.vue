@@ -32,12 +32,17 @@ export default {
     refresh() {
       this.$store.dispatch('refreshWeather');
 <<<<<<< HEAD
+<<<<<<< HEAD
     },
   },
 =======
     }
   }
 >>>>>>> refreshWheater working correct
+=======
+    }
+  }
+>>>>>>> 828a0557b42fc21a167ecbba2f382d9408189a9b
 };
 </script>
 

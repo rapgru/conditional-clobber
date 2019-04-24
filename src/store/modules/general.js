@@ -152,8 +152,11 @@ export default {
     refreshWeather(context) {
       darksky((result) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
         context.commit('weather.setRaw', result);
 =======
+=======
+>>>>>>> 828a0557b42fc21a167ecbba2f382d9408189a9b
         context.commit('weather.currently.setTime', result.currently.time);
         context.commit('weather.currently.setSummary', result.currently.summary);
         context.commit('weather.currently.setTemperature', result.currently.temperature);
@@ -185,7 +188,10 @@ export default {
         context.commit('weather.daily.setPrecipPercentage', result.daily.data[0].precipProbability);
         context.commit('weather.daily.setPrecipType', result.daily.data[0].precipType);
         context.commit('weather.daily.setIcon', result.daily.data[0].icon);
+<<<<<<< HEAD
 >>>>>>> Added refreshWeather function
+=======
+>>>>>>> 828a0557b42fc21a167ecbba2f382d9408189a9b
       });
     },
   },

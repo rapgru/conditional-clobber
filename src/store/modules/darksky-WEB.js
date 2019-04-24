@@ -56,6 +56,7 @@ export default function (f) {
       summary: 'Mixed precipitation throughout the week, with temperatures falling to 39°F on Saturday.',
       icon: 'rain',
 <<<<<<< HEAD
+<<<<<<< HEAD
       data: [{
         time: 1509944400,
         summary: 'Rain starting in the afternoon, continuing until evening.',
@@ -98,6 +99,8 @@ export default function (f) {
         apparentTemperatureMaxTime: 1509994800,
       },
 =======
+=======
+>>>>>>> 828a0557b42fc21a167ecbba2f382d9408189a9b
       data: [
         {
           time: 1509944400,
@@ -140,7 +143,10 @@ export default function (f) {
           apparentTemperatureMax: 66.53,
           apparentTemperatureMaxTime: 1509994800,
         },
+<<<<<<< HEAD
 >>>>>>> Added refreshWeather function
+=======
+>>>>>>> 828a0557b42fc21a167ecbba2f382d9408189a9b
       ],
     },
   });

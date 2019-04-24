@@ -61,11 +61,16 @@
     ],
     "rules": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "no-param-reassign": "off"
 =======
       "no-param-reassign": "off",
       "import/prefer-default-export": "off"
 >>>>>>> Added svg.js and raw.loader Added renderPrediction
+=======
+      "no-param-reassign": "off",
+      "import/prefer-default-export": "off"
+>>>>>>> 828a0557b42fc21a167ecbba2f382d9408189a9b
     },
     "parserOptions": {
       "parser": "babel-eslint"
