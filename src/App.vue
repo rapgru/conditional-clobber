@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <transition :name="'switch-' + direction" mode="out-in">
-      <router-view/>
-    </transition>
+    <md-app md-mode="fixed" style="height:100vh;">
+      <md-app-content>
+        <transition :name="'switch-' + direction" mode="out-in">
+          <router-view/>
+        </transition>
+      </md-app-content>
+    </md-app>
   </div>
 </template>
 
@@ -35,12 +39,13 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
-@import "~vue-material/dist/theme/engine";
+//@import "~vue-material/dist/theme/engine";
 
 #app {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   height: 100vh;
   width: 100vw;
+  overflow:hidden;
 }
 
 * {margin: 0px; padding: 0px;}
