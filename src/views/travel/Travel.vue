@@ -1,7 +1,9 @@
 <template>
-  <div ref="content" class="md-layout md-alignment-center-center">
-    <div class="md-layout-item">
-      <h1 class="md-title">Travel</h1>
+  <div class="travel-view-root">
+    <div ref="content" class="md-layout md-alignment-center-center">
+      <div class="md-layout-item">
+        <h1 class="md-title">Travel</h1>
+      </div>
     </div>
   </div>
 </template>
@@ -22,8 +24,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  div {
-    height: 100vh;
+  .travel-view-root {
+    height: 100%;
     width: 100%;
+
+    .md-layout {
+      height: 100%;
+    }
   }
 </style>
