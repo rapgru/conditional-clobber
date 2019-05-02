@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "css": "^2.2.4",
+    "jsonq": "^1.2.0",
     "raw-loader": "^2.0.0",
     "svg.js": "^2.7.1",
     "tar": "^4.4.8",

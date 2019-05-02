@@ -19,4 +19,4 @@ new Vue({
 }).$mount('#app');
 
 const renderService = pictureRenderer();
-renderService.renderPrediction().then(test => console.log(test));
+renderService.renderPrediction(null).then(test => console.log(JSON.stringify(test)));
