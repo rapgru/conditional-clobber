@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 283.5 283.5" style="enable-background:new 0 0 283.5 283.5;" xml:space="preserve">
+<style type="text/css">
+
+		@-webkit-keyframes Ani1{
+ 		 0%   { opacity: 0; }
+		 90%  {opacity:0; }
+ 		 100% { opacity: 1; }
+		}
+		@-webkit-keyframes Ani2{
+ 		 0%   { opacity: 0; }
+		 90%  {opacity:0; }
+ 		 100% { opacity: 1; }
+		}
+		@-webkit-keyframes Ani3{
+ 		 0%   { opacity: 0; }
+		 90%  {opacity:0; }
+ 		 100% { opacity: 1; }
+		}
+		@-webkit-keyframes Ani4{
+ 		 0%   { opacity: 0; }
+		 90%  {opacity:0; }
+ 		 100% { opacity: 1; }
+		}
+
+	.st0{fill:#1B75BC;}
+	.st1{fill:#FFF200;}
+	.st2{fill:#4B5A76;}
+	.st3{fill:#43506A;}
+	#Blitz_1_{Animation: Ani1 4s infinite;}
+	#Links{Animation: Ani2 2s infinite;}
+	#Rechts{Animation: Ani3 3.5s infinite;}
+	#Mitte{Animation: Ani4 3s infinite;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M86,105.3c-0.2,0.4-0.5,0.8-0.7,1.2c-0.2,0.2,0.2,0.6,0.4,0.4c0.3-0.4,0.6-0.8,0.8-1.3
+			C86.6,105.3,86.2,105,86,105.3L86,105.3z"/>
+	</g>
+	
+		<animateMotion  accumulate="none" additive="replace" calcMode="paced" dur="1400ms" fill="remove" repeatCount="indefinite" restart="always" values="0,03; 0,10;">
+		</animateMotion>
+</g>
+<g>
+	<g>
+		<path class="st0" d="M87.9,107.3c-0.2,0.3-0.5,0.6-0.7,0.9c-0.2,0.2,0.1,0.6,0.4,0.4c0.2-0.3,0.5-0.6,0.7-0.9
+			C88.4,107.4,88.1,107,87.9,107.3L87.9,107.3z"/>
+	</g>
+	
+		<animateMotion  accumulate="none" additive="replace" calcMode="paced" dur="1500ms" fill="remove" repeatCount="indefinite" restart="always" values="0,00; 0,10;">
+		</animateMotion>
+</g>
+<g>
+	<g>
+		<path class="st0" d="M91.3,105.8c-0.3,0.3-0.5,0.7-0.6,1.1c-0.1,0.3,0.4,0.4,0.5,0.1c0.1-0.3,0.3-0.6,0.5-0.9
+			C91.8,105.9,91.5,105.5,91.3,105.8L91.3,105.8z"/>
+	</g>
+	
+		<animateMotion  accumulate="none" additive="replace" calcMode="paced" dur="1000ms" fill="remove" repeatCount="indefinite" restart="always" values="0,00; 0,10;">
+		</animateMotion>
+</g>
+<g>
+	<g>
+		<path class="st0" d="M93,108.8c-0.2,0.4-0.4,0.8-0.6,1.2c-0.2,0.3,0.3,0.5,0.4,0.3c0.3-0.4,0.5-0.8,0.7-1.3
+			C93.6,108.7,93.1,108.5,93,108.8L93,108.8z"/>
+	</g>
+	
+		<animateMotion  accumulate="none" additive="replace" calcMode="paced" dur="1200ms" fill="remove" repeatCount="indefinite" restart="always" values="0,00; 0,10;">
+		</animateMotion>
+</g>
+<g>
+	<g>
+		<path class="st0" d="M95.3,106c-0.1,0.3-0.2,0.6-0.4,0.9c-0.2,0.3,0.3,0.5,0.4,0.3c0.2-0.3,0.3-0.6,0.4-1
+			C95.9,105.9,95.4,105.7,95.3,106L95.3,106z"/>
+	</g>
+	
+		<animateMotion  accumulate="none" additive="replace" calcMode="paced" dur="1600ms" fill="remove" repeatCount="indefinite" restart="always" values="0,00; 0,10;">
+		</animateMotion>
+</g>
+<g>
+	<g>
+		<path class="st0" d="M98.9,106.8c0.2-0.4,0.4-0.7,0.7-1c0.2-0.2-0.1-0.6-0.4-0.4c-0.3,0.3-0.6,0.7-0.8,1.1
+			C98.3,106.9,98.8,107.1,98.9,106.8L98.9,106.8z"/>
+	</g>
+	
+		<animateMotion  accumulate="none" additive="replace" calcMode="paced" dur="1000ms" fill="remove" repeatCount="indefinite" restart="always" values="0,00; 0,10;">
+		</animateMotion>
+</g>
+<g>
+	<g>
+		<path class="st0" d="M96.9,110.5c0.2-0.4,0.4-0.8,0.6-1.2c0.1-0.3-0.4-0.4-0.5-0.1c-0.1,0.4-0.3,0.7-0.5,1
+			C96.3,110.5,96.7,110.7,96.9,110.5L96.9,110.5z"/>
+	</g>
+	
+		<animateMotion  accumulate="none" additive="replace" calcMode="paced" dur="1000ms" fill="remove" repeatCount="indefinite" restart="always" values="0,00; 0,10;">
+		</animateMotion>
+</g>
+<g>
+	<g>
+		<path class="st0" d="M100.1,109.4c0.2-0.4,0.5-0.9,0.8-1.3c0.2-0.3-0.2-0.6-0.4-0.4c-0.3,0.4-0.6,0.9-0.9,1.4
+			C99.6,109.4,100,109.7,100.1,109.4L100.1,109.4z"/>
+	</g>
+	
+		<animateMotion  accumulate="none" additive="replace" calcMode="paced" dur="1800ms" fill="remove" repeatCount="indefinite" restart="always" values="0,00; 0,10;">
+		</animateMotion>
+</g>
+<g>
+	<g>
+		<path class="st0" d="M103.8,107.2c0.1-0.3,0.2-0.4,0.4-0.6c0.2-0.2-0.1-0.6-0.4-0.4c-0.3,0.2-0.4,0.5-0.5,0.8
+			C103.3,107.4,103.7,107.5,103.8,107.2L103.8,107.2z"/>
+	</g>
+	
+		<animateMotion  accumulate="none" additive="replace" calcMode="paced" dur="1400ms" fill="remove" repeatCount="indefinite" restart="always" values="0,00; 0,10;">
+		</animateMotion>
+</g>
+<g>
+	<g>
+		<path class="st0" d="M101.5,111.7c0.1-0.4,0.2-0.7,0.5-0.9c0.2-0.2-0.1-0.6-0.4-0.4c-0.3,0.3-0.5,0.7-0.6,1.2
+			C100.9,111.8,101.4,112,101.5,111.7L101.5,111.7z"/>
+	</g>
+	
+		<animateMotion  accumulate="none" additive="replace" calcMode="paced" dur="1000ms" fill="remove" repeatCount="indefinite" restart="always" values="0,00; 0,10;">
+		</animateMotion>
+</g>
+<g>
+	<g>
+		<path class="st0" d="M89,110.5c0.1-0.2,0.2-0.3,0.3-0.5c0.1-0.3-0.3-0.5-0.4-0.3s-0.2,0.3-0.3,0.5C88.4,110.6,88.8,110.8,89,110.5
+			L89,110.5z"/>
+	</g>
+	
+		<animateMotion  accumulate="none" additive="replace" calcMode="paced" dur="1500ms" fill="remove" repeatCount="indefinite" restart="always" values="0,00; 0,10;">
+		</animateMotion>
+</g>
+<g>
+	<g>
+		<path class="st0" d="M83.4,110c0.2-0.4,0.4-0.7,0.6-1c0.2-0.2-0.1-0.6-0.4-0.4c-0.3,0.3-0.5,0.7-0.7,1.1
+			C82.8,110,83.3,110.3,83.4,110L83.4,110z"/>
+	</g>
+	
+		<animateMotion  accumulate="none" additive="replace" calcMode="paced" dur="1200ms" fill="remove" repeatCount="indefinite" restart="always" values="0,03; 0,10;">
+		</animateMotion>
+</g>
+<g id="Links">
+	<g>
+		<g>
+			<path class="st1" d="M103.4,110.8c-0.7,1.1-1.5,2.2-2.3,3.2c-0.2,0.3,0.2,0.5,0.4,0.3c0.8-1,1.6-2.1,2.3-3.2
+				C104,110.8,103.6,110.5,103.4,110.8L103.4,110.8z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path class="st1" d="M101.4,114.4c0.8,0,1.7,0,2.5,0c0.3,0,0.3-0.5,0-0.5c-0.8-0.1-1.7-0.1-2.5,0
+				C101,113.9,101,114.4,101.4,114.4L101.4,114.4z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path class="st1" d="M103.9,113.9c-0.9,0.8-1.5,1.9-2.4,2.7c-0.2,0.2,0.1,0.6,0.4,0.4c0.8-0.9,1.5-1.9,2.4-2.7
+				C104.5,114.1,104.1,113.7,103.9,113.9L103.9,113.9z"/>
+		</g>
+	</g>
+</g>
+<g id="Blitz_1_">
+	<g>
+		<g>
+			<path class="st1" d="M86.4,112.3c-0.7,1.1-1.5,2.2-2.3,3.2c-0.2,0.3,0.2,0.5,0.4,0.3c0.8-1,1.6-2.1,2.3-3.2
+				C87,112.3,86.6,112,86.4,112.3L86.4,112.3z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path class="st1" d="M84.4,115.9c0.8,0,1.7,0,2.5,0c0.3,0,0.3-0.5,0-0.5c-0.8-0.1-1.7-0.1-2.5,0
+				C84.1,115.4,84.1,115.9,84.4,115.9L84.4,115.9z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path class="st1" d="M86.9,115.4c-0.9,0.8-1.5,1.9-2.4,2.7c-0.2,0.2,0.1,0.6,0.4,0.4c0.8-0.9,1.5-1.9,2.4-2.7
+				C87.5,115.6,87.1,115.2,86.9,115.4L86.9,115.4z"/>
+		</g>
+	</g>
+</g>
+<g id="Rechts">
+	<g>
+		<g>
+			<path class="st1" d="M91,116.7c-0.7,1.1-1.5,2.2-2.3,3.2c-0.2,0.3,0.2,0.5,0.4,0.3c0.8-1,1.6-2.1,2.3-3.2
+				C91.6,116.7,91.2,116.4,91,116.7L91,116.7z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path class="st1" d="M89,120.3c0.8,0,1.7,0,2.5,0c0.3,0,0.3-0.5,0-0.5c-0.8-0.1-1.7-0.1-2.5,0C88.7,119.8,88.7,120.3,89,120.3
+				L89,120.3z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path class="st1" d="M91.5,119.8c-0.9,0.8-1.5,1.9-2.4,2.7c-0.2,0.2,0.1,0.6,0.4,0.4c0.8-0.9,1.5-1.9,2.4-2.7
+				C92.1,120,91.7,119.6,91.5,119.8L91.5,119.8z"/>
+		</g>
+	</g>
+</g>
+<g id="Mitte">
+	<g>
+		<g>
+			<path class="st1" d="M96.9,113.4c-0.7,1.1-1.5,2.2-2.3,3.2c-0.2,0.3,0.2,0.5,0.4,0.3c0.8-1,1.6-2.1,2.3-3.2
+				C97.5,113.4,97.1,113.1,96.9,113.4L96.9,113.4z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path class="st1" d="M94.9,117c0.8,0,1.7,0,2.5,0c0.3,0,0.3-0.5,0-0.5c-0.8-0.1-1.7-0.1-2.5,0C94.6,116.5,94.6,117,94.9,117
+				L94.9,117z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path class="st1" d="M97.4,116.5c-0.9,0.8-1.5,1.9-2.4,2.7c-0.2,0.2,0.1,0.6,0.4,0.4c0.8-0.9,1.5-1.9,2.4-2.7
+				C98,116.7,97.6,116.3,97.4,116.5L97.4,116.5z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<ellipse class="st2" cx="86.7" cy="105.2" rx="6.9" ry="8.3"/>
+		<ellipse class="st2" cx="93.6" cy="105.2" rx="6.9" ry="8.3"/>
+		<ellipse class="st2" cx="100.5" cy="105.2" rx="6.9" ry="8.3"/>
+		<ellipse class="st2" cx="101.9" cy="106.2" rx="8.3" ry="5.5"/>
+		<ellipse class="st2" cx="85.3" cy="106.2" rx="8.3" ry="5.5"/>
+	</g>
+	<path class="st3" d="M105.1,99.8c-0.1,0.3-1-0.6-2.6-1.3c-1.7-0.6-3.1-0.9-3-1.2c0.1-0.3,1.8-0.3,3.5,0.3S105.2,99.5,105.1,99.8z"
+		/>
+	<path class="st3" d="M77.4,105.9c0,1.4,0.7,2.5,1.2,2.5s-0.2-1.1-0.2-2.5s0.6-2.5,0.2-2.5S77.4,104.5,77.4,105.9z"/>
+</g>
+</svg>
