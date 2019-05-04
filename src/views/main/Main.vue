@@ -3,7 +3,8 @@
       <button class="testButton" v-on:click="refresh">Refresh</button>
     <div class="md-layout-item">
       <h1 class="md-title">Main</h1>
-      <button class="testButton" v-on:click="refresh">Refresh</button>
+      <button class="getNewPic" v-on:click="getNewPic">Pic</button>
+      <div v-html="getPicture"></div>
     </div>
   </div>
 </template>
@@ -32,6 +33,16 @@ export default {
     refresh() {
       this.$store.dispatch('refreshWeather');
     },
+    getNewPic() {
+      this.$store.dispatch('predictToday');
+    }
+  },
+computed:
+  {
+     getPicture()
+     {
+       return this.$store.state.prediction.renderedPicture.svg
+     }
   },
 };
 </script>

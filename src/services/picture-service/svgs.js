@@ -559,4 +559,8 @@ export function getSVGString(name) {
   return svgs[name].svg;
 }
 
+export function getSVGType(name) {
+  return svgs[name].type;
+}
+
 export default svgs;
