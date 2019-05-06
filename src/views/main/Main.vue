@@ -35,9 +35,9 @@ export default {
             type: 'time',
             time: {
               unit: 'hour',
-              min: moment('24.04.2019').second(0).minute(0).hour(0)
+              min: moment().second(0).minute(0).hour(0)
                 .toDate(),
-              max: moment('24.04.2019').second(59).minute(59).hour(23)
+              max: moment().second(59).minute(59).hour(23)
                 .toDate(),
             },
             ticks: {
@@ -96,7 +96,7 @@ export default {
             backgroundColor: 'rgb(243,156,18)',
             fill: false,
             label: 'temperature',
-            data: this.$store.state.general.weather.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.temperature })),
+            data: this.$store.state.general.weather.timemachine.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.temperature })),
           },
           {
             yAxisID: 'hum',
@@ -104,7 +104,7 @@ export default {
             backgroundColor: 'rgb(52,152,219)',
             label: 'humidity',
             fill: false,
-            data: this.$store.state.general.weather.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.humidity * 100 })),
+            data: this.$store.state.general.weather.timemachine.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.humidity * 100 })),
           },
         ],
       };
@@ -122,6 +122,7 @@ export default {
     hammertime.on('swipeleft', () => {
       this.$router.push('/travel');
     });
+    this.$store.dispatch('loadLocation');
   },
   methods: {
     update() {
