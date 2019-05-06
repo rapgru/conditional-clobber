@@ -614,6 +614,11 @@ export const svgs = {
     category: 'hair',
     svg: womanHairLongFringeOrange,
   },
+  womanHairLongFringeBlack: {
+    type: 'longFringeHair',
+    category: 'hair',
+    svg: womanHairLongFringeBlack,
+  },
   womanHairLongStraightBlond: {
     type: 'longStraightHair',
     category: 'hair',
@@ -628,6 +633,11 @@ export const svgs = {
     type: 'longStraightHair',
     category: 'hair',
     svg: womanHairLongStraightOrange,
+  },
+  womanHairLongStraightBlack: {
+    type: 'longStraightHair',
+    category: 'hair',
+    svg: womanHairLongStraightBlack,
   },
   womanHairLongWavytBlond: {
     type: 'longWavytHair',
@@ -644,6 +654,11 @@ export const svgs = {
     category: 'hair',
     svg: womanHairLongWavytOrange,
   },
+  womanHairLongWavytBlack: {
+    type: 'longWavytHair',
+    category: 'hair',
+    svg: womanHairLongWavytBlack,
+  },
   womanHairPigtailBraidBlond: {
     type: 'braid',
     category: 'hair',
@@ -658,6 +673,11 @@ export const svgs = {
     type: 'braid',
     category: 'hair',
     svg: womanHairPigtailBraidOrange,
+  },
+  womanHairPigtailBraidBlack: {
+    type: 'braid',
+    category: 'hair',
+    svg: womanHairPigtailBraidBlack,
   },
   womanHairPigtailDuttBlond: {
     type: 'dutt',
@@ -674,6 +694,11 @@ export const svgs = {
     category: 'hair',
     svg: womanHairPigtailDuttOrange,
   },
+  womanHairPigtailDuttBlack: {
+    type: 'dutt',
+    category: 'hair',
+    svg: womanHairPigtailDuttBlack,
+  },
   womanHairPigtailPigtailBlond: {
     type: 'pigtail',
     category: 'hair',
@@ -688,6 +713,11 @@ export const svgs = {
     type: 'pigtail',
     category: 'hair',
     svg: womanHairPigtailPigtailOrange,
+  },
+  womanHairPigtailPigtailBlack: {
+    type: 'pigtail',
+    category: 'hair',
+    svg: womanHairPigtailPigtailBlack,
   },
   womanHairShortCurlyBlond: {
     type: 'shortCurlyHair',
@@ -704,6 +734,11 @@ export const svgs = {
     category: 'hair',
     svg: womanHairShortCurlyOrange,
   },
+  womanHairShortCurlyBlack: {
+    type: 'shortCurlyHair',
+    category: 'hair',
+    svg: womanHairShortCurlyBlack,
+  },
   womanHairShortFringeBlond: {
     type: 'shortFringeHair',
     category: 'hair',
@@ -719,6 +754,11 @@ export const svgs = {
     category: 'hair',
     svg: womanHairShortFringeOrange,
   },
+  womanHairShortFringeBlack: {
+    type: 'shortFringeHair',
+    category: 'hair',
+    svg: womanHairShortFringeBlack,
+  },
   womanHairShortStraightBlond: {
     type: 'shortStraightHair',
     category: 'hair',
@@ -733,6 +773,11 @@ export const svgs = {
     type: 'shortStraightHair',
     category: 'hair',
     svg: womanHairShortStraightOrange,
+  },
+  womanHairShortStraightBlack: {
+    type: 'shortStraightHair',
+    category: 'hair',
+    svg: womanHairShortStraightBlack,
   },
   weatherPredictionHail: {
     type: 'weatherIconHail',
@@ -818,6 +863,11 @@ export const svgs = {
     type: 'iconHaircolor',
     category: 'icon',
     svg: iconsHairColorOrange,
+  },
+  iconsHairColorBlack: {
+    type: 'iconHaircolor',
+    category: 'icon',
+    svg: iconsHairColorBlack,
   },
   manBodyWhite: {
     type: 'body',
@@ -1107,6 +1157,11 @@ export const svgs = {
     category: 'hair',
     svg: manHairFirstOrange,
   },
+  manHairFirstBlack: {
+    type: 'firstHair',
+    category: 'hair',
+    svg: manHairFirstBlack,
+  },
   manHairLongBlond: {
     type: 'longHair',
     category: 'hair',
@@ -1121,6 +1176,11 @@ export const svgs = {
     type: 'longHair',
     category: 'hair',
     svg: manHairLongOrange,
+  },
+  manHairLongBlack: {
+    type: 'longHair',
+    category: 'hair',
+    svg: manHairLongBlack,
   },
   manHairMattBlond: {
     type: 'mattHair',
@@ -1137,6 +1197,11 @@ export const svgs = {
     category: 'hair',
     svg: manHairMattOrange,
   },
+  manHairMattBlack: {
+    type: 'mattHair',
+    category: 'hair',
+    svg: manHairMattBlack,
+  },
   manHairSecondBlond: {
     type: 'secondHair',
     category: 'hair',
@@ -1152,6 +1217,11 @@ export const svgs = {
     category: 'hair',
     svg: manHairSecondOrange,
   },
+  manHairSecondBlack: {
+    type: 'secondHair',
+    category: 'hair',
+    svg: manHairSecondBlack,
+  },
   manHairWavesBlond: {
     type: 'wavieHair',
     category: 'hair',
@@ -1166,6 +1236,11 @@ export const svgs = {
     type: 'wavieHair',
     category: 'hair',
     svg: manHairWavesOrange,
+  },
+  manHairWavesBlack: {
+    type: 'wavieHair',
+    category: 'hair',
+    svg: manHairWavesBlack,
   },
 };
 
