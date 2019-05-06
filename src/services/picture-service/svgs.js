@@ -70,30 +70,40 @@ import womanUpperbodyTshirtViolet from '!!raw-loader!@/assets/SVGs/Woman/Clothes
 import womanHairLongFringeBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Fringe/Blond.svg';
 import womanHairLongFringeBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Fringe/Brown.svg';
 import womanHairLongFringeOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Fringe/Orange.svg';
+import womanHairLongFringeBlack from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Fringe/Black.svg';
 import womanHairLongStraightBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Straight/Blond.svg';
 import womanHairLongStraightBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Straight/Brown.svg';
 import womanHairLongStraightOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Straight/Orange.svg';
+import womanHairLongStraightBlack from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Straight/Black.svg';
 import womanHairLongWavytBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Blond.svg';
 import womanHairLongWavytBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Brown.svg';
 import womanHairLongWavytOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Orange.svg';
+import womanHairLongWavytBlack from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Black.svg';
 import womanHairPigtailBraidBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Braid/Blond.svg';
 import womanHairPigtailBraidBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Braid/Brown.svg';
 import womanHairPigtailBraidOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Braid/Orange.svg';
+import womanHairPigtailBraidBlack from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Braid/Black.svg';
 import womanHairPigtailDuttBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Dutt/Blond.svg';
 import womanHairPigtailDuttBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Dutt/Brown.svg';
 import womanHairPigtailDuttOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Dutt/Orange.svg';
+import womanHairPigtailDuttBlack from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Dutt/Black.svg';
 import womanHairPigtailPigtailBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Pigtail/Blond.svg';
 import womanHairPigtailPigtailBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Pigtail/Brown.svg';
 import womanHairPigtailPigtailOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Pigtail/Orange.svg';
+import womanHairPigtailPigtailBlack from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Pigtail/Black.svg';
 import womanHairShortCurlyBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Curly/Blond.svg';
 import womanHairShortCurlyBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Curly/Brown.svg';
 import womanHairShortCurlyOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Curly/Orange.svg';
+import womanHairShortCurlyBlack from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Curly/Black.svg';
 import womanHairShortFringeBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Fringe/Blond.svg';
 import womanHairShortFringeBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Fringe/Brown.svg';
 import womanHairShortFringeOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Fringe/Orange.svg';
+import womanHairShortFringeBlack from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Fringe/Black.svg';
 import womanHairShortStraightBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Straight/Blond.svg';
 import womanHairShortStraightBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Straight/Brown.svg';
 import womanHairShortStraightOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Straight/Orange.svg';
+import womanHairShortStraightBlack from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Straight/Black.svg';
+
 
 import weatherPredictionHail from '!!raw-loader!@/assets/SVGs/Weather/Prediction/Hail.svg';
 import weatherPredictionRain from '!!raw-loader!@/assets/SVGs/Weather/Prediction/Rain.svg';
@@ -113,6 +123,7 @@ import iconsGenderWoman from '!!raw-loader!@/assets/SVGs/Icons/Gender/Woman_Symb
 import iconsHairColorBlond from '!!raw-loader!@/assets/SVGs/Icons/Hair_Color/Blond.svg';
 import iconsHairColorBrown from '!!raw-loader!@/assets/SVGs/Icons/Hair_Color/Brown.svg';
 import iconsHairColorOrange from '!!raw-loader!@/assets/SVGs/Icons/Hair_Color/Orange.svg';
+import iconsHairColorBlack from '!!raw-loader!@/assets/SVGs/Icons/Hair_Color/Black.svg';
 
 import manBodyWhite from '!!raw-loader!@/assets/SVGs/Man/Body/White.svg';
 import manBodyYellow from '!!raw-loader!@/assets/SVGs/Man/Body/Yellow.svg';
@@ -163,18 +174,24 @@ import manUpperbodyColdTshirtUYellow from '!!raw-loader!@/assets/SVGs/Man/Clothe
 import manHairFirstBlond from '!!raw-loader!@/assets/SVGs/Man/Hair/First/Blond.svg';
 import manHairFirstBrown from '!!raw-loader!@/assets/SVGs/Man/Hair/First/Brown.svg';
 import manHairFirstOrange from '!!raw-loader!@/assets/SVGs/Man/Hair/First/Orange.svg';
+import manHairFirstBlack from '!!raw-loader!@/assets/SVGs/Man/Hair/First/Black.svg';
 import manHairLongBlond from '!!raw-loader!@/assets/SVGs/Man/Hair/Long/Blond.svg';
 import manHairLongBrown from '!!raw-loader!@/assets/SVGs/Man/Hair/Long/Brown.svg';
 import manHairLongOrange from '!!raw-loader!@/assets/SVGs/Man/Hair/Long/Orange.svg';
+import manHairLongBlack from '!!raw-loader!@/assets/SVGs/Man/Hair/Long/Black.svg';
 import manHairMattBlond from '!!raw-loader!@/assets/SVGs/Man/Hair/Matt/Blond.svg';
 import manHairMattBrown from '!!raw-loader!@/assets/SVGs/Man/Hair/Matt/Brown.svg';
 import manHairMattOrange from '!!raw-loader!@/assets/SVGs/Man/Hair/Matt/Orange.svg';
+import manHairMattBlack from '!!raw-loader!@/assets/SVGs/Man/Hair/Matt/Black.svg';
 import manHairSecondBlond from '!!raw-loader!@/assets/SVGs/Man/Hair/Second/Blond.svg';
 import manHairSecondBrown from '!!raw-loader!@/assets/SVGs/Man/Hair/Second/Brown.svg';
 import manHairSecondOrange from '!!raw-loader!@/assets/SVGs/Man/Hair/Second/Orange.svg';
+import manHairSecondBlack from '!!raw-loader!@/assets/SVGs/Man/Hair/Second/Black.svg';
 import manHairWavesBlond from '!!raw-loader!@/assets/SVGs/Man/Hair/Waves/Blond.svg';
 import manHairWavesBrown from '!!raw-loader!@/assets/SVGs/Man/Hair/Waves/Brown.svg';
 import manHairWavesOrange from '!!raw-loader!@/assets/SVGs/Man/Hair/Waves/Orange.svg';
+import manHairWavesBlack from '!!raw-loader!@/assets/SVGs/Man/Hair/Waves/Black.svg';
+
 
 export const svgs = {
   womanBodyBlack: {
