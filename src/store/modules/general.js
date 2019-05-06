@@ -1,4 +1,4 @@
-import darksky from '@/store/modules/darksky-APP_TARGET';
+import { darkskyForecast, darkskyTimeMachine } from '@/store/modules/darksky-APP_TARGET';
 import { vuexNestedMutations } from 'vuex-nested-mutations';
 
 export default {
@@ -8,19 +8,38 @@ export default {
         data: [{ temperature: 49 }],
       },
     },
+    settings: {
+    },
   },
   mutations: vuexNestedMutations({
     weather: {
-      setRaw(state, raw) {
-        state.weather = raw;
+      setRawTimeMachine(state, raw) {
+        state.weather.timemachine = raw;
+      },
+      setRawForecast(state, raw) {
+        state.weather.forecast = raw;
+      },
+    },
+    settings: {
+      setLocation(state, position) {
+        state.settings.position = position;
       },
     },
   }),
   actions: {
     refreshWeather(context) {
-      darksky((result) => {
-        context.commit('weather.setRaw', result);
+      darkskyTimeMachine((result) => {
+        context.commit('weather.setRawTimeMachine', result);
       });
+      darkskyForecast((result) => {
+        context.commit('weather.setRawForecast', result);
+      });
+    },
+    setCurrentLocation(context) {
+      navigator.geolocation.getCurrentPosition(
+        position => context.commit('settings.setLocation', position),
+        e => alert(`Can't get geolocation! ${e.message}`),
+      );
     },
   },
 };
