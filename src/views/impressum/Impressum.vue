@@ -1,9 +1,7 @@
 <template>
-  <div class="impressum-view-root">
-    <div ref="content" class="md-layout md-alignment-center-center">
-      <div class="md-layout-item">
-        <h1 class="md-title">Impressum</h1>
-      </div>
+  <div ref="content" class="md-layout md-alignment-center-center">
+    <div class="md-layout-item">
+      <h1 class="md-title">Impressum</h1>
     </div>
   </div>
 </template>
@@ -25,12 +23,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .impressum-view-root {
-    height: 100%;
+  div {
+    height: 100vh;
     width: 100%;
-
-    .md-layout {
-      height: 100%;
-    }
   }
 </style>

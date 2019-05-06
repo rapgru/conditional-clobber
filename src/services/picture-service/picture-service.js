@@ -1,14 +1,32 @@
 import convertXML from 'xml-js';
-import convertCss from 'css';
 import { getSVGString } from '@/services/picture-service/svgs';
-
-/*
-This Service merges all needed SVG images into one.
-It loads the pictures with a raw-loader and gives it uniq names
-
-If any sort of clothing is not needed the 'rendertPicture.svg();' is left blank.
-*/
+import jsonQ from 'jsonq';
 
 export function renderPrediction(prediction) {
-  return 0;
+  // predicition is an array with all SVGs names
+  prediction = ['womanBodyWhite', 'womanHairShortCurlyOrange', 'womanLowerbodyWarmThightskirtBlue', 'womanUpperbodyWarmCroptopBlue', 'womanJacketSpringautumnGrayblue', 'womanShoeRain'];
+
+  // This is the SVG all other will get merged in
+  let mainSVG = "<?xml version='1.0' encoding='utf-8'?> <svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 200 600' style='enable-background:new 0 0 200 600;' xml:space='preserve'>";
+
+  // The following forEach swaps all class names for unique class names
+  prediction.forEach((svgName) => {
+    let CurrentSvg = getSVGString(svgName);
+    let svgJSON = JSON.parse(convertXML.xml2json(CurrentSvg));
+    svgJSON = jsonQ(svgJSON);
+
+    const array = svgJSON.find('class').unique();
+    array.forEach((element) => {
+      const tmp = new RegExp(element, 'g');
+      CurrentSvg = CurrentSvg.replace(tmp, element + svgName);
+    });
+
+    // Next comes the code for merging the current SVG into the main svg
+    CurrentSvg.replace("<?xml version='1.0' encoding='utf-8'?> <svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 200 600' style='enable-background:new 0 0 200 600;' xml:space='preserve'>", '');
+    CurrentSvg.replace('</svg>', '');
+    mainSVG += CurrentSvg;
+  });
+
+  mainSVG += '</svg>';
+  return mainSVG;
 }

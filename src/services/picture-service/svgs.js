@@ -1,495 +1,660 @@
 /* eslint-disable import/no-webpack-loader-syntax */
-import womanBodyBlack from 'raw-loader!@/assets/SVGs/Woman/Body/Black.svg';
-import womanBodyLightYellow from 'raw-loader!@/assets/SVGs/Woman/Body/LightYellow.svg';
-import womanBodyWhite from 'raw-loader!@/assets/SVGs/Woman/Body/White.svg';
-import womanDressStraplessBlue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapless/Blue.svg';
-import womanDressStraplessRed from 'raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapless/Red.svg';
-import womanDressStraplessWhiteblue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapless/Whiteblue.svg';
-import womanDressStraplongBlack from 'raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Straplong/Black.svg';
-import womanDressStraplongPink from 'raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Straplong/Pink.svg';
-import womanDressStraplongViolet from 'raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Straplong/Violet.svg';
-import womanDressStrapshortBlack from 'raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapshort/Black.svg';
-import womanDressStrapshortBlue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapshort/Blue.svg';
-import womanDressStrapshortPink from 'raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapshort/Pink.svg';
-import womanDressStrapshortWhite from 'raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapshort/White.svg';
-import womanExtraBikiniBlack from 'raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Bikini/Black.svg';
-import womanExtraBikiniBlue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Bikini/Blue.svg';
-import womanExtraBikiniPink from 'raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Bikini/Pink.svg';
-import womanExtraCapBlue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Cap/Blue.svg';
-import womanExtraCapRed from 'raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Cap/Red.svg';
-import womanExtraCapViolet from 'raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Cap/Violet.svg';
-import womanExtraGloveBlack from 'raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Glove/Black.svg';
-import womanExtraGloveBlue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Glove/Blue.svg';
-import womanExtraGloveRed from 'raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Glove/Red.svg';
-import womanJacketSpringautumnBlack from 'raw-loader!@/assets/SVGs/Woman/Clothes/Jacket/Spring-Autumn/Black.svg';
-import womanJacketSpringautumnBlue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Jacket/Spring-Autumn/Blue.svg';
-import womanJacketSpringautumnGrayblue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Jacket/Spring-Autumn/Grayblue.svg';
-import womanJacketWinterBlue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Jacket/Winter/Blue.svg';
-import womanJacketWinterGreen from 'raw-loader!@/assets/SVGs/Woman/Clothes/Jacket/Winter/Green.svg';
-import womanLowerbodyColdTrousersBlue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Cold/Trousers/Blue.svg';
-import womanLowerbodyColdTrousersDarkblue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Cold/Trousers/Darkblue.svg';
-import womanLowerbodyColdTrousersDarkgreen from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Cold/Trousers/Darkgreen.svg';
-import womanLowerbodyColdTrousersLightblue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Cold/Trousers/Lightblue.svg';
-import womanLowerbodyColdTrousersWhite from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Cold/Trousers/White.svg';
-import womanLowerbodyWarmSkirtBlack from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Skirt/Black.svg';
-import womanLowerbodyWarmSkirtBlue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Skirt/Blue.svg';
-import womanLowerbodyWarmSkirtViolet from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Skirt/Violet.svg';
-import womanLowerbodyWarmThightskirtBlack from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Thightskirt/Black.svg';
-import womanLowerbodyWarmThightskirtBlue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Thightskirt/Blue.svg';
-import womanLowerbodyWarmThightskirtBrown from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Thightskirt/Brown.svg';
-import womanLowerbodyWarmTrousersBlack from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Trousers/Black.svg';
-import womanLowerbodyWarmTrousersBlue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Trousers/Blue.svg';
-import womanLowerbodyWarmTrousersGray from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Trousers/Gray.svg';
-import womanLowerbodyWarmTrousersLightBlue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Trousers/Lightblue.svg';
-import womanShoeEveryday from 'raw-loader!@/assets/SVGs/Woman/Clothes/Shoe/Everyday/Black.svg';
-import womanShoeRain from 'raw-loader!@/assets/SVGs/Woman/Clothes/Shoe/Rubberboots/Yellow.svg';
-import womanShoeWarm from 'raw-loader!@/assets/SVGs/Woman/Clothes/Shoe/Warm/Flat.svg';
-import womanShoeCold from 'raw-loader!@/assets/SVGs/Woman/Clothes/Shoe/Winter/Boots.svg';
-import womanUpperbodyColdCollartopBlack from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Collartop/Black.svg';
-import womanUpperbodyColdCollartopBlueviolet from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Collartop/Blueviolet.svg';
-import womanUpperbodyColdCollartopGray from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Collartop/Gray.svg';
-import womanUpperbodyColdCollartopWhite from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Collartop/White.svg';
-import womanUpperbodyColdPulloverPink from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Pullover/Pink.svg';
-import womanUpperbodyColdPulloverRed from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Pullover/Red.svg';
-import womanUpperbodyColdPulloverTurquoise from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Pullover/Turquoise.svg';
-import womanUpperbodyColdTopRed from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Top/Red.svg';
-import womanUpperbodyColdTopTurquoise from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Top/Turquoise.svg';
-import womanUpperbodyColdTopViolet from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Top/Violet.svg';
-import womanUpperbodyColdTopWhite from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Top/White.svg';
-import womanUpperbodyWarmCroptopBlue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Croptop/Blue.svg';
-import womanUpperbodyWarmCroptopDarkgreen from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Croptop/Darkgreen.svg';
-import womanUpperbodyWarmCroptopRed from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Croptop/Red.svg';
-import womanUpperbodyWarmStraplesstopGreen from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straplesstop/Green.svg';
-import womanUpperbodyWarmStraplesstopTurquoise from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straplesstop/Turquoise.svg';
-import womanUpperbodyWarmStraplesstopViolet from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straplesstop/Violet.svg';
-import womanUpperbodyStraptopLightblue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straptop/Lightblue.svg';
-import womanUpperbodyStraptopLightviolet from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straptop/Lightviolet.svg';
-import womanUpperbodyStraptopRed from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straptop/Red.svg';
-import womanUpperbodyStraptopWhitepink from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straptop/Whitepink.svg';
-import womanUpperbodyTshirtLightgray from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/T-shirt/Lightgray.svg';
-import womanUpperbodyTshirtLightblue from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/T-shirt/Lightblue.svg';
-import womanUpperbodyTshirtViolet from 'raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/T-shirt/Violet.svg';
-import womanHairLongFringeBlond from 'raw-loader!@/assets/SVGs/Woman/Hair/Long/Fringe/Blond.svg';
-import womanHairLongFringeBrown from 'raw-loader!@/assets/SVGs/Woman/Hair/Long/Fringe/Brown.svg';
-import womanHairLongFringeOrange from 'raw-loader!@/assets/SVGs/Woman/Hair/Long/Fringe/Orange.svg';
-import womanHairLongStraightBlond from 'raw-loader!@/assets/SVGs/Woman/Hair/Long/Straight/Blond.svg';
-import womanHairLongStraightBrown from 'raw-loader!@/assets/SVGs/Woman/Hair/Long/Straight/Brown.svg';
-import womanHairLongStraightOrange from 'raw-loader!@/assets/SVGs/Woman/Hair/Long/Straight/Orange.svg';
-import womanHairLongWavytBlond from 'raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Blond.svg';
-import womanHairLongWavytBrown from 'raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Brown.svg';
-import womanHairLongWavytOrange from 'raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Orange.svg';
-import womanHairPigtailBraidBlond from 'raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Braid/Blond.svg';
-import womanHairPigtailBraidBrown from 'raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Braid/Brown.svg';
-import womanHairPigtailBraidOrange from 'raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Braid/Orange.svg';
-import womanHairPigtailDuttBlond from 'raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Dutt/Blond.svg';
-import womanHairPigtailDuttBrown from 'raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Dutt/Brown.svg';
-import womanHairPigtailDuttOrange from 'raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Dutt/Orange.svg';
-import womanHairPigtailPigtailBlond from 'raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Pigtail/Blond.svg';
-import womanHairPigtailPigtailBrown from 'raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Pigtail/Brown.svg';
-import womanHairPigtailPigtailOrange from 'raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Pigtail/Orange.svg';
-import womanHairShortCurlyBlond from 'raw-loader!@/assets/SVGs/Woman/Hair/Short/Curly/Blond.svg';
-import womanHairShortCurlyBrown from 'raw-loader!@/assets/SVGs/Woman/Hair/Short/Curly/Brown.svg';
-import womanHairShortCurlyOrange from 'raw-loader!@/assets/SVGs/Woman/Hair/Short/Curly/Orange.svg';
-import womanHairShortFringeBlond from 'raw-loader!@/assets/SVGs/Woman/Hair/Short/Fringe/Blond.svg';
-import womanHairShortFringeBrown from 'raw-loader!@/assets/SVGs/Woman/Hair/Short/Fringe/Brown.svg';
-import womanHairShortFringeOrange from 'raw-loader!@/assets/SVGs/Woman/Hair/Short/Fringe/Orange.svg';
-import womanHairShortStraightBlond from 'raw-loader!@/assets/SVGs/Woman/Hair/Short/Straight/Blond.svg';
-import womanHairShortStraightBrown from 'raw-loader!@/assets/SVGs/Woman/Hair/Short/Straight/Brown.svg';
-import womanHairShortStraightOrange from 'raw-loader!@/assets/SVGs/Woman/Hair/Short/Straight/Orange.svg';
+import womanBodyBlack from '!!raw-loader!@/assets/SVGs/Woman/Body/Black.svg';
+import womanBodyLightYellow from '!!raw-loader!@/assets/SVGs/Woman/Body/LightYellow.svg';
+import womanBodyWhite from '!!raw-loader!@/assets/SVGs/Woman/Body/White.svg';
+import womanDressStraplessBlue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapless/Blue.svg';
+import womanDressStraplessRed from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapless/Red.svg';
+import womanDressStraplessWhiteblue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapless/Whiteblue.svg';
+import womanDressStraplongBlack from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Straplong/Black.svg';
+import womanDressStraplongPink from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Straplong/Pink.svg';
+import womanDressStraplongViolet from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Straplong/Violet.svg';
+import womanDressStrapshortBlack from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapshort/Black.svg';
+import womanDressStrapshortBlue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapshort/Blue.svg';
+import womanDressStrapshortPink from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapshort/Pink.svg';
+import womanDressStrapshortWhite from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapshort/White.svg';
+import womanExtraBikiniBlack from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Bikini/Black.svg';
+import womanExtraBikiniBlue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Bikini/Blue.svg';
+import womanExtraBikiniPink from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Bikini/Pink.svg';
+import womanExtraCapBlue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Cap/Blue.svg';
+import womanExtraCapRed from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Cap/Red.svg';
+import womanExtraCapViolet from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Cap/Violet.svg';
+import womanExtraGloveBlack from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Glove/Black.svg';
+import womanExtraGloveBlue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Glove/Blue.svg';
+import womanExtraGloveRed from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Extras/Glove/Red.svg';
+import womanJacketSpringautumnBlack from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Jacket/Spring-Autumn/Black.svg';
+import womanJacketSpringautumnGrayblue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Jacket/Spring-Autumn/Grayblue.svg';
+import womanJacketWinterBlue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Jacket/Winter/Blue.svg';
+import womanJacketWinterGreen from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Jacket/Winter/Green.svg';
+import womanLowerbodyColdTrousersBlue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Cold/Trousers/Blue.svg';
+import womanLowerbodyColdTrousersDarkblue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Cold/Trousers/Darkblue.svg';
+import womanLowerbodyColdTrousersDarkgreen from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Cold/Trousers/Darkgreen.svg';
+import womanLowerbodyColdTrousersLightblue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Cold/Trousers/Lightblue.svg';
+import womanLowerbodyColdTrousersWhite from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Cold/Trousers/White.svg';
+import womanLowerbodyWarmSkirtBlack from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Skirt/Black.svg';
+import womanLowerbodyWarmSkirtBlue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Skirt/Blue.svg';
+import womanLowerbodyWarmSkirtViolet from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Skirt/Violet.svg';
+import womanLowerbodyWarmThightskirtBlack from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Thightskirt/Black.svg';
+import womanLowerbodyWarmThightskirtBlue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Thightskirt/Blue.svg';
+import womanLowerbodyWarmThightskirtBrown from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Thightskirt/Brown.svg';
+import womanLowerbodyWarmTrousersBlack from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Trousers/Black.svg';
+import womanLowerbodyWarmTrousersBlue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Trousers/Blue.svg';
+import womanLowerbodyWarmTrousersGray from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Trousers/Gray.svg';
+import womanLowerbodyWarmTrousersLightBlue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Lowerbody/Warm/Trousers/Lightblue.svg';
+import womanShoeEveryday from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Shoe/Everyday/Black.svg';
+import womanShoeRain from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Shoe/Rubberboots/Yellow.svg';
+import womanShoeWarm from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Shoe/Warm/Flat.svg';
+import womanShoeCold from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Shoe/Winter/Boots.svg';
+import womanUpperbodyColdCollartopBlack from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Collartop/Black.svg';
+import womanUpperbodyColdCollartopBlueviolet from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Collartop/Blueviolet.svg';
+import womanUpperbodyColdCollartopGray from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Collartop/Gray.svg';
+import womanUpperbodyColdCollartopWhite from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Collartop/White.svg';
+import womanUpperbodyColdPulloverPink from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Pullover/Pink.svg';
+import womanUpperbodyColdPulloverRed from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Pullover/Red.svg';
+import womanUpperbodyColdPulloverTurquoise from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Pullover/Turquoise.svg';
+import womanUpperbodyColdTopRed from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Top/Red.svg';
+import womanUpperbodyColdTopTurquoise from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Top/Turquoise.svg';
+import womanUpperbodyColdTopViolet from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Top/Violet.svg';
+import womanUpperbodyColdTopWhite from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Cold/Top/White.svg';
+import womanUpperbodyWarmCroptopBlue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Croptop/Blue.svg';
+import womanUpperbodyWarmCroptopDarkgreen from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Croptop/Darkgreen.svg';
+import womanUpperbodyWarmCroptopRed from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Croptop/Red.svg';
+import womanUpperbodyWarmStraplesstopGreen from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straplesstop/Green.svg';
+import womanUpperbodyWarmStraplesstopTurquoise from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straplesstop/Turquoise.svg';
+import womanUpperbodyWarmStraplesstopViolet from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straplesstop/Violet.svg';
+import womanUpperbodyStraptopLightblue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straptop/Lightblue.svg';
+import womanUpperbodyStraptopLightviolet from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straptop/Lightviolet.svg';
+import womanUpperbodyStraptopRed from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straptop/Red.svg';
+import womanUpperbodyStraptopWhitepink from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straptop/Whitepink.svg';
+import womanUpperbodyTshirtLightgray from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/T-shirt/Lightgray.svg';
+import womanUpperbodyTshirtLightblue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/T-shirt/Lightblue.svg';
+import womanUpperbodyTshirtViolet from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/T-shirt/Violet.svg';
+import womanHairLongFringeBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Fringe/Blond.svg';
+import womanHairLongFringeBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Fringe/Brown.svg';
+import womanHairLongFringeOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Fringe/Orange.svg';
+import womanHairLongStraightBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Straight/Blond.svg';
+import womanHairLongStraightBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Straight/Brown.svg';
+import womanHairLongStraightOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Straight/Orange.svg';
+import womanHairLongWavytBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Blond.svg';
+import womanHairLongWavytBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Brown.svg';
+import womanHairLongWavytOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Orange.svg';
+import womanHairPigtailBraidBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Braid/Blond.svg';
+import womanHairPigtailBraidBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Braid/Brown.svg';
+import womanHairPigtailBraidOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Braid/Orange.svg';
+import womanHairPigtailDuttBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Dutt/Blond.svg';
+import womanHairPigtailDuttBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Dutt/Brown.svg';
+import womanHairPigtailDuttOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Dutt/Orange.svg';
+import womanHairPigtailPigtailBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Pigtail/Blond.svg';
+import womanHairPigtailPigtailBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Pigtail/Brown.svg';
+import womanHairPigtailPigtailOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Pigtail/Orange.svg';
+import womanHairShortCurlyBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Curly/Blond.svg';
+import womanHairShortCurlyBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Curly/Brown.svg';
+import womanHairShortCurlyOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Curly/Orange.svg';
+import womanHairShortFringeBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Fringe/Blond.svg';
+import womanHairShortFringeBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Fringe/Brown.svg';
+import womanHairShortFringeOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Fringe/Orange.svg';
+import womanHairShortStraightBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Straight/Blond.svg';
+import womanHairShortStraightBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Straight/Brown.svg';
+import womanHairShortStraightOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Straight/Orange.svg';
 
-const svgs = {
+export const svgs = {
   womanBodyBlack: {
     type: 'body',
+    category: 'body',
     svg: womanBodyBlack,
   },
   womanBodyLightYellow: {
     type: 'body',
+    category: 'body',
     svg: womanBodyLightYellow,
   },
   womanBodyWhite: {
     type: 'body',
+    category: 'body',
     svg: womanBodyWhite,
   },
   womanDressStraplessBlue: {
-    type: 'Dress',
+    type: 'dressStrapless',
+    category: 'fullbody',
+    percentage: 10,
     svg: womanDressStraplessBlue,
   },
   womanDressStraplessRed: {
-    type: 'Dress',
+    type: 'dressStrapless',
+    category: 'fullbody',
+    percentage: 10,
     svg: womanDressStraplessRed,
   },
   womanDressStraplessWhiteblue: {
-    type: 'Dress',
+    type: 'dressStrapless',
+    category: 'fullbody',
+    percentage: 10,
     svg: womanDressStraplessWhiteblue,
   },
   womanDressStraplongBlack: {
-    type: 'Dress',
+    type: 'dressStraplong',
+    category: 'fullbody',
+    percentage: 35,
     svg: womanDressStraplongBlack,
   },
   womanDressStraplongPink: {
-    type: 'Dress',
+    type: 'dressStraplong',
+    category: 'fullbody',
+    percentage: 35,
     svg: womanDressStraplongPink,
   },
   womanDressStraplongViolet: {
-    type: 'Dress',
+    type: 'dressStraplong',
+    category: 'fullbody',
+    percentage: 35,
     svg: womanDressStraplongViolet,
   },
   womanDressStrapshortBlack: {
-    type: 'Dress',
+    type: 'dressStrapshort',
+    category: 'fullbody',
+    percentage: 20,
     svg: womanDressStrapshortBlack,
   },
   womanDressStrapshortBlue: {
-    type: 'Dress',
+    type: 'dressStrapshort',
+    category: 'fullbody',
+    percentage: 20,
     svg: womanDressStrapshortBlue,
   },
   womanDressStrapshortPink: {
-    type: 'Dress',
+    type: 'dressStrapshort',
+    category: 'fullbody',
+    percentage: 20,
     svg: womanDressStrapshortPink,
   },
   womanDressStrapshortWhite: {
-    type: 'Dress',
+    type: 'dressStrapshort',
+    category: 'fullbody',
+    percentage: 20,
     svg: womanDressStrapshortWhite,
   },
   womanExtraBikiniBlack: {
-    type: 'Bikini',
+    type: 'bikini',
+    category: 'fullbody',
+    percentage: 0,
     svg: womanExtraBikiniBlack,
   },
   womanExtraBikiniBlue: {
-    type: 'Bikini',
+    type: 'bikini',
+    category: 'fullbody',
+    percentage: 0,
     svg: womanExtraBikiniBlue,
   },
   womanExtraBikiniPink: {
-    type: 'Bikini',
+    type: 'bikini',
+    category: 'fullbody',
+    percentage: 0,
     svg: womanExtraBikiniPink,
   },
   womanExtraCapBlue: {
-    type: 'Cap',
+    type: 'cap',
+    category: 'headgear',
+    percentage: 100,
     svg: womanExtraCapBlue,
   },
   womanExtraCapRed: {
-    type: 'Cap',
+    type: 'cap',
+    category: 'headgear',
+    percentage: 100,
     svg: womanExtraCapRed,
   },
   womanExtraCapViolet: {
-    type: 'Cap',
+    type: 'cap',
+    category: 'headgear',
+    percentage: 100,
     svg: womanExtraCapViolet,
   },
   womanExtraGloveBlack: {
-    type: 'Gloves',
+    type: 'gloves',
+    category: 'gloves',
+    percentage: 100,
     svg: womanExtraGloveBlack,
   },
   womanExtraGloveBlue: {
-    type: 'Gloves',
+    type: 'gloves',
+    category: 'gloves',
+    percentage: 100,
     svg: womanExtraGloveBlue,
   },
   womanExtraGloveRed: {
-    type: 'Gloves',
+    type: 'gloves',
+    category: 'gloves',
+    percentage: 100,
     svg: womanExtraGloveRed,
   },
   womanJacketSpringautumnBlack: {
-    type: 'Jacket for Spring and Autumn',
+    type: 'jacketSpringAutumn',
+    category: 'jacket',
+    percentage: 40,
     svg: womanJacketSpringautumnBlack,
   },
-  womanJacketSpringautumnBlue: {
-    type: 'Jacket for Spring and Autumn',
-    svg: womanJacketSpringautumnBlue,
-  },
   womanJacketSpringautumnGrayblue: {
-    type: 'Jacket for Spring and Autumn',
+    type: 'jacketSpringAutumn',
+    category: 'jacket',
+    percentage: 40,
     svg: womanJacketSpringautumnGrayblue,
   },
   womanJacketWinterBlue: {
-    type: 'Jacket for Winter',
+    type: 'jacketWinter',
+    category: 'jacket',
+    percentage: 100,
     svg: womanJacketWinterBlue,
   },
   womanJacketWinterGreen: {
-    type: 'for',
+    type: 'jacketWinter',
+    category: 'jacket',
+    percentage: 100,
     svg: womanJacketWinterGreen,
   },
   womanLowerbodyColdTrousersBlue: {
-    type: 'Trousers',
+    type: 'trousersCold',
+    category: 'lowerbody',
+    percentage: 75,
     svg: womanLowerbodyColdTrousersBlue,
   },
   womanLowerbodyColdTrousersDarkblue: {
-    type: 'Trousers',
+    type: 'trousersCold',
+    category: 'lowerbody',
+    percentage: 75,
     svg: womanLowerbodyColdTrousersDarkblue,
   },
   womanLowerbodyColdTrousersDarkgreen: {
-    type: 'Trousers',
+    type: 'trousersCold',
+    category: 'lowerbody',
+    percentage: 75,
     svg: womanLowerbodyColdTrousersDarkgreen,
   },
   womanLowerbodyColdTrousersLightblue: {
-    type: 'Trousers',
+    type: 'trousersCold',
+    category: 'lowerbody',
+    percentage: 75,
     svg: womanLowerbodyColdTrousersLightblue,
   },
   womanLowerbodyColdTrousersWhite: {
-    type: 'Trousers',
+    type: 'trousersCold',
+    category: 'lowerbody',
+    percentage: 75,
     svg: womanLowerbodyColdTrousersWhite,
   },
   womanLowerbodyWarmSkirtBlack: {
-    type: 'Skirt',
+    type: 'skirt',
+    category: 'lowerbody',
+    percentage: 15,
     svg: womanLowerbodyWarmSkirtBlack,
   },
   womanLowerbodyWarmSkirtBlue: {
-    type: 'Skirt',
+    type: 'skirt',
+    category: 'lowerbody',
+    percentage: 15,
     svg: womanLowerbodyWarmSkirtBlue,
   },
   womanLowerbodyWarmSkirtViolet: {
-    type: 'Skirt',
+    type: 'skirt',
+    category: 'lowerbody',
+    percentage: 15,
     svg: womanLowerbodyWarmSkirtViolet,
   },
   womanLowerbodyWarmThightskirtBlack: {
-    type: 'Thightskirt',
+    type: 'thightskirt',
+    category: 'lowerbody',
+    percentage: 15,
     svg: womanLowerbodyWarmThightskirtBlack,
   },
   womanLowerbodyWarmThightskirtBlue: {
-    type: 'Thightskirt',
+    type: 'thightskirt',
+    category: 'lowerbody',
+    percentage: 15,
     svg: womanLowerbodyWarmThightskirtBlue,
   },
   womanLowerbodyWarmThightskirtBrown: {
-    type: 'Thightskirt',
+    type: 'thightskirt',
+    category: 'lowerbody',
+    percentage: 15,
     svg: womanLowerbodyWarmThightskirtBrown,
   },
   womanLowerbodyWarmTrousersBlack: {
-    type: 'Trousers',
+    type: 'trousersWarm',
+    category: 'lowerbody',
+    percentage: 15,
     svg: womanLowerbodyWarmTrousersBlack,
   },
   womanLowerbodyWarmTrousersBlue: {
-    type: 'Trousers',
+    type: 'trousersWarm',
+    category: 'lowerbody',
+    percentage: 15,
     svg: womanLowerbodyWarmTrousersBlue,
   },
   womanLowerbodyWarmTrousersGray: {
-    type: 'Trousers',
+    type: 'trousersWarm',
+    category: 'lowerbody',
+    percentage: 15,
     svg: womanLowerbodyWarmTrousersGray,
   },
   womanLowerbodyWarmTrousersLightBlue: {
-    type: 'Trousers',
+    type: 'trousersWarm',
+    category: 'lowerbody',
+    percentage: 15,
     svg: womanLowerbodyWarmTrousersLightBlue,
   },
   womanShoeEveryday: {
-    type: 'Shoes',
+    type: 'shoesEverday',
+    category: 'shoes',
+    percentage: 50,
     svg: womanShoeEveryday,
   },
   womanShoeRain: {
-    type: 'Rubberboots',
+    type: 'rubberboots',
+    category: 'shoes',
+    percentage: 0,
     svg: womanShoeRain,
   },
   womanShoeWarm: {
-    type: 'Cool shoes',
+    type: 'shoesWarm',
+    category: 'shoes',
+    percentage: 20,
     svg: womanShoeWarm,
   },
   womanShoeCold: {
-    type: 'Warming shoes',
+    type: 'shoesCold',
+    category: 'shoes',
+    percentage: 80,
     svg: womanShoeCold,
   },
   womanUpperbodyColdCollartopBlack: {
-    type: 'Collartop',
+    type: 'collartop',
+    category: 'upperbody',
+    percentage: 70,
     svg: womanUpperbodyColdCollartopBlack,
   },
   womanUpperbodyColdCollartopBlueviolet: {
-    type: 'Collartop',
+    type: 'collartop',
+    category: 'upperbody',
+    percentage: 70,
     svg: womanUpperbodyColdCollartopBlueviolet,
   },
   womanUpperbodyColdCollartopGray: {
-    type: 'Collartop',
+    type: 'collartop',
+    category: 'upperbody',
+    percentage: 70,
     svg: womanUpperbodyColdCollartopGray,
   },
   womanUpperbodyColdCollartopWhite: {
-    type: 'Collartop',
+    type: 'collartop',
+    category: 'upperbody',
+    percentage: 70,
     svg: womanUpperbodyColdCollartopWhite,
   },
   womanUpperbodyColdPulloverPink: {
-    type: 'Pullover',
+    type: 'pullover',
+    category: 'upperbody',
+    percentage: 65,
     svg: womanUpperbodyColdPulloverPink,
   },
   womanUpperbodyColdPulloverRed: {
-    type: 'Pullover',
+    type: 'pullover',
+    category: 'upperbody',
+    percentage: 65,
     svg: womanUpperbodyColdPulloverRed,
   },
   womanUpperbodyColdPulloverTurquoise: {
-    type: 'Pullover',
+    type: 'pullover',
+    category: 'upperbody',
+    percentage: 65,
     svg: womanUpperbodyColdPulloverTurquoise,
   },
   womanUpperbodyColdTopRed: {
-    type: 'Top',
+    type: 'top',
+    category: 'upperbody',
+    percentage: 50,
     svg: womanUpperbodyColdTopRed,
   },
   womanUpperbodyColdTopTurquoise: {
-    type: 'Top',
+    type: 'top',
+    category: 'upperbody',
+    percentage: 50,
     svg: womanUpperbodyColdTopTurquoise,
   },
   womanUpperbodyColdTopViolet: {
-    type: 'Top',
+    type: 'top',
+    category: 'upperbody',
+    percentage: 50,
     svg: womanUpperbodyColdTopViolet,
   },
   womanUpperbodyColdTopWhite: {
-    type: 'Top',
+    type: 'top',
+    category: 'upperbody',
+    percentage: 50,
     svg: womanUpperbodyColdTopWhite,
   },
   womanUpperbodyWarmCroptopBlue: {
-    type: 'Croptop',
+    type: 'croptop',
+    category: 'upperbody',
+    percentage: 20,
     svg: womanUpperbodyWarmCroptopBlue,
   },
   womanUpperbodyWarmCroptopDarkgreen: {
-    type: 'Croptop',
+    type: 'croptop',
+    category: 'upperbody',
+    percentage: 20,
     svg: womanUpperbodyWarmCroptopDarkgreen,
   },
   womanUpperbodyWarmCroptopRed: {
-    type: 'Croptop',
+    type: 'croptop',
+    category: 'upperbody',
+    percentage: 20,
     svg: womanUpperbodyWarmCroptopRed,
   },
   womanUpperbodyWarmStraplesstopGreen: {
-    type: 'Straplesstop',
+    type: 'straplesstop',
+    category: 'upperbody',
+    percentage: 10,
     svg: womanUpperbodyWarmStraplesstopGreen,
   },
   womanUpperbodyWarmStraplesstopTurquoise: {
-    type: 'Straplesstop',
+    type: 'straplesstop',
+    category: 'upperbody',
+    percentage: 10,
     svg: womanUpperbodyWarmStraplesstopTurquoise,
   },
   womanUpperbodyWarmStraplesstopViolet: {
-    type: 'Straplesstop',
+    type: 'straplesstop',
+    category: 'upperbody',
+    percentage: 10,
     svg: womanUpperbodyWarmStraplesstopViolet,
   },
   womanUpperbodyStraptopLightblue: {
-    type: 'Straptop',
+    type: 'straptop',
+    category: 'upperbody',
+    percentage: 15,
     svg: womanUpperbodyStraptopLightblue,
   },
   womanUpperbodyStraptopLightviolet: {
-    type: 'Straptop',
+    type: 'straptop',
+    category: 'upperbody',
+    percentage: 15,
     svg: womanUpperbodyStraptopLightviolet,
   },
   womanUpperbodyStraptopRed: {
-    type: 'Straptop',
+    type: 'straptop',
+    category: 'upperbody',
+    percentage: 15,
     svg: womanUpperbodyStraptopRed,
   },
   womanUpperbodyStraptopWhitepink: {
-    type: 'Straptop',
+    type: 'straptop',
+    category: 'upperbody',
+    percentage: 15,
     svg: womanUpperbodyStraptopWhitepink,
   },
   womanUpperbodyTshirtLightgray: {
-    type: 'T-Shirt',
+    type: 't-shirt',
+    category: 'upperbody',
+    percentage: 25,
     svg: womanUpperbodyTshirtLightgray,
   },
   womanUpperbodyTshirtLightblue: {
-    type: 'T-Shirt',
+    type: 't-shirt',
+    category: 'upperbody',
+    percentage: 25,
     svg: womanUpperbodyTshirtLightblue,
   },
   womanUpperbodyTshirtViolet: {
-    type: 'T-Shirt',
+    type: 't-shirt',
+    category: 'upperbody',
+    percentage: 25,
     svg: womanUpperbodyTshirtViolet,
   },
   womanHairLongFringeBlond: {
-    type: 'long fringe hair',
+    type: 'longFringeHair',
+    category: 'hair',
     svg: womanHairLongFringeBlond,
   },
   womanHairLongFringeBrown: {
-    type: 'long fringe hair',
+    type: 'longFringeHair',
+    category: 'hair',
     svg: womanHairLongFringeBrown,
   },
   womanHairLongFringeOrange: {
-    type: 'long fringe hair',
+    type: 'longFringeHair',
+    category: 'hair',
     svg: womanHairLongFringeOrange,
   },
   womanHairLongStraightBlond: {
-    type: 'long straight hair',
+    type: 'longStraightHair',
+    category: 'hair',
     svg: womanHairLongStraightBlond,
   },
   womanHairLongStraightBrown: {
-    type: 'long straight hair',
+    type: 'longStraightHair',
+    category: 'hair',
     svg: womanHairLongStraightBrown,
   },
   womanHairLongStraightOrange: {
-    type: 'long straight hair',
+    type: 'longStraightHair',
+    category: 'hair',
     svg: womanHairLongStraightOrange,
   },
   womanHairLongWavytBlond: {
-    type: 'long wavyt hair',
+    type: 'longWavytHair',
+    category: 'hair',
     svg: womanHairLongWavytBlond,
   },
   womanHairLongWavytBrown: {
-    type: 'long wavyt hair',
+    type: 'longWavytHair',
+    category: 'hair',
     svg: womanHairLongWavytBrown,
   },
   womanHairLongWavytOrange: {
-    type: 'long wavyt hair',
+    type: 'longWavytHair',
+    category: 'hair',
     svg: womanHairLongWavytOrange,
   },
   womanHairPigtailBraidBlond: {
-    type: 'Braid',
+    type: 'braid',
+    category: 'hair',
     svg: womanHairPigtailBraidBlond,
   },
   womanHairPigtailBraidBrown: {
-    type: 'Braid',
+    type: 'braid',
+    category: 'hair',
     svg: womanHairPigtailBraidBrown,
   },
   womanHairPigtailBraidOrange: {
-    type: 'Braid',
+    type: 'braid',
+    category: 'hair',
     svg: womanHairPigtailBraidOrange,
   },
   womanHairPigtailDuttBlond: {
-    type: 'Dutt',
+    type: 'dutt',
+    category: 'hair',
     svg: womanHairPigtailDuttBlond,
   },
   womanHairPigtailDuttBrown: {
-    type: 'Dutt',
+    type: 'dutt',
+    category: 'hair',
     svg: womanHairPigtailDuttBrown,
   },
   womanHairPigtailDuttOrange: {
-    type: 'Dutt',
+    type: 'dutt',
+    category: 'hair',
     svg: womanHairPigtailDuttOrange,
   },
   womanHairPigtailPigtailBlond: {
-    type: 'Pigtail',
+    type: 'pigtail',
+    category: 'hair',
     svg: womanHairPigtailPigtailBlond,
   },
   womanHairPigtailPigtailBrown: {
-    type: 'Pigtail',
+    type: 'pigtail',
+    category: 'hair',
     svg: womanHairPigtailPigtailBrown,
   },
   womanHairPigtailPigtailOrange: {
-    type: 'Pigtail',
+    type: 'pigtail',
+    category: 'hair',
     svg: womanHairPigtailPigtailOrange,
   },
   womanHairShortCurlyBlond: {
-    type: 'short curly hair',
+    type: 'shortCurlyHair',
+    category: 'hair',
     svg: womanHairShortCurlyBlond,
   },
   womanHairShortCurlyBrown: {
-    type: 'short curly hair',
+    type: 'shortCurlyHair',
+    category: 'hair',
     svg: womanHairShortCurlyBrown,
   },
   womanHairShortCurlyOrange: {
-    type: 'short curly hair',
+    type: 'shortCurlyHair',
+    category: 'hair',
     svg: womanHairShortCurlyOrange,
   },
   womanHairShortFringeBlond: {
-    type: 'short fringe hair',
+    type: 'shortFringeHair',
+    category: 'hair',
     svg: womanHairShortFringeBlond,
   },
   womanHairShortFringeBrown: {
-    type: 'short fringe hair',
+    type: 'shortFringeHair',
+    category: 'hair',
     svg: womanHairShortFringeBrown,
   },
   womanHairShortFringeOrange: {
-    type: 'short fringe hair',
+    type: 'shortFringeHair',
+    category: 'hair',
     svg: womanHairShortFringeOrange,
   },
   womanHairShortStraightBlond: {
-    type: 'short straight hair',
+    type: 'shortStraightHair',
+    category: 'hair',
     svg: womanHairShortStraightBlond,
   },
   womanHairShortStraightBrown: {
-    type: 'short straight hair',
+    type: 'shortStraightHair',
+    category: 'hair',
     svg: womanHairShortStraightBrown,
   },
   womanHairShortStraightOrange: {
-    type: 'short straight hair',
+    type: 'shortStraightHair',
+    category: 'hair',
     svg: womanHairShortStraightOrange,
   },
 };
 
 export function getSVGString(name) {
   return svgs[name].svg;
+}
+
+export function getSVGType(name) {
+  return svgs[name].type;
+}
+
+export function getSVGCategory(name) {
+  return svgs[name].category;
 }
 
 export default svgs;

@@ -1,4 +1,5 @@
-import test from '!!raw-loader!@/assets/test.svg';
+import test from '!!raw-loader!@/assets/SVGs/Woman/Body/White.svg';
+import { renderPrediction } from '@/services/picture-service/picture-service';
 
 export default {
   state: {
@@ -11,11 +12,14 @@ export default {
     ],
   },
   mutations: {
-
+    setPic(state, pic) {
+      state.renderedPicture.svg = pic;
+    },
   },
   actions: {
     predictToday(context) {
-
+      const picture = renderPrediction(null);
+      context.commit('setPic', picture);
     },
   },
 };
