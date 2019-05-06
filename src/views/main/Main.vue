@@ -122,7 +122,7 @@ export default {
     hammertime.on('swipeleft', () => {
       this.$router.push('/travel');
     });
-    this.$store.dispatch('loadLocation');
+    this.$store.dispatch('refreshWeather');
   },
   methods: {
     update() {

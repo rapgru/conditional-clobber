@@ -20,10 +20,15 @@ export default {
     },
     settings: {
       position: {
-        coords: {
-          longitude: 48.477231,
-          latitude: 15.673781,
-        },
+        longitude: 48.477231,
+        latitude: 15.673781,
+      },
+      unit: 'fahrenheit',
+      avatar: {
+        hair: 'Black',
+        hairType: 'Male/First',
+        body: 'White',
+        gender: "Male",
       },
     },
   },
@@ -37,15 +42,44 @@ export default {
       },
     },
     settings: {
-      setLocation(state, val) {
-        state.settings.position.coords.latitude = val.coords.latitude;
-        state.settings.position.coords.longitude = val.coords.longitude;
+      position: {
+        setLatitude(state, lat) {
+          state.settings.position.latitude = lat;
+        },
+        setLongitude(state, long) {
+          state.settings.position.longitude = long;
+        },
+      },
+      setUnit(state, unit) {
+        if (unit === 'fahrenheit' || unit === 'celcius') {
+          state.settings.unit = unit;
+        }
+      },
+      avatar: {
+        setHair(state, hair) {
+          if (hair === 'Black' || hair === 'Brown' || hair === 'Orange' || hair === 'Blond') {
+            state.settings.avatar.hair = hair;
+          }
+        },
+        setHairType(state, hairType) {
+          state.settings.avatar.hairType = hairType;
+        },
+        setBody(state, body) {
+          if (body === 'Black' || body === 'White' || body === 'Yellow') {
+            state.settings.avatar.body = body;
+          }
+        },
+        setGender(state, gender) {
+          if (gender === 'Female' || gender === 'Male') {
+            state.settings.avatar.gender = gender;
+          }
+        },
       },
     },
   }),
   actions: {
     refreshWeather(context) {
-      const { coords } = context.state.settings.position;
+      const coords = context.state.settings.position;
       const locationString = `${coords.latitude},${coords.longitude}`;
       darkskyTimeMachine((result) => {
         context.commit('weather.setRawTimeMachine', result);
@@ -58,10 +92,13 @@ export default {
         context.commit('weather.setRawForecast', result);
       }, locationString);
     },
-    loadLocation(context) {
+    loadPosition(context) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          context.commit('settings.setLocation', position);
+          if (position !== {} && position !== undefined) {
+            context.commit('settings.position.setLongitude', position.coords.longitude);
+            context.commit('settings.position.setLatitude', position.coords.latitude);
+          }
           context.dispatch('refreshWeather');
         },
         e => alert(`Can't get geolocation! ${e.message}`),
