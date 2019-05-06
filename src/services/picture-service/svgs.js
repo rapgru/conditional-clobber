@@ -66,7 +66,6 @@ import womanUpperbodyStraptopLightviolet from '!!raw-loader!@/assets/SVGs/Woman/
 import womanUpperbodyStraptopRed from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straptop/Red.svg';
 import womanUpperbodyStraptopWhitepink from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/Straptop/Whitepink.svg';
 import womanUpperbodyTshirtLightgray from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/T-shirt/Lightgray.svg';
-import womanUpperbodyTshirtLightblue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/T-shirt/Lightblue.svg';
 import womanUpperbodyTshirtViolet from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Upperbody/Warm/T-shirt/Violet.svg';
 import womanHairLongFringeBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Fringe/Blond.svg';
 import womanHairLongFringeBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Fringe/Brown.svg';
@@ -95,6 +94,87 @@ import womanHairShortFringeOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Sh
 import womanHairShortStraightBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Straight/Blond.svg';
 import womanHairShortStraightBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Straight/Brown.svg';
 import womanHairShortStraightOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Short/Straight/Orange.svg';
+
+import weatherPredictionHail from '!!raw-loader!@/assets/SVGs/Weather/Prediction/Hail.svg';
+import weatherPredictionRain from '!!raw-loader!@/assets/SVGs/Weather/Prediction/Rain.svg';
+import weatherPredictionSnow from '!!raw-loader!@/assets/SVGs/Weather/Prediction/Snow.svg';
+import weatherPredictionSun from '!!raw-loader!@/assets/SVGs/Weather/Prediction/Sun.svg';
+import weatherPredictionThunderstorm from '!!raw-loader!@/assets/SVGs/Weather/Prediction/Thunderstorm.svg';
+import weatherToolsCap from '!!raw-loader!@/assets/SVGs/Weather/Tools/Cap.svg';
+import weatherToolsGloves from '!!raw-loader!@/assets/SVGs/Weather/Tools/Gloves.svg';
+import weatherToolsSuncreme from '!!raw-loader!@/assets/SVGs/Weather/Tools/Suncreme.svg';
+import weatherToolsUmbrella from '!!raw-loader!@/assets/SVGs/Weather/Tools/Umbrella.svg';
+
+import iconsBodyColorBlack from '!!raw-loader!@/assets/SVGs/Icons/Body_Color/Black.svg';
+import iconsBodyColorWhite from '!!raw-loader!@/assets/SVGs/Icons/Body_Color/White.svg';
+import iconsBodyColorYellow from '!!raw-loader!@/assets/SVGs/Icons/Body_Color/Yellow.svg';
+import iconsGenderMan from '!!raw-loader!@/assets/SVGs/Icons/Gender/Man_Symbol.svg';
+import iconsGenderWoman from '!!raw-loader!@/assets/SVGs/Icons/Gender/Woman_Symbol.svg';
+import iconsHairColorBlond from '!!raw-loader!@/assets/SVGs/Icons/Hair_Color/Blond.svg';
+import iconsHairColorBrown from '!!raw-loader!@/assets/SVGs/Icons/Hair_Color/Brown.svg';
+import iconsHairColorOrange from '!!raw-loader!@/assets/SVGs/Icons/Hair_Color/Orange.svg';
+
+import manBodyWhite from '!!raw-loader!@/assets/SVGs/Man/Body/White.svg';
+import manBodyYellow from '!!raw-loader!@/assets/SVGs/Man/Body/Yellow.svg';
+import manBodyBlack from '!!raw-loader!@/assets/SVGs/Man/Body/Black.svg';
+import manExtraTrunkBlue from '!!raw-loader!@/assets/SVGs/Man/Clothes/Extra/Bath/Blue.svg';
+import manExtraTrunkGray from '!!raw-loader!@/assets/SVGs/Man/Clothes/Extra/Bath/Gray.svg';
+import manExtraCapBlue from '!!raw-loader!@/assets/SVGs/Man/Clothes/Extra/Cap/Blue.svg';
+import manExtraCapViolet from '!!raw-loader!@/assets/SVGs/Man/Clothes/Extra/Cap/Violet.svg';
+import manExtraGloveViolet from '!!raw-loader!@/assets/SVGs/Man/Clothes/Extra/Glove/Violet.svg';
+import manExtraGloveBlue from '!!raw-loader!@/assets/SVGs/Man/Clothes/Extra/Glove/Blue.svg';
+import manExtraJacketBlue from '!!raw-loader!@/assets/SVGs/Man/Clothes/Extra/West/Blue.svg'; // Actually Jacket
+import manExtraJacketWhite from '!!raw-loader!@/assets/SVGs/Man/Clothes/Extra/West/White.svg'; // Actually Jacket
+import manExtraWinterjacketBlack from '!!raw-loader!@/assets/SVGs/Man/Clothes/Extra/Winterjacket/Black.svg';
+import manExtraWinterjacketBlue from '!!raw-loader!@/assets/SVGs/Man/Clothes/Extra/Winterjacket/Blue.svg';
+import manLowerbodyColdBlack from '!!raw-loader!@/assets/SVGs/Man/Clothes/Lower Body/Cold/Black.svg';
+import manLowerbodyColdBlue from '!!raw-loader!@/assets/SVGs/Man/Clothes/Lower Body/Cold/Blue.svg';
+import manLowerbodyColdGray from '!!raw-loader!@/assets/SVGs/Man/Clothes/Lower Body/Cold/Gray.svg';
+import manLowerbodyColdGreen from '!!raw-loader!@/assets/SVGs/Man/Clothes/Lower Body/Cold/Green.svg';
+import manLowerbodyWarmMiddleBlack from '!!raw-loader!@/assets/SVGs/Man/Clothes/Lower Body/Warm/Middle/Black.svg';
+import manLowerbodyWarmMiddleBlue from '!!raw-loader!@/assets/SVGs/Man/Clothes/Lower Body/Warm/Middle/Blue.svg';
+import manLowerbodyWarmMiddleGray from '!!raw-loader!@/assets/SVGs/Man/Clothes/Lower Body/Warm/Middle/Gray.svg';
+import manLowerbodyWarmShortBlack from '!!raw-loader!@/assets/SVGs/Man/Clothes/Lower Body/Warm/Short/Black.svg';
+import manLowerbodyWarmShortBlue from '!!raw-loader!@/assets/SVGs/Man/Clothes/Lower Body/Warm/Short/Blue.svg';
+import manLowerbodyWarmShortGray from '!!raw-loader!@/assets/SVGs/Man/Clothes/Lower Body/Warm/Short/Gray.svg';
+import manLowerbodyWarmShortGreen from '!!raw-loader!@/assets/SVGs/Man/Clothes/Lower Body/Warm/Short/Green.svg';
+import manShoesRubberboots from '!!raw-loader!@/assets/SVGs/Man/Clothes/Shoes/Rainingboots/Yellow.svg';
+import manShoesSneakers from '!!raw-loader!@/assets/SVGs/Man/Clothes/Shoes/Sneakers/Blue.svg';
+import manShoesWinter from '!!raw-loader!@/assets/SVGs/Man/Clothes/Shoes/Winter/Blue.svg';
+import manUpperbodyColdCollarpulloverBlack from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Cold/Collarpullover/Black.svg';
+import manUpperbodyColdCollarpulloverBlue from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Cold/Collarpullover/Blue.svg';
+import manUpperbodyColdCollarpulloverGreen from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Cold/Collarpullover/Green.svg';
+import manUpperbodyColdCollarpulloverViolet from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Cold/Collarpullover/Violet.svg';
+import manUpperbodyColdLongshirtBlue from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Cold/Long Shirt/Blue.svg';
+import manUpperbodyColdLongshirtBrown from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Cold/Long Shirt/Brown.svg';
+import manUpperbodyColdLongshirtRed from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Cold/Long Shirt/Red.svg';
+import manUpperbodyColdStraptopBlue from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Warm/Straptop/Blue.svg';
+import manUpperbodyColdStraptopGray from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Warm/Straptop/Gray.svg';
+import manUpperbodyColdStraptopGreen from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Warm/Straptop/Green.svg';
+import manUpperbodyColdStraptopWhite from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Warm/Straptop/White.svg';
+import manUpperbodyColdTshirtVBlue from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Warm/T-ShirtV/Blue.svg';
+import manUpperbodyColdTshirtVBrown from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Warm/T-ShirtV/Gray.svg';
+import manUpperbodyColdTshirtVGray from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Warm/T-ShirtV/Brown.svg';
+import manUpperbodyColdTshirtVWhite from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Warm/T-ShirtV/White.svg';
+import manUpperbodyColdTshirtUBlack from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Warm/T-ShirtU/Black.svg';
+import manUpperbodyColdTshirtUBlue from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Warm/T-ShirtU/Blue.svg';
+import manUpperbodyColdTshirtUViolet from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Warm/T-ShirtU/Violet.svg';
+import manUpperbodyColdTshirtUYellow from '!!raw-loader!@/assets/SVGs/Man/Clothes/Upper Body/Warm/T-ShirtU/Yellow.svg';
+import manHairFirstBlond from '!!raw-loader!@/assets/SVGs/Man/Hair/First/Blond.svg';
+import manHairFirstBrown from '!!raw-loader!@/assets/SVGs/Man/Hair/First/Brown.svg';
+import manHairFirstOrange from '!!raw-loader!@/assets/SVGs/Man/Hair/First/Orange.svg';
+import manHairLongBlond from '!!raw-loader!@/assets/SVGs/Man/Hair/Long/Blond.svg';
+import manHairLongBrown from '!!raw-loader!@/assets/SVGs/Man/Hair/Long/Brown.svg';
+import manHairLongOrange from '!!raw-loader!@/assets/SVGs/Man/Hair/Long/Orange.svg';
+import manHairMattBlond from '!!raw-loader!@/assets/SVGs/Man/Hair/Matt/Blond.svg';
+import manHairMattBrown from '!!raw-loader!@/assets/SVGs/Man/Hair/Matt/Brown.svg';
+import manHairMattOrange from '!!raw-loader!@/assets/SVGs/Man/Hair/Matt/Orange.svg';
+import manHairSecondBlond from '!!raw-loader!@/assets/SVGs/Man/Hair/Second/Blond.svg';
+import manHairSecondBrown from '!!raw-loader!@/assets/SVGs/Man/Hair/Second/Brown.svg';
+import manHairSecondOrange from '!!raw-loader!@/assets/SVGs/Man/Hair/Second/Orange.svg';
+import manHairWavesBlond from '!!raw-loader!@/assets/SVGs/Man/Hair/Waves/Blond.svg';
+import manHairWavesBrown from '!!raw-loader!@/assets/SVGs/Man/Hair/Waves/Brown.svg';
+import manHairWavesOrange from '!!raw-loader!@/assets/SVGs/Man/Hair/Waves/Orange.svg';
 
 export const svgs = {
   womanBodyBlack: {
@@ -496,12 +576,6 @@ export const svgs = {
     percentage: 25,
     svg: womanUpperbodyTshirtLightgray,
   },
-  womanUpperbodyTshirtLightblue: {
-    type: 't-shirt',
-    category: 'upperbody',
-    percentage: 25,
-    svg: womanUpperbodyTshirtLightblue,
-  },
   womanUpperbodyTshirtViolet: {
     type: 't-shirt',
     category: 'upperbody',
@@ -642,6 +716,439 @@ export const svgs = {
     type: 'shortStraightHair',
     category: 'hair',
     svg: womanHairShortStraightOrange,
+  },
+  weatherPredictionHail: {
+    type: 'weatherIconHail',
+    category: 'weatherIcon',
+    svg: weatherPredictionHail,
+  },
+  weatherPredictionRain: {
+    type: 'weatherIconRain',
+    category: 'weatherIcon',
+    svg: weatherPredictionRain,
+  },
+  weatherPredictionSnow: {
+    type: 'weatherIconSnow',
+    category: 'weatherIcon',
+    svg: weatherPredictionSnow,
+  },
+  weatherPredictionSun: {
+    type: 'weatherIconSun',
+    category: 'weatherIcon',
+    svg: weatherPredictionSun,
+  },
+  weatherPredictionThunderstorm: {
+    type: 'weatherIconThunderstorm',
+    category: 'weatherIcon',
+    svg: weatherPredictionThunderstorm,
+  },
+  weatherToolsCap: {
+    type: 'weatherIconCap',
+    category: 'weatherIcon',
+    svg: weatherToolsCap,
+  },
+  weatherToolsGloves: {
+    type: 'weatherIconGloves',
+    category: 'weatherIcon',
+    svg: weatherToolsGloves,
+  },
+  weatherToolsSuncreme: {
+    type: 'weatherIconSuncreme',
+    category: 'weatherIcon',
+    svg: weatherToolsSuncreme,
+  },
+  weatherToolsUmbrella: {
+    type: 'weatherIconUmbrella',
+    category: 'weatherIcon',
+    svg: weatherToolsUmbrella,
+  },
+  iconsBodyColorBlack: {
+    type: 'iconBlack',
+    category: 'icon',
+    svg: iconsBodyColorBlack,
+  },
+  iconsBodyColorWhite: {
+    type: 'iconWhite',
+    category: 'icon',
+    svg: iconsBodyColorWhite,
+  },
+  iconsBodyColorYellow: {
+    type: 'iconYellow',
+    category: 'icon',
+    svg: iconsBodyColorYellow,
+  },
+  iconsGenderMan: {
+    type: 'iconGender',
+    category: 'icon',
+    svg: iconsGenderMan,
+  },
+  iconsGenderWoman: {
+    type: 'iconGender',
+    category: 'icon',
+    svg: iconsGenderWoman,
+  },
+  iconsHairColorBlond: {
+    type: 'iconHaircolor',
+    category: 'icon',
+    svg: iconsHairColorBlond,
+  },
+  iconsHairColorBrown: {
+    type: 'iconHaircolor',
+    category: 'icon',
+    svg: iconsHairColorBrown,
+  },
+  iconsHairColorOrange: {
+    type: 'iconHaircolor',
+    category: 'icon',
+    svg: iconsHairColorOrange,
+  },
+  manBodyWhite: {
+    type: 'body',
+    category: 'body',
+    svg: manBodyWhite,
+  },
+  manBodyYellow: {
+    type: 'body',
+    category: 'body',
+    svg: manBodyYellow,
+  },
+  manBodyBlack: {
+    type: 'body',
+    category: 'body',
+    svg: manBodyBlack,
+  },
+  manExtraTrunkBlue: {
+    type: 'trunk',
+    category: 'extra',
+    percentage: 5,
+    svg: manExtraTrunkBlue,
+  },
+  manExtraTrunkGray: {
+    type: 'trunk',
+    category: 'extra',
+    percentage: 5,
+    svg: manExtraTrunkGray,
+  },
+  manExtraCapBlue: {
+    type: 'cap',
+    category: 'headgear',
+    percentage: 100,
+    svg: manExtraCapBlue,
+  },
+  manExtraCapViolet: {
+    type: 'cap',
+    category: 'headgear',
+    percentage: 100,
+    svg: manExtraCapViolet,
+  },
+  manExtraGloveViolet: {
+    type: 'gloves',
+    category: 'gloves',
+    percentage: 100,
+    svg: manExtraGloveViolet,
+  },
+  manExtraGloveBlue: {
+    type: 'gloves',
+    category: 'gloves',
+    percentage: 100,
+    svg: manExtraGloveBlue,
+  },
+  manExtraJacketBlue: {
+    type: 'jacketSpringAutumn',
+    category: 'jacket',
+    percentage: 50,
+    svg: manExtraJacketBlue,
+  },
+  manExtraJacketWhite: {
+    type: 'jacketSpringAutumn',
+    category: 'jacket',
+    percentage: 50,
+    svg: manExtraJacketWhite,
+  },
+  manExtraWinterjacketBlack: {
+    type: 'jacketWinter',
+    category: 'jacket',
+    percentage: 100,
+    svg: manExtraWinterjacketBlack,
+  },
+  manExtraWinterjacketBlue: {
+    type: 'jacketWinter',
+    category: 'jacket',
+    percentage: 100,
+    svg: manExtraWinterjacketBlue,
+  },
+  manLowerbodyColdBlack: {
+    type: 'trousersCold',
+    category: 'lowerbody',
+    percentage: 60,
+    svg: manLowerbodyColdBlack,
+  },
+  manLowerbodyColdBlue: {
+    type: 'trousersCold',
+    category: 'lowerbody',
+    percentage: 60,
+    svg: manLowerbodyColdBlue,
+  },
+  manLowerbodyColdGray: {
+    type: 'trousersCold',
+    category: 'lowerbody',
+    percentage: 60,
+    svg: manLowerbodyColdGray,
+  },
+  manLowerbodyColdGreen: {
+    type: 'trousersCold',
+    category: 'lowerbody',
+    percentage: 60,
+    svg: manLowerbodyColdGreen,
+  },
+  manLowerbodyWarmMiddleBlack: {
+    type: 'trousersWarm',
+    category: 'lowerbody',
+    percentage: 30,
+    svg: manLowerbodyWarmMiddleBlack,
+  },
+  manLowerbodyWarmMiddleBlue: {
+    type: 'trousersWarm',
+    category: 'lowerbody',
+    percentage: 30,
+    svg: manLowerbodyWarmMiddleBlue,
+  },
+  manLowerbodyWarmMiddleGray: {
+    type: 'trousersWarm',
+    category: 'lowerbody',
+    percentage: 30,
+    svg: manLowerbodyWarmMiddleGray,
+  },
+  manLowerbodyWarmShortBlack: {
+    type: 'trousersWarm',
+    category: 'lowerbody',
+    percentage: 20,
+    svg: manLowerbodyWarmShortBlack,
+  },
+  manLowerbodyWarmShortBlue: {
+    type: 'trousersWarm',
+    category: 'lowerbody',
+    percentage: 20,
+    svg: manLowerbodyWarmShortBlue,
+  },
+  manLowerbodyWarmShortGray: {
+    type: 'trousersWarm',
+    category: 'lowerbody',
+    percentage: 20,
+    svg: manLowerbodyWarmShortGray,
+  },
+  manLowerbodyWarmShortGreen: {
+    type: 'trousersWarm',
+    category: 'lowerbody',
+    percentage: 20,
+    svg: manLowerbodyWarmShortGreen,
+  },
+  manShoesRubberboots: {
+    type: 'rubberboots',
+    category: 'shoes',
+    percentage: 0,
+    svg: manShoesRubberboots,
+  },
+  manShoesSneakers: {
+    type: 'rubberboots',
+    category: 'shoes',
+    percentage: 30,
+    svg: manShoesSneakers,
+  },
+  manShoesWinter: {
+    type: 'rubberboots',
+    category: 'shoes',
+    percentage: 90,
+    svg: manShoesWinter,
+  },
+  manUpperbodyColdCollarpulloverBlack: {
+    type: 'collarpullover',
+    category: 'upperbody',
+    percentage: 85,
+    svg: manUpperbodyColdCollarpulloverBlack,
+  },
+  manUpperbodyColdCollarpulloverBlue: {
+    type: 'collarpullover',
+    category: 'upperbody',
+    percentage: 85,
+    svg: manUpperbodyColdCollarpulloverBlue,
+  },
+  manUpperbodyColdCollarpulloverGreen: {
+    type: 'collarpullover',
+    category: 'upperbody',
+    percentage: 85,
+    svg: manUpperbodyColdCollarpulloverGreen,
+  },
+  manUpperbodyColdCollarpulloverViolet: {
+    type: 'collarpullover',
+    category: 'upperbody',
+    percentage: 85,
+    svg: manUpperbodyColdCollarpulloverViolet,
+  },
+  manUpperbodyColdLongshirtBlue: {
+    type: 'longshirt',
+    category: 'upperbody',
+    percentage: 60,
+    svg: manUpperbodyColdLongshirtBlue,
+  },
+  manUpperbodyColdLongshirtBrown: {
+    type: 'longshirt',
+    category: 'upperbody',
+    percentage: 60,
+    svg: manUpperbodyColdLongshirtBrown,
+  },
+  manUpperbodyColdLongshirtRed: {
+    type: 'longshirt',
+    category: 'upperbody',
+    percentage: 60,
+    svg: manUpperbodyColdLongshirtRed,
+  },
+  manUpperbodyColdStraptopBlue: {
+    type: 'straptop',
+    category: 'upperbody',
+    percentage: 10,
+    svg: manUpperbodyColdStraptopBlue,
+  },
+  manUpperbodyColdStraptopGray: {
+    type: 'straptop',
+    category: 'upperbody',
+    percentage: 10,
+    svg: manUpperbodyColdStraptopGray,
+  },
+  manUpperbodyColdStraptopGreen: {
+    type: 'straptop',
+    category: 'upperbody',
+    percentage: 10,
+    svg: manUpperbodyColdStraptopGreen,
+  },
+  manUpperbodyColdStraptopWhite: {
+    type: 'straptop',
+    category: 'upperbody',
+    percentage: 10,
+    svg: manUpperbodyColdStraptopWhite,
+  },
+  manUpperbodyColdTshirtVBlue: {
+    type: 'TshirtV',
+    category: 'upperbody',
+    percentage: 25,
+    svg: manUpperbodyColdTshirtVBlue,
+  },
+  manUpperbodyColdTshirtVBrown: {
+    type: 'TshirtV',
+    category: 'upperbody',
+    percentage: 25,
+    svg: manUpperbodyColdTshirtVBrown,
+  },
+  manUpperbodyColdTshirtVGray: {
+    type: 'TshirtV',
+    category: 'upperbody',
+    percentage: 25,
+    svg: manUpperbodyColdTshirtVGray,
+  },
+  manUpperbodyColdTshirtVWhite: {
+    type: 'TshirtV',
+    category: 'upperbody',
+    percentage: 25,
+    svg: manUpperbodyColdTshirtVWhite,
+  },
+  manUpperbodyColdTshirtUBlack: {
+    type: 'TshirtU',
+    category: 'upperbody',
+    percentage: 20,
+    svg: manUpperbodyColdTshirtUBlack,
+  },
+  manUpperbodyColdTshirtUBlue: {
+    type: 'TshirtU',
+    category: 'upperbody',
+    percentage: 20,
+    svg: manUpperbodyColdTshirtUBlue,
+  },
+  manUpperbodyColdTshirtUViolet: {
+    type: 'TshirtU',
+    category: 'upperbody',
+    percentage: 20,
+    svg: manUpperbodyColdTshirtUViolet,
+  },
+  manUpperbodyColdTshirtUYellow: {
+    type: 'TshirtU',
+    category: 'upperbody',
+    percentage: 20,
+    svg: manUpperbodyColdTshirtUYellow,
+  },
+  manHairFirstBlond: {
+    type: 'firstHair',
+    category: 'hair',
+    svg: manHairFirstBlond,
+  },
+  manHairFirstBrown: {
+    type: 'firstHair',
+    category: 'hair',
+    svg: manHairFirstBrown,
+  },
+  manHairFirstOrange: {
+    type: 'firstHair',
+    category: 'hair',
+    svg: manHairFirstOrange,
+  },
+  manHairLongBlond: {
+    type: 'longHair',
+    category: 'hair',
+    svg: manHairLongBlond,
+  },
+  manHairLongBrown: {
+    type: 'longHair',
+    category: 'hair',
+    svg: manHairLongBrown,
+  },
+  manHairLongOrange: {
+    type: 'longHair',
+    category: 'hair',
+    svg: manHairLongOrange,
+  },
+  manHairMattBlond: {
+    type: 'mattHair',
+    category: 'hair',
+    svg: manHairMattBlond,
+  },
+  manHairMattBrown: {
+    type: 'mattHair',
+    category: 'hair',
+    svg: manHairMattBrown,
+  },
+  manHairMattOrange: {
+    type: 'mattHair',
+    category: 'hair',
+    svg: manHairMattOrange,
+  },
+  manHairSecondBlond: {
+    type: 'secondHair',
+    category: 'hair',
+    svg: manHairSecondBlond,
+  },
+  manHairSecondBrown: {
+    type: 'secondHair',
+    category: 'hair',
+    svg: manHairSecondBrown,
+  },
+  manHairSecondOrange: {
+    type: 'secondHair',
+    category: 'hair',
+    svg: manHairSecondOrange,
+  },
+  manHairWavesBlond: {
+    type: 'wavieHair',
+    category: 'hair',
+    svg: manHairWavesBlond,
+  },
+  manHairWavesBrown: {
+    type: 'wavieHair',
+    category: 'hair',
+    svg: manHairWavesBrown,
+  },
+  manHairWavesOrange: {
+    type: 'wavieHair',
+    category: 'hair',
+    svg: manHairWavesOrange,
   },
 };
 
