@@ -195,24 +195,28 @@ import manHairWavesBlack from '!!raw-loader!@/assets/SVGs/Man/Hair/Waves/Black.s
 
 export const svgs = {
   womanBodyBlack: {
+    name: 'womanBodyBlack',
     gender: 'female',
     type: 'body',
     category: 'body',
     svg: womanBodyBlack,
   },
   womanBodyLightYellow: {
+    name: 'womanBodyLightYellow',
     gender: 'female',
     type: 'body',
     category: 'body',
     svg: womanBodyLightYellow,
   },
   womanBodyWhite: {
+    name: 'womanBodyWhite',
     gender: 'female',
     type: 'body',
     category: 'body',
     svg: womanBodyWhite,
   },
   womanDressStraplessBlue: {
+    name: 'womanDressStraplessBlue',
     gender: 'female',
     type: 'dressStrapless',
     category: 'fullbody',
@@ -220,6 +224,7 @@ export const svgs = {
     svg: womanDressStraplessBlue,
   },
   womanDressStraplessRed: {
+    name: 'womanDressStraplessRed',
     gender: 'female',
     type: 'dressStrapless',
     category: 'fullbody',
@@ -227,6 +232,7 @@ export const svgs = {
     svg: womanDressStraplessRed,
   },
   womanDressStraplessWhiteblue: {
+    name: 'womanDressStraplessWhiteblue',
     gender: 'female',
     type: 'dressStrapless',
     category: 'fullbody',
@@ -234,6 +240,7 @@ export const svgs = {
     svg: womanDressStraplessWhiteblue,
   },
   womanDressStraplongBlack: {
+    name: 'womanDressStraplongBlack',
     gender: 'female',
     type: 'dressStraplong',
     category: 'fullbody',
@@ -241,6 +248,7 @@ export const svgs = {
     svg: womanDressStraplongBlack,
   },
   womanDressStraplongPink: {
+    name: 'womanDressStraplongPink',
     gender: 'female',
     type: 'dressStraplong',
     category: 'fullbody',
@@ -248,6 +256,7 @@ export const svgs = {
     svg: womanDressStraplongPink,
   },
   womanDressStraplongViolet: {
+    name: 'womanDressStraplongViolet',
     gender: 'female',
     type: 'dressStraplong',
     category: 'fullbody',
@@ -255,6 +264,7 @@ export const svgs = {
     svg: womanDressStraplongViolet,
   },
   womanDressStrapshortBlack: {
+    name: 'womanDressStrapshortBlack',
     gender: 'female',
     type: 'dressStrapshort',
     category: 'fullbody',
@@ -262,6 +272,7 @@ export const svgs = {
     svg: womanDressStrapshortBlack,
   },
   womanDressStrapshortBlue: {
+    name: 'womanDressStrapshortBlue',
     gender: 'female',
     type: 'dressStrapshort',
     category: 'fullbody',
@@ -269,6 +280,7 @@ export const svgs = {
     svg: womanDressStrapshortBlue,
   },
   womanDressStrapshortPink: {
+    name: 'womanDressStrapshortPink',
     gender: 'female',
     type: 'dressStrapshort',
     category: 'fullbody',
@@ -276,6 +288,7 @@ export const svgs = {
     svg: womanDressStrapshortPink,
   },
   womanDressStrapshortWhite: {
+    name: 'womanDressStrapshortWhite',
     gender: 'female',
     type: 'dressStrapshort',
     category: 'fullbody',
@@ -283,6 +296,7 @@ export const svgs = {
     svg: womanDressStrapshortWhite,
   },
   womanExtraBikiniBlack: {
+    name: 'womanExtraBikiniBlack',
     gender: 'female',
     type: 'bikini',
     category: 'fullbody',
@@ -290,6 +304,7 @@ export const svgs = {
     svg: womanExtraBikiniBlack,
   },
   womanExtraBikiniBlue: {
+    name: 'womanExtraBikiniBlue',
     gender: 'female',
     type: 'bikini',
     category: 'fullbody',
@@ -297,6 +312,7 @@ export const svgs = {
     svg: womanExtraBikiniBlue,
   },
   womanExtraBikiniPink: {
+    name: 'womanExtraBikiniPink',
     gender: 'female',
     type: 'bikini',
     category: 'fullbody',
@@ -304,6 +320,7 @@ export const svgs = {
     svg: womanExtraBikiniPink,
   },
   womanExtraCapBlue: {
+    name: 'womanExtraCapBlue',
     gender: 'female',
     type: 'cap',
     category: 'headgear',
@@ -311,6 +328,7 @@ export const svgs = {
     svg: womanExtraCapBlue,
   },
   womanExtraCapRed: {
+    name: 'womanExtraCapRed',
     gender: 'female',
     type: 'cap',
     category: 'headgear',
@@ -318,6 +336,7 @@ export const svgs = {
     svg: womanExtraCapRed,
   },
   womanExtraCapViolet: {
+    name: 'womanExtraCapViolet',
     gender: 'female',
     type: 'cap',
     category: 'headgear',
@@ -325,6 +344,7 @@ export const svgs = {
     svg: womanExtraCapViolet,
   },
   womanExtraGloveBlack: {
+    name: 'womanExtraGloveBlack',
     gender: 'female',
     type: 'gloves',
     category: 'gloves',
@@ -332,6 +352,7 @@ export const svgs = {
     svg: womanExtraGloveBlack,
   },
   womanExtraGloveBlue: {
+    name: 'womanExtraGloveBlue',
     gender: 'female',
     type: 'gloves',
     category: 'gloves',
@@ -339,6 +360,7 @@ export const svgs = {
     svg: womanExtraGloveBlue,
   },
   womanExtraGloveRed: {
+    name: 'womanExtraGloveRed',
     gender: 'female',
     type: 'gloves',
     category: 'gloves',
@@ -346,6 +368,7 @@ export const svgs = {
     svg: womanExtraGloveRed,
   },
   womanJacketSpringautumnBlack: {
+    name: 'womanJacketSpringautumnBlack',
     gender: 'female',
     type: 'jacketSpringAutumn',
     category: 'jacket',
@@ -353,6 +376,7 @@ export const svgs = {
     svg: womanJacketSpringautumnBlack,
   },
   womanJacketSpringautumnGrayblue: {
+    name: 'womanJacketSpringautumnGrayblue',
     gender: 'female',
     type: 'jacketSpringAutumn',
     category: 'jacket',
@@ -360,6 +384,7 @@ export const svgs = {
     svg: womanJacketSpringautumnGrayblue,
   },
   womanJacketWinterBlue: {
+    name: 'womanJacketWinterBlue',
     gender: 'female',
     type: 'jacketWinter',
     category: 'jacket',
@@ -367,6 +392,7 @@ export const svgs = {
     svg: womanJacketWinterBlue,
   },
   womanJacketWinterGreen: {
+    name: 'womanJacketWinterGreen',
     gender: 'female',
     type: 'jacketWinter',
     category: 'jacket',
@@ -374,6 +400,7 @@ export const svgs = {
     svg: womanJacketWinterGreen,
   },
   womanLowerbodyColdTrousersBlue: {
+    name: 'womanLowerbodyColdTrousersBlue',
     gender: 'female',
     type: 'trousersCold',
     category: 'lowerbody',
@@ -381,6 +408,7 @@ export const svgs = {
     svg: womanLowerbodyColdTrousersBlue,
   },
   womanLowerbodyColdTrousersDarkblue: {
+    name: 'womanLowerbodyColdTrousersDarkblue',
     gender: 'female',
     type: 'trousersCold',
     category: 'lowerbody',
@@ -388,6 +416,7 @@ export const svgs = {
     svg: womanLowerbodyColdTrousersDarkblue,
   },
   womanLowerbodyColdTrousersDarkgreen: {
+    name: 'womanLowerbodyColdTrousersDarkgreen',
     gender: 'female',
     type: 'trousersCold',
     category: 'lowerbody',
@@ -395,6 +424,7 @@ export const svgs = {
     svg: womanLowerbodyColdTrousersDarkgreen,
   },
   womanLowerbodyColdTrousersLightblue: {
+    name: 'womanLowerbodyColdTrousersLightblue',
     gender: 'female',
     type: 'trousersCold',
     category: 'lowerbody',
@@ -402,6 +432,7 @@ export const svgs = {
     svg: womanLowerbodyColdTrousersLightblue,
   },
   womanLowerbodyColdTrousersWhite: {
+    name: 'womanLowerbodyColdTrousersWhite',
     gender: 'female',
     type: 'trousersCold',
     category: 'lowerbody',
@@ -409,6 +440,7 @@ export const svgs = {
     svg: womanLowerbodyColdTrousersWhite,
   },
   womanLowerbodyWarmSkirtBlack: {
+    name: 'womanLowerbodyWarmSkirtBlack',
     gender: 'female',
     type: 'skirt',
     category: 'lowerbody',
@@ -416,6 +448,7 @@ export const svgs = {
     svg: womanLowerbodyWarmSkirtBlack,
   },
   womanLowerbodyWarmSkirtBlue: {
+    name: 'womanLowerbodyWarmSkirtBlue',
     gender: 'female',
     type: 'skirt',
     category: 'lowerbody',
@@ -423,6 +456,7 @@ export const svgs = {
     svg: womanLowerbodyWarmSkirtBlue,
   },
   womanLowerbodyWarmSkirtViolet: {
+    name: 'womanLowerbodyWarmSkirtViolet',
     gender: 'female',
     type: 'skirt',
     category: 'lowerbody',
@@ -430,6 +464,7 @@ export const svgs = {
     svg: womanLowerbodyWarmSkirtViolet,
   },
   womanLowerbodyWarmThightskirtBlack: {
+    name: 'womanLowerbodyWarmThightskirtBlack',
     gender: 'female',
     type: 'thightskirt',
     category: 'lowerbody',
@@ -437,6 +472,7 @@ export const svgs = {
     svg: womanLowerbodyWarmThightskirtBlack,
   },
   womanLowerbodyWarmThightskirtBlue: {
+    name: 'womanLowerbodyWarmThightskirtBlue',
     gender: 'female',
     type: 'thightskirt',
     category: 'lowerbody',
@@ -444,6 +480,7 @@ export const svgs = {
     svg: womanLowerbodyWarmThightskirtBlue,
   },
   womanLowerbodyWarmThightskirtBrown: {
+    name: 'womanLowerbodyWarmThightskirtBrown',
     gender: 'female',
     type: 'thightskirt',
     category: 'lowerbody',
@@ -451,6 +488,7 @@ export const svgs = {
     svg: womanLowerbodyWarmThightskirtBrown,
   },
   womanLowerbodyWarmTrousersBlack: {
+    name: 'womanLowerbodyWarmTrousersBlack',
     gender: 'female',
     type: 'trousersWarm',
     category: 'lowerbody',
@@ -458,6 +496,7 @@ export const svgs = {
     svg: womanLowerbodyWarmTrousersBlack,
   },
   womanLowerbodyWarmTrousersBlue: {
+    name: 'womanLowerbodyWarmTrousersBlue',
     gender: 'female',
     type: 'trousersWarm',
     category: 'lowerbody',
@@ -465,6 +504,7 @@ export const svgs = {
     svg: womanLowerbodyWarmTrousersBlue,
   },
   womanLowerbodyWarmTrousersGray: {
+    name: 'womanLowerbodyWarmTrousersGray',
     gender: 'female',
     type: 'trousersWarm',
     category: 'lowerbody',
@@ -472,6 +512,7 @@ export const svgs = {
     svg: womanLowerbodyWarmTrousersGray,
   },
   womanLowerbodyWarmTrousersLightBlue: {
+    name: 'womanLowerbodyWarmTrousersLightBlue',
     gender: 'female',
     type: 'trousersWarm',
     category: 'lowerbody',
@@ -479,6 +520,7 @@ export const svgs = {
     svg: womanLowerbodyWarmTrousersLightBlue,
   },
   womanShoeEveryday: {
+    name: 'womanShoeEveryday',
     gender: 'female',
     type: 'shoesEverday',
     category: 'shoes',
@@ -486,6 +528,7 @@ export const svgs = {
     svg: womanShoeEveryday,
   },
   womanShoeRain: {
+    name: 'womanShoeRain',
     gender: 'female',
     type: 'rubberboots',
     category: 'shoes',
@@ -493,6 +536,7 @@ export const svgs = {
     svg: womanShoeRain,
   },
   womanShoeWarm: {
+    name: 'womanShoeWarm',
     gender: 'female',
     type: 'shoesWarm',
     category: 'shoes',
@@ -500,6 +544,7 @@ export const svgs = {
     svg: womanShoeWarm,
   },
   womanShoeCold: {
+    name: 'womanShoeCold',
     gender: 'female',
     type: 'shoesCold',
     category: 'shoes',
@@ -507,6 +552,7 @@ export const svgs = {
     svg: womanShoeCold,
   },
   womanUpperbodyColdCollartopBlack: {
+    name: 'womanUpperbodyColdCollartopBlack',
     gender: 'female',
     type: 'collartop',
     category: 'upperbody',
@@ -514,6 +560,7 @@ export const svgs = {
     svg: womanUpperbodyColdCollartopBlack,
   },
   womanUpperbodyColdCollartopBlueviolet: {
+    name: 'womanUpperbodyColdCollartopBlueviolet',
     gender: 'female',
     type: 'collartop',
     category: 'upperbody',
@@ -521,6 +568,7 @@ export const svgs = {
     svg: womanUpperbodyColdCollartopBlueviolet,
   },
   womanUpperbodyColdCollartopGray: {
+    name: 'womanUpperbodyColdCollartopGray',
     gender: 'female',
     type: 'collartop',
     category: 'upperbody',
@@ -528,6 +576,7 @@ export const svgs = {
     svg: womanUpperbodyColdCollartopGray,
   },
   womanUpperbodyColdCollartopWhite: {
+    name: 'womanUpperbodyColdCollartopWhite',
     gender: 'female',
     type: 'collartop',
     category: 'upperbody',
@@ -535,6 +584,7 @@ export const svgs = {
     svg: womanUpperbodyColdCollartopWhite,
   },
   womanUpperbodyColdPulloverPink: {
+    name: 'womanUpperbodyColdPulloverPink',
     gender: 'female',
     type: 'pullover',
     category: 'upperbody',
@@ -542,6 +592,7 @@ export const svgs = {
     svg: womanUpperbodyColdPulloverPink,
   },
   womanUpperbodyColdPulloverRed: {
+    name: 'womanUpperbodyColdPulloverRed',
     gender: 'female',
     type: 'pullover',
     category: 'upperbody',
@@ -549,6 +600,7 @@ export const svgs = {
     svg: womanUpperbodyColdPulloverRed,
   },
   womanUpperbodyColdPulloverTurquoise: {
+    name: 'womanUpperbodyColdPulloverTurquoise',
     gender: 'female',
     type: 'pullover',
     category: 'upperbody',
@@ -556,6 +608,7 @@ export const svgs = {
     svg: womanUpperbodyColdPulloverTurquoise,
   },
   womanUpperbodyColdTopRed: {
+    name: 'womanUpperbodyColdTopRed',
     gender: 'female',
     type: 'top',
     category: 'upperbody',
@@ -563,6 +616,7 @@ export const svgs = {
     svg: womanUpperbodyColdTopRed,
   },
   womanUpperbodyColdTopTurquoise: {
+    name: 'womanUpperbodyColdTopTurquoise',
     gender: 'female',
     type: 'top',
     category: 'upperbody',
@@ -570,6 +624,7 @@ export const svgs = {
     svg: womanUpperbodyColdTopTurquoise,
   },
   womanUpperbodyColdTopViolet: {
+    name: 'womanUpperbodyColdTopViolet',
     gender: 'female',
     type: 'top',
     category: 'upperbody',
@@ -577,6 +632,7 @@ export const svgs = {
     svg: womanUpperbodyColdTopViolet,
   },
   womanUpperbodyColdTopWhite: {
+    name: 'womanUpperbodyColdTopWhite',
     gender: 'female',
     type: 'top',
     category: 'upperbody',
@@ -584,6 +640,7 @@ export const svgs = {
     svg: womanUpperbodyColdTopWhite,
   },
   womanUpperbodyWarmCroptopBlue: {
+    name: 'womanUpperbodyWarmCroptopBlue',
     gender: 'female',
     type: 'croptop',
     category: 'upperbody',
@@ -591,6 +648,7 @@ export const svgs = {
     svg: womanUpperbodyWarmCroptopBlue,
   },
   womanUpperbodyWarmCroptopDarkgreen: {
+    name: 'womanUpperbodyWarmCroptopDarkgreen',
     gender: 'female',
     type: 'croptop',
     category: 'upperbody',
@@ -598,6 +656,7 @@ export const svgs = {
     svg: womanUpperbodyWarmCroptopDarkgreen,
   },
   womanUpperbodyWarmCroptopRed: {
+    name: 'womanUpperbodyWarmCroptopRed',
     gender: 'female',
     type: 'croptop',
     category: 'upperbody',
@@ -605,6 +664,7 @@ export const svgs = {
     svg: womanUpperbodyWarmCroptopRed,
   },
   womanUpperbodyWarmStraplesstopGreen: {
+    name: 'womanUpperbodyWarmStraplesstopGreen',
     gender: 'female',
     type: 'straplesstop',
     category: 'upperbody',
@@ -612,6 +672,7 @@ export const svgs = {
     svg: womanUpperbodyWarmStraplesstopGreen,
   },
   womanUpperbodyWarmStraplesstopTurquoise: {
+    name: 'womanUpperbodyWarmStraplesstopTurquoise',
     gender: 'female',
     type: 'straplesstop',
     category: 'upperbody',
@@ -619,6 +680,7 @@ export const svgs = {
     svg: womanUpperbodyWarmStraplesstopTurquoise,
   },
   womanUpperbodyWarmStraplesstopViolet: {
+    name: 'womanUpperbodyWarmStraplesstopViolet',
     gender: 'female',
     type: 'straplesstop',
     category: 'upperbody',
@@ -626,6 +688,7 @@ export const svgs = {
     svg: womanUpperbodyWarmStraplesstopViolet,
   },
   womanUpperbodyStraptopLightblue: {
+    name: 'womanUpperbodyStraptopLightblue',
     gender: 'female',
     type: 'straptop',
     category: 'upperbody',
@@ -633,6 +696,7 @@ export const svgs = {
     svg: womanUpperbodyStraptopLightblue,
   },
   womanUpperbodyStraptopLightviolet: {
+    name: 'womanUpperbodyStraptopLightviolet',
     gender: 'female',
     type: 'straptop',
     category: 'upperbody',
@@ -640,6 +704,7 @@ export const svgs = {
     svg: womanUpperbodyStraptopLightviolet,
   },
   womanUpperbodyStraptopRed: {
+    name: 'womanUpperbodyStraptopRed',
     gender: 'female',
     type: 'straptop',
     category: 'upperbody',
@@ -647,6 +712,7 @@ export const svgs = {
     svg: womanUpperbodyStraptopRed,
   },
   womanUpperbodyStraptopWhitepink: {
+    name: 'womanUpperbodyStraptopWhitepink',
     gender: 'female',
     type: 'straptop',
     category: 'upperbody',
@@ -654,6 +720,7 @@ export const svgs = {
     svg: womanUpperbodyStraptopWhitepink,
   },
   womanUpperbodyTshirtLightgray: {
+    name: 'womanUpperbodyTshirtLightgray',
     gender: 'female',
     type: 't-shirt',
     category: 'upperbody',
@@ -661,6 +728,7 @@ export const svgs = {
     svg: womanUpperbodyTshirtLightgray,
   },
   womanUpperbodyTshirtViolet: {
+    name: 'womanUpperbodyTshirtViolet',
     gender: 'female',
     type: 't-shirt',
     category: 'upperbody',
@@ -668,330 +736,388 @@ export const svgs = {
     svg: womanUpperbodyTshirtViolet,
   },
   womanHairLongFringeBlond: {
+    name: 'womanHairLongFringeBlond',
     gender: 'female',
     type: 'longFringeHair',
     category: 'hair',
     svg: womanHairLongFringeBlond,
   },
   womanHairLongFringeBrown: {
+    name: 'womanHairLongFringeBrown',
     gender: 'female',
     type: 'longFringeHair',
     category: 'hair',
     svg: womanHairLongFringeBrown,
   },
   womanHairLongFringeOrange: {
+    name: 'womanHairLongFringeOrange',
     gender: 'female',
     type: 'longFringeHair',
     category: 'hair',
     svg: womanHairLongFringeOrange,
   },
   womanHairLongFringeBlack: {
+    name: 'womanHairLongFringeBlack',
     gender: 'female',
     type: 'longFringeHair',
     category: 'hair',
     svg: womanHairLongFringeBlack,
   },
   womanHairLongStraightBlond: {
+    name: 'womanHairLongStraightBlond',
     gender: 'female',
     type: 'longStraightHair',
     category: 'hair',
     svg: womanHairLongStraightBlond,
   },
   womanHairLongStraightBrown: {
+    name: 'womanHairLongStraightBrown',
     gender: 'female',
     type: 'longStraightHair',
     category: 'hair',
     svg: womanHairLongStraightBrown,
   },
   womanHairLongStraightOrange: {
+    name: 'womanHairLongStraightOrange',
     gender: 'female',
     type: 'longStraightHair',
     category: 'hair',
     svg: womanHairLongStraightOrange,
   },
   womanHairLongStraightBlack: {
+    name: 'womanHairLongStraightBlack',
     gender: 'female',
     type: 'longStraightHair',
     category: 'hair',
     svg: womanHairLongStraightBlack,
   },
   womanHairLongWavytBlond: {
+    name: 'womanHairLongWavytBlond',
     gender: 'female',
     type: 'longWavytHair',
     category: 'hair',
     svg: womanHairLongWavytBlond,
   },
   womanHairLongWavytBrown: {
+    name: 'womanHairLongWavytBrown',
     gender: 'female',
     type: 'longWavytHair',
     category: 'hair',
     svg: womanHairLongWavytBrown,
   },
   womanHairLongWavytOrange: {
+    name: 'womanHairLongWavytOrange',
     gender: 'female',
     type: 'longWavytHair',
     category: 'hair',
     svg: womanHairLongWavytOrange,
   },
   womanHairLongWavytBlack: {
+    name: 'womanHairLongWavytBlack',
     gender: 'female',
     type: 'longWavytHair',
     category: 'hair',
     svg: womanHairLongWavytBlack,
   },
   womanHairPigtailBraidBlond: {
+    name: 'womanHairPigtailBraidBlond',
     gender: 'female',
     type: 'braid',
     category: 'hair',
     svg: womanHairPigtailBraidBlond,
   },
   womanHairPigtailBraidBrown: {
+    name: 'womanHairPigtailBraidBrown',
     gender: 'female',
     type: 'braid',
     category: 'hair',
     svg: womanHairPigtailBraidBrown,
   },
   womanHairPigtailBraidOrange: {
+    name: 'womanHairPigtailBraidOrange',
     gender: 'female',
     type: 'braid',
     category: 'hair',
     svg: womanHairPigtailBraidOrange,
   },
   womanHairPigtailBraidBlack: {
+    name: 'womanHairPigtailBraidBlack',
     gender: 'female',
     type: 'braid',
     category: 'hair',
     svg: womanHairPigtailBraidBlack,
   },
   womanHairPigtailDuttBlond: {
+    name: 'womanHairPigtailDuttBlond',
     gender: 'female',
     type: 'dutt',
     category: 'hair',
     svg: womanHairPigtailDuttBlond,
   },
   womanHairPigtailDuttBrown: {
+    name: 'womanHairPigtailDuttBrown',
     gender: 'female',
     type: 'dutt',
     category: 'hair',
     svg: womanHairPigtailDuttBrown,
   },
   womanHairPigtailDuttOrange: {
+    name: 'womanHairPigtailDuttOrange',
     gender: 'female',
     type: 'dutt',
     category: 'hair',
     svg: womanHairPigtailDuttOrange,
   },
   womanHairPigtailDuttBlack: {
+    name: 'womanHairPigtailDuttBlack',
     gender: 'female',
     type: 'dutt',
     category: 'hair',
     svg: womanHairPigtailDuttBlack,
   },
   womanHairPigtailPigtailBlond: {
+    name: 'womanHairPigtailPigtailBlond',
     gender: 'female',
     type: 'pigtail',
     category: 'hair',
     svg: womanHairPigtailPigtailBlond,
   },
   womanHairPigtailPigtailBrown: {
+    name: 'womanHairPigtailPigtailBrown',
     gender: 'female',
     type: 'pigtail',
     category: 'hair',
     svg: womanHairPigtailPigtailBrown,
   },
   womanHairPigtailPigtailOrange: {
+    name: 'womanHairPigtailPigtailOrange',
     gender: 'female',
     type: 'pigtail',
     category: 'hair',
     svg: womanHairPigtailPigtailOrange,
   },
   womanHairPigtailPigtailBlack: {
+    name: 'womanHairPigtailPigtailBlack',
     gender: 'female',
     type: 'pigtail',
     category: 'hair',
     svg: womanHairPigtailPigtailBlack,
   },
   womanHairShortCurlyBlond: {
+    name: 'womanHairShortCurlyBlond',
     gender: 'female',
     type: 'shortCurlyHair',
     category: 'hair',
     svg: womanHairShortCurlyBlond,
   },
   womanHairShortCurlyBrown: {
+    name: 'womanHairShortCurlyBrown',
     gender: 'female',
     type: 'shortCurlyHair',
     category: 'hair',
     svg: womanHairShortCurlyBrown,
   },
   womanHairShortCurlyOrange: {
+    name: 'womanHairShortCurlyOrange',
     gender: 'female',
     type: 'shortCurlyHair',
     category: 'hair',
     svg: womanHairShortCurlyOrange,
   },
   womanHairShortCurlyBlack: {
+    name: 'womanHairShortCurlyBlack',
     gender: 'female',
     type: 'shortCurlyHair',
     category: 'hair',
     svg: womanHairShortCurlyBlack,
   },
   womanHairShortFringeBlond: {
+    name: 'womanHairShortFringeBlond',
     gender: 'female',
     type: 'shortFringeHair',
     category: 'hair',
     svg: womanHairShortFringeBlond,
   },
   womanHairShortFringeBrown: {
+    name: 'womanHairShortFringeBrown',
     gender: 'female',
     type: 'shortFringeHair',
     category: 'hair',
     svg: womanHairShortFringeBrown,
   },
   womanHairShortFringeOrange: {
+    name: 'womanHairShortFringeOrange',
     gender: 'female',
     type: 'shortFringeHair',
     category: 'hair',
     svg: womanHairShortFringeOrange,
   },
   womanHairShortFringeBlack: {
+    name: 'womanHairShortFringeBlack',
     gender: 'female',
     type: 'shortFringeHair',
     category: 'hair',
     svg: womanHairShortFringeBlack,
   },
   womanHairShortStraightBlond: {
+    name: 'womanHairShortStraightBlond',
     gender: 'female',
     type: 'shortStraightHair',
     category: 'hair',
     svg: womanHairShortStraightBlond,
   },
   womanHairShortStraightBrown: {
+    name: 'womanHairShortStraightBrown',
     gender: 'female',
     type: 'shortStraightHair',
     category: 'hair',
     svg: womanHairShortStraightBrown,
   },
   womanHairShortStraightOrange: {
+    name: 'womanHairShortStraightOrange',
     gender: 'female',
     type: 'shortStraightHair',
     category: 'hair',
     svg: womanHairShortStraightOrange,
   },
   womanHairShortStraightBlack: {
+    name: 'womanHairShortStraightBlack',
     gender: 'female',
     type: 'shortStraightHair',
     category: 'hair',
     svg: womanHairShortStraightBlack,
   },
   weatherPredictionHail: {
+    name: 'weatherPredictionHail',
     type: 'weatherIconHail',
     category: 'weatherIcon',
     svg: weatherPredictionHail,
   },
   weatherPredictionRain: {
+    name: 'weatherPredictionRain',
     type: 'weatherIconRain',
     category: 'weatherIcon',
     svg: weatherPredictionRain,
   },
   weatherPredictionSnow: {
+    name: 'weatherPredictionSnow',
     type: 'weatherIconSnow',
     category: 'weatherIcon',
     svg: weatherPredictionSnow,
   },
   weatherPredictionSun: {
+    name: 'weatherPredictionSun',
     type: 'weatherIconSun',
     category: 'weatherIcon',
     svg: weatherPredictionSun,
   },
   weatherPredictionThunderstorm: {
+    name: 'weatherPredictionThunderstorm',
     type: 'weatherIconThunderstorm',
     category: 'weatherIcon',
     svg: weatherPredictionThunderstorm,
   },
   weatherToolsCap: {
+    name: 'weatherToolsCap',
     type: 'weatherIconCap',
     category: 'weatherIcon',
     svg: weatherToolsCap,
   },
   weatherToolsGloves: {
+    name: 'weatherToolsGloves',
     type: 'weatherIconGloves',
     category: 'weatherIcon',
     svg: weatherToolsGloves,
   },
   weatherToolsSuncreme: {
+    name: 'weatherToolsSuncreme',
     type: 'weatherIconSuncreme',
     category: 'weatherIcon',
     svg: weatherToolsSuncreme,
   },
   weatherToolsUmbrella: {
+    name: 'weatherToolsUmbrella',
     type: 'weatherIconUmbrella',
     category: 'weatherIcon',
     svg: weatherToolsUmbrella,
   },
   iconsBodyColorBlack: {
+    name: 'iconsBodyColorBlack',
     type: 'iconBlack',
     category: 'icon',
     svg: iconsBodyColorBlack,
   },
   iconsBodyColorWhite: {
+    name: 'iconsBodyColorWhite',
     type: 'iconWhite',
     category: 'icon',
     svg: iconsBodyColorWhite,
   },
   iconsBodyColorYellow: {
+    name: 'iconsBodyColorYellow',
     type: 'iconYellow',
     category: 'icon',
     svg: iconsBodyColorYellow,
   },
   iconsGenderMan: {
+    name: 'iconsGenderMan',
     type: 'iconGender',
     category: 'icon',
     svg: iconsGenderMan,
   },
   iconsGenderWoman: {
+    name: 'iconsGenderWoman',
     type: 'iconGender',
     category: 'icon',
     svg: iconsGenderWoman,
   },
   iconsHairColorBlond: {
+    name: 'iconsHairColorBlond',
     type: 'iconHaircolor',
     category: 'icon',
     svg: iconsHairColorBlond,
   },
   iconsHairColorBrown: {
+    name: 'iconsHairColorBrown',
     type: 'iconHaircolor',
     category: 'icon',
     svg: iconsHairColorBrown,
   },
   iconsHairColorOrange: {
+    name: 'iconsHairColorOrange',
     type: 'iconHaircolor',
     category: 'icon',
     svg: iconsHairColorOrange,
   },
   iconsHairColorBlack: {
+    name: 'iconsHairColorBlack',
     type: 'iconHaircolor',
     category: 'icon',
     svg: iconsHairColorBlack,
   },
   manBodyWhite: {
+    name: 'manBodyWhite',
     gender: 'male',
     type: 'body',
     category: 'body',
     svg: manBodyWhite,
   },
   manBodyYellow: {
+    name: 'manBodyYellow',
     gender: 'male',
     type: 'body',
     category: 'body',
     svg: manBodyYellow,
   },
   manBodyBlack: {
+    name: 'manBodyBlack',
     gender: 'male',
     type: 'body',
     category: 'body',
     svg: manBodyBlack,
   },
   manExtraTrunkBlue: {
+    name: 'manExtraTrunkBlue',
     gender: 'male',
     type: 'trunk',
     category: 'extra',
@@ -999,6 +1125,7 @@ export const svgs = {
     svg: manExtraTrunkBlue,
   },
   manExtraTrunkGray: {
+    name: 'manExtraTrunkGray',
     gender: 'male',
     type: 'trunk',
     category: 'extra',
@@ -1006,6 +1133,7 @@ export const svgs = {
     svg: manExtraTrunkGray,
   },
   manExtraCapBlue: {
+    name: 'manExtraCapBlue',
     gender: 'male',
     type: 'cap',
     category: 'headgear',
@@ -1013,6 +1141,7 @@ export const svgs = {
     svg: manExtraCapBlue,
   },
   manExtraCapViolet: {
+    name: 'manExtraCapViolet',
     gender: 'male',
     type: 'cap',
     category: 'headgear',
@@ -1020,6 +1149,7 @@ export const svgs = {
     svg: manExtraCapViolet,
   },
   manExtraGloveViolet: {
+    name: 'manExtraGloveViolet',
     gender: 'male',
     type: 'gloves',
     category: 'gloves',
@@ -1027,6 +1157,7 @@ export const svgs = {
     svg: manExtraGloveViolet,
   },
   manExtraGloveBlue: {
+    name: 'manExtraGloveBlue',
     gender: 'male',
     type: 'gloves',
     category: 'gloves',
@@ -1034,6 +1165,7 @@ export const svgs = {
     svg: manExtraGloveBlue,
   },
   manExtraJacketBlue: {
+    name: 'manExtraJacketBlue',
     gender: 'male',
     type: 'jacketSpringAutumn',
     category: 'jacket',
@@ -1041,6 +1173,7 @@ export const svgs = {
     svg: manExtraJacketBlue,
   },
   manExtraJacketWhite: {
+    name: 'manExtraJacketWhite',
     gender: 'male',
     type: 'jacketSpringAutumn',
     category: 'jacket',
@@ -1048,6 +1181,7 @@ export const svgs = {
     svg: manExtraJacketWhite,
   },
   manExtraWinterjacketBlack: {
+    name: 'manExtraWinterjacketBlack',
     gender: 'male',
     type: 'jacketWinter',
     category: 'jacket',
@@ -1055,6 +1189,7 @@ export const svgs = {
     svg: manExtraWinterjacketBlack,
   },
   manExtraWinterjacketBlue: {
+    name: 'manExtraWinterjacketBlue',
     gender: 'male',
     type: 'jacketWinter',
     category: 'jacket',
@@ -1062,6 +1197,7 @@ export const svgs = {
     svg: manExtraWinterjacketBlue,
   },
   manLowerbodyColdBlack: {
+    name: 'manLowerbodyColdBlack',
     gender: 'male',
     type: 'trousersCold',
     category: 'lowerbody',
@@ -1069,6 +1205,7 @@ export const svgs = {
     svg: manLowerbodyColdBlack,
   },
   manLowerbodyColdBlue: {
+    name: 'manLowerbodyColdBlue',
     gender: 'male',
     type: 'trousersCold',
     category: 'lowerbody',
@@ -1076,6 +1213,7 @@ export const svgs = {
     svg: manLowerbodyColdBlue,
   },
   manLowerbodyColdGray: {
+    name: 'manLowerbodyColdGray',
     gender: 'male',
     type: 'trousersCold',
     category: 'lowerbody',
@@ -1083,6 +1221,7 @@ export const svgs = {
     svg: manLowerbodyColdGray,
   },
   manLowerbodyColdGreen: {
+    name: 'manLowerbodyColdGreen',
     gender: 'male',
     type: 'trousersCold',
     category: 'lowerbody',
@@ -1090,6 +1229,7 @@ export const svgs = {
     svg: manLowerbodyColdGreen,
   },
   manLowerbodyWarmMiddleBlack: {
+    name: 'manLowerbodyWarmMiddleBlack',
     gender: 'male',
     type: 'trousersWarm',
     category: 'lowerbody',
@@ -1097,6 +1237,7 @@ export const svgs = {
     svg: manLowerbodyWarmMiddleBlack,
   },
   manLowerbodyWarmMiddleBlue: {
+    name: 'manLowerbodyWarmMiddleBlue',
     gender: 'male',
     type: 'trousersWarm',
     category: 'lowerbody',
@@ -1104,6 +1245,7 @@ export const svgs = {
     svg: manLowerbodyWarmMiddleBlue,
   },
   manLowerbodyWarmMiddleGray: {
+    name: 'manLowerbodyWarmMiddleGray',
     gender: 'male',
     type: 'trousersWarm',
     category: 'lowerbody',
@@ -1111,6 +1253,7 @@ export const svgs = {
     svg: manLowerbodyWarmMiddleGray,
   },
   manLowerbodyWarmShortBlack: {
+    name: 'manLowerbodyWarmShortBlack',
     gender: 'male',
     type: 'trousersWarm',
     category: 'lowerbody',
@@ -1118,6 +1261,7 @@ export const svgs = {
     svg: manLowerbodyWarmShortBlack,
   },
   manLowerbodyWarmShortBlue: {
+    name: 'manLowerbodyWarmShortBlue',
     gender: 'male',
     type: 'trousersWarm',
     category: 'lowerbody',
@@ -1125,6 +1269,7 @@ export const svgs = {
     svg: manLowerbodyWarmShortBlue,
   },
   manLowerbodyWarmShortGray: {
+    name: 'manLowerbodyWarmShortGray',
     gender: 'male',
     type: 'trousersWarm',
     category: 'lowerbody',
@@ -1132,6 +1277,7 @@ export const svgs = {
     svg: manLowerbodyWarmShortGray,
   },
   manLowerbodyWarmShortGreen: {
+    name: 'manLowerbodyWarmShortGreen',
     gender: 'male',
     type: 'trousersWarm',
     category: 'lowerbody',
@@ -1139,6 +1285,7 @@ export const svgs = {
     svg: manLowerbodyWarmShortGreen,
   },
   manShoesRubberboots: {
+    name: 'manShoesRubberboots',
     gender: 'male',
     type: 'rubberboots',
     category: 'shoes',
@@ -1146,6 +1293,7 @@ export const svgs = {
     svg: manShoesRubberboots,
   },
   manShoesSneakers: {
+    name: 'manShoesSneakers',
     gender: 'male',
     type: 'rubberboots',
     category: 'shoes',
@@ -1153,6 +1301,7 @@ export const svgs = {
     svg: manShoesSneakers,
   },
   manShoesWinter: {
+    name: 'manShoesWinter',
     gender: 'male',
     type: 'rubberboots',
     category: 'shoes',
@@ -1160,6 +1309,7 @@ export const svgs = {
     svg: manShoesWinter,
   },
   manUpperbodyColdCollarpulloverBlack: {
+    name: 'manUpperbodyColdCollarpulloverBlack',
     gender: 'male',
     type: 'collarpullover',
     category: 'upperbody',
@@ -1167,6 +1317,7 @@ export const svgs = {
     svg: manUpperbodyColdCollarpulloverBlack,
   },
   manUpperbodyColdCollarpulloverBlue: {
+    name: 'manUpperbodyColdCollarpulloverBlue',
     gender: 'male',
     type: 'collarpullover',
     category: 'upperbody',
@@ -1174,6 +1325,7 @@ export const svgs = {
     svg: manUpperbodyColdCollarpulloverBlue,
   },
   manUpperbodyColdCollarpulloverGreen: {
+    name: 'manUpperbodyColdCollarpulloverGreen',
     gender: 'male',
     type: 'collarpullover',
     category: 'upperbody',
@@ -1181,6 +1333,7 @@ export const svgs = {
     svg: manUpperbodyColdCollarpulloverGreen,
   },
   manUpperbodyColdCollarpulloverViolet: {
+    name: 'manUpperbodyColdCollarpulloverViolet',
     gender: 'male',
     type: 'collarpullover',
     category: 'upperbody',
@@ -1188,6 +1341,7 @@ export const svgs = {
     svg: manUpperbodyColdCollarpulloverViolet,
   },
   manUpperbodyColdLongshirtBlue: {
+    name: 'manUpperbodyColdLongshirtBlue',
     gender: 'male',
     type: 'longshirt',
     category: 'upperbody',
@@ -1195,6 +1349,7 @@ export const svgs = {
     svg: manUpperbodyColdLongshirtBlue,
   },
   manUpperbodyColdLongshirtBrown: {
+    name: 'manUpperbodyColdLongshirtBrown',
     gender: 'male',
     type: 'longshirt',
     category: 'upperbody',
@@ -1202,6 +1357,7 @@ export const svgs = {
     svg: manUpperbodyColdLongshirtBrown,
   },
   manUpperbodyColdLongshirtRed: {
+    name: 'manUpperbodyColdLongshirtRed',
     gender: 'male',
     type: 'longshirt',
     category: 'upperbody',
@@ -1209,6 +1365,7 @@ export const svgs = {
     svg: manUpperbodyColdLongshirtRed,
   },
   manUpperbodyColdStraptopBlue: {
+    name: 'manUpperbodyColdStraptopBlue',
     gender: 'male',
     type: 'straptop',
     category: 'upperbody',
@@ -1216,6 +1373,7 @@ export const svgs = {
     svg: manUpperbodyColdStraptopBlue,
   },
   manUpperbodyColdStraptopGray: {
+    name: 'manUpperbodyColdStraptopGray',
     gender: 'male',
     type: 'straptop',
     category: 'upperbody',
@@ -1223,6 +1381,7 @@ export const svgs = {
     svg: manUpperbodyColdStraptopGray,
   },
   manUpperbodyColdStraptopGreen: {
+    name: 'manUpperbodyColdStraptopGreen',
     gender: 'male',
     type: 'straptop',
     category: 'upperbody',
@@ -1230,6 +1389,7 @@ export const svgs = {
     svg: manUpperbodyColdStraptopGreen,
   },
   manUpperbodyColdStraptopWhite: {
+    name: 'manUpperbodyColdStraptopWhite',
     gender: 'male',
     type: 'straptop',
     category: 'upperbody',
@@ -1237,6 +1397,7 @@ export const svgs = {
     svg: manUpperbodyColdStraptopWhite,
   },
   manUpperbodyColdTshirtVBlue: {
+    name: 'manUpperbodyColdTshirtVBlue',
     gender: 'male',
     type: 'TshirtV',
     category: 'upperbody',
@@ -1244,6 +1405,7 @@ export const svgs = {
     svg: manUpperbodyColdTshirtVBlue,
   },
   manUpperbodyColdTshirtVBrown: {
+    name: 'manUpperbodyColdTshirtVBrown',
     gender: 'male',
     type: 'TshirtV',
     category: 'upperbody',
@@ -1251,6 +1413,7 @@ export const svgs = {
     svg: manUpperbodyColdTshirtVBrown,
   },
   manUpperbodyColdTshirtVGray: {
+    name: 'manUpperbodyColdTshirtVGray',
     gender: 'male',
     type: 'TshirtV',
     category: 'upperbody',
@@ -1258,6 +1421,7 @@ export const svgs = {
     svg: manUpperbodyColdTshirtVGray,
   },
   manUpperbodyColdTshirtVWhite: {
+    name: 'manUpperbodyColdTshirtVWhite',
     gender: 'male',
     type: 'TshirtV',
     category: 'upperbody',
@@ -1265,6 +1429,7 @@ export const svgs = {
     svg: manUpperbodyColdTshirtVWhite,
   },
   manUpperbodyColdTshirtUBlack: {
+    name: 'manUpperbodyColdTshirtUBlack',
     gender: 'male',
     type: 'TshirtU',
     category: 'upperbody',
@@ -1272,6 +1437,7 @@ export const svgs = {
     svg: manUpperbodyColdTshirtUBlack,
   },
   manUpperbodyColdTshirtUBlue: {
+    name: 'manUpperbodyColdTshirtUBlue',
     gender: 'male',
     type: 'TshirtU',
     category: 'upperbody',
@@ -1279,6 +1445,7 @@ export const svgs = {
     svg: manUpperbodyColdTshirtUBlue,
   },
   manUpperbodyColdTshirtUViolet: {
+    name: 'manUpperbodyColdTshirtUViolet',
     gender: 'male',
     type: 'TshirtU',
     category: 'upperbody',
@@ -1286,6 +1453,7 @@ export const svgs = {
     svg: manUpperbodyColdTshirtUViolet,
   },
   manUpperbodyColdTshirtUYellow: {
+    name: 'manUpperbodyColdTshirtUYellow',
     gender: 'male',
     type: 'TshirtU',
     category: 'upperbody',
@@ -1293,120 +1461,140 @@ export const svgs = {
     svg: manUpperbodyColdTshirtUYellow,
   },
   manHairFirstBlond: {
+    name: 'manHairFirstBlond',
     gender: 'male',
     type: 'firstHair',
     category: 'hair',
     svg: manHairFirstBlond,
   },
   manHairFirstBrown: {
+    name: 'manHairFirstBrown',
     gender: 'male',
     type: 'firstHair',
     category: 'hair',
     svg: manHairFirstBrown,
   },
   manHairFirstOrange: {
+    name: 'manHairFirstOrange',
     gender: 'male',
     type: 'firstHair',
     category: 'hair',
     svg: manHairFirstOrange,
   },
   manHairFirstBlack: {
+    name: 'manHairFirstBlack',
     gender: 'male',
     type: 'firstHair',
     category: 'hair',
     svg: manHairFirstBlack,
   },
   manHairLongBlond: {
+    name: 'manHairLongBlond',
     gender: 'male',
     type: 'longHair',
     category: 'hair',
     svg: manHairLongBlond,
   },
   manHairLongBrown: {
+    name: 'manHairLongBrown',
     gender: 'male',
     type: 'longHair',
     category: 'hair',
     svg: manHairLongBrown,
   },
   manHairLongOrange: {
+    name: 'manHairLongOrange',
     gender: 'male',
     type: 'longHair',
     category: 'hair',
     svg: manHairLongOrange,
   },
   manHairLongBlack: {
+    name: 'manHairLongBlack',
     gender: 'male',
     type: 'longHair',
     category: 'hair',
     svg: manHairLongBlack,
   },
   manHairMattBlond: {
+    name: 'manHairMattBlond',
     gender: 'male',
     type: 'mattHair',
     category: 'hair',
     svg: manHairMattBlond,
   },
   manHairMattBrown: {
+    name: 'manHairMattBrown',
     gender: 'male',
     type: 'mattHair',
     category: 'hair',
     svg: manHairMattBrown,
   },
   manHairMattOrange: {
+    name: 'manHairMattOrange',
     gender: 'male',
     type: 'mattHair',
     category: 'hair',
     svg: manHairMattOrange,
   },
   manHairMattBlack: {
+    name: 'manHairMattBlack',
     gender: 'male',
     type: 'mattHair',
     category: 'hair',
     svg: manHairMattBlack,
   },
   manHairSecondBlond: {
+    name: 'manHairSecondBlond',
     gender: 'male',
     type: 'secondHair',
     category: 'hair',
     svg: manHairSecondBlond,
   },
   manHairSecondBrown: {
+    name: 'manHairSecondBrown',
     gender: 'male',
     type: 'secondHair',
     category: 'hair',
     svg: manHairSecondBrown,
   },
   manHairSecondOrange: {
+    name: 'manHairSecondOrange',
     gender: 'male',
     type: 'secondHair',
     category: 'hair',
     svg: manHairSecondOrange,
   },
   manHairSecondBlack: {
+    name: 'manHairSecondBlack',
     gender: 'male',
     type: 'secondHair',
     category: 'hair',
     svg: manHairSecondBlack,
   },
   manHairWavesBlond: {
+    name: 'manHairWavesBlond',
     gender: 'male',
     type: 'wavieHair',
     category: 'hair',
     svg: manHairWavesBlond,
   },
   manHairWavesBrown: {
+    name: 'manHairWavesBrown',
     gender: 'male',
     type: 'wavieHair',
     category: 'hair',
     svg: manHairWavesBrown,
   },
   manHairWavesOrange: {
+    name: 'manHairWavesOrange',
     gender: 'male',
     type: 'wavieHair',
     category: 'hair',
     svg: manHairWavesOrange,
   },
   manHairWavesBlack: {
+    name: 'manHairWavesBlack',
     gender: 'male',
     type: 'wavieHair',
     category: 'hair',
