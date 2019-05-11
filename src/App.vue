@@ -7,6 +7,10 @@
         </transition>
       </md-app-content>
     </md-app>
+    <md-snackbar v-for="error in errors" :key="error.id" md-position="center" :md-duration="Infinity" :md-active="true" md-persistent>
+      <span>{{error.msg}}</span>
+      <md-button v-if="error.hasAction" class="md-primary" @click="error.action">{{error.btn}}</md-button>
+    </md-snackbar>
   </div>
 </template>
 
@@ -31,6 +35,14 @@ export default {
         if (from.path === '/') this.direction = 'down';
       }
     },
+  },
+  computed: {
+    errors() {
+      return this.$store.state.general.errors;
+    },
+  },
+  mounted() {
+    this.$store.dispatch('refreshWeather');
   },
 };
 </script>

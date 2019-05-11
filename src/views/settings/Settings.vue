@@ -45,10 +45,10 @@
             <md-card-content>
               <md-list>
                 <md-list-item>
-                  <md-radio v-model="unit" value="fahrenheit">°F</md-radio>
+                  <md-radio v-model="unit" value="us">°F</md-radio>
                 </md-list-item>
                 <md-list-item>
-                  <md-radio v-model="unit" value="celcius">°C</md-radio>
+                  <md-radio v-model="unit" value="ca">°C</md-radio>
                 </md-list-item>
               </md-list>
             </md-card-content>
@@ -122,62 +122,62 @@ export default {
       hairTypes: {
         female: [
           {
-            id: 'Female/Long/Fringe',
-            svg: 'Woman/Hair/Long/Fringe',
+            id: 'Long/Fringe',
+            svg: 'Icons/HairWoman/Long/Fringe',
           },
           {
-            id: 'Female/Long/Straight',
-            svg: 'Woman/Hair/Long/Straight',
+            id: 'Long/Straight',
+            svg: 'Icons/HairWoman/Long/Straight',
           },
           {
-            id: 'Female/Long/Wavy',
-            svg: 'Woman/Hair/Long/Wavy',
+            id: 'Long/Wavy',
+            svg: 'Icons/HairWoman/Long/Wavy',
           },
           {
-            id: 'Female/Pigtail/Braid',
-            svg: 'Woman/Hair/Pigtail/Braid',
+            id: 'Pigtail/Braid',
+            svg: 'Icons/HairWoman/Pigtail/Braid',
           },
           {
-            id: 'Female/Pigtail/Dutt',
-            svg: 'Woman/Hair/Pigtail/Dutt',
+            id: 'Pigtail/Dutt',
+            svg: 'Icons/HairWoman/Pigtail/Dutt',
           },
           {
-            id: 'Female/Pigtail/Pigtail',
-            svg: 'Woman/Hair/Pigtail/Pigtail',
+            id: 'Pigtail/Pigtail',
+            svg: 'Icons/HairWoman/Pigtail/Pigtail',
           },
           {
-            id: 'Female/Short/Curly',
-            svg: 'Woman/Hair/Short/Curly',
+            id: 'Short/Curly',
+            svg: 'Icons/HairWoman/Short/Curly',
           },
           {
-            id: 'Female/Short/Fringe',
-            svg: 'Woman/Hair/Short/Fringe',
+            id: 'Short/Fringe',
+            svg: 'Icons/HairWoman/Short/Fringe',
           },
           {
-            id: 'Female/Short/Straight',
-            svg: 'Woman/Hair/Short/Straight',
+            id: 'Short/Straight',
+            svg: 'Icons/HairWoman/Short/Straight',
           },
         ],
         male: [
           {
-            id: 'Male/First',
-            svg: 'Man/Hair/First',
+            id: 'First',
+            svg: 'Icons/HairMan/First',
           },
           {
-            id: 'Male/Long',
-            svg: 'Man/Hair/Long',
+            id: 'Long',
+            svg: 'Icons/HairMan/Long',
           },
           {
-            id: 'Male/Matt',
-            svg: 'Man/Hair/Matt',
+            id: 'Matt',
+            svg: 'Icons/HairMan/Matt',
           },
           {
-            id: 'Male/Second',
-            svg: 'Man/Hair/Second',
+            id: 'Second',
+            svg: 'Icons/HairMan/Second',
           },
           {
-            id: 'Male/Waves',
-            svg: 'Man/Hair/Waves',
+            id: 'Waves',
+            svg: 'Icons/HairMan/Waves',
           },
         ],
       },
@@ -220,6 +220,7 @@ export default {
       },
       set(val) {
         this.$store.commit('settings.position.setLatitude', parseFloat(val));
+        this.$store.dispatch('refreshWeather');
       },
     },
     longitude: {
@@ -228,6 +229,7 @@ export default {
       },
       set(val) {
         this.$store.commit('settings.position.setLongitude', parseFloat(val));
+        this.$store.dispatch('refreshWeather');
       },
     },
     unit: {
@@ -236,6 +238,7 @@ export default {
       },
       set(val) {
         this.$store.commit('settings.setUnit', val);
+        this.$store.dispatch('refreshWeather');
       },
     },
     hair: {
@@ -244,6 +247,7 @@ export default {
       },
       set(val) {
         this.$store.commit('settings.avatar.setHair', val);
+        this.$store.dispatch('refreshWeather');
       },
     },
     hairType: {
@@ -252,6 +256,7 @@ export default {
       },
       set(val) {
         this.$store.commit('settings.avatar.setHairType', val);
+        this.$store.dispatch('refreshWeather');
       },
     },
     body: {
@@ -260,6 +265,7 @@ export default {
       },
       set(val) {
         this.$store.commit('settings.avatar.setBody', val);
+        this.$store.dispatch('refreshWeather');
       },
     },
     gender: {
@@ -268,6 +274,7 @@ export default {
       },
       set(val) {
         this.$store.commit('settings.avatar.setGender', val);
+        this.$store.dispatch('refreshWeather');
       },
     },
   },

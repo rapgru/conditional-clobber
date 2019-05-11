@@ -10,8 +10,7 @@ export default {
   components: {},
   props: ['path', 'id', 'selected'],
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     select() {
@@ -24,11 +23,11 @@ export default {
 <style lang="scss" scoped>
   div.selected {
     background-color: green;
-    border-radius: 50%;
-    box-shadow: 0px -2px 3px 3px green;
+    border-radius: 5%;
   }
 
   .md-layout-item {
     margin: 10px;
+    overflow: hidden;
   }
 </style>

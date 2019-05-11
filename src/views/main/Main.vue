@@ -71,6 +71,7 @@ export default {
               },
               ticks: {
                 fontColor: '#fff',
+                beginAtZero: true,
               },
             },
           ],
@@ -88,7 +89,6 @@ export default {
     },
     temp() {
       return {
-        //labels: ['6am', '9am', '12am', '3pm', '6pm', '9pm', '12pm'],
         datasets: [
           {
             yAxisID: 'temp',
@@ -102,9 +102,9 @@ export default {
             yAxisID: 'hum',
             borderColor: 'rgb(52,152,219)',
             backgroundColor: 'rgb(52,152,219)',
-            label: 'humidity',
+            label: 'rainfall',
             fill: false,
-            data: this.$store.state.general.weather.timemachine.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.humidity * 100 })),
+            data: this.$store.state.general.weather.timemachine.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.precipIntensity })),
           },
         ],
       };
@@ -122,7 +122,6 @@ export default {
     hammertime.on('swipeleft', () => {
       this.$router.push('/travel');
     });
-    this.$store.dispatch('refreshWeather');
   },
   methods: {
     update() {

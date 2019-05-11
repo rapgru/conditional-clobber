@@ -1,8 +1,7 @@
 import { darkskyForecast, darkskyTimeMachine } from '@/store/modules/darksky-APP_TARGET';
 import { vuexNestedMutations } from 'vuex-nested-mutations';
 import moment from 'moment';
-
-// TODO: Error handling when loading external data
+import _ from 'lodash';
 
 export default {
   state: {
@@ -23,14 +22,15 @@ export default {
         longitude: 48.477231,
         latitude: 15.673781,
       },
-      unit: 'fahrenheit',
+      unit: 'us',
       avatar: {
         hair: 'Black',
-        hairType: 'Male/First',
+        hairType: 'First',
         body: 'White',
-        gender: "Male",
+        gender: 'Male',
       },
     },
+    errors: [],
   },
   mutations: vuexNestedMutations({
     weather: {
@@ -51,7 +51,7 @@ export default {
         },
       },
       setUnit(state, unit) {
-        if (unit === 'fahrenheit' || unit === 'celcius') {
+        if (unit === 'us' || unit === 'ca') {
           state.settings.unit = unit;
         }
       },
@@ -76,6 +76,16 @@ export default {
         },
       },
     },
+    error: {
+      addError(state, error) {
+        if (state.errors.indexOf(error) === -1) {
+          state.errors.push(error);
+        }
+      },
+      removeError(state, id) {
+        _.remove(state.errors, e => e.id === id);
+      },
+    },
   }),
   actions: {
     refreshWeather(context) {
@@ -91,6 +101,7 @@ export default {
       darkskyForecast((result) => {
         context.commit('weather.setRawForecast', result);
       }, locationString);
+      context.dispatch('predictToday');
     },
     loadPosition(context) {
       navigator.geolocation.getCurrentPosition(
@@ -101,8 +112,18 @@ export default {
           }
           context.dispatch('refreshWeather');
         },
-        e => alert(`Can't get geolocation! ${e.message}`),
+        e => context.dispatch('submitError', {
+          id: 'geolocation_not_available',
+          msg: 'Can\'t load your current position',
+          hasAction: false,
+        }),
       );
+    },
+    submitError(context, error) {
+      context.commit('error.addError', error);
+      setTimeout(() => {
+        context.commit('error.removeError', error.id);
+      }, 4000);
     },
   },
 };
