@@ -29,6 +29,7 @@ export default {
   actions: {
     predictToday(context) {
       const genderPrefix = context.rootState.general.settings.avatar.gender === 'Female' ? 'woman' : 'man';
+      const { unit } = context.rootState.general.settings;
       /* prediction.predict({
         weather: context.rootState.general.weather.timemachine,
         gender: _.toLower(context.rootState.general.settings.avatar.gender),
@@ -60,7 +61,7 @@ export default {
         weather: context.rootState.general.weather.timemachine,
         gender: _.toLower(context.rootState.general.settings.avatar.gender),
         dayInformation: { start: moment().hour(5).minute(30).second(0), stop: moment().hour(19).minute(30).second(0) },
-        settings: { resolution: 4, mintemp: -10, maxtemp: 40 },
+        settings: { resolution: 4, mintemp: (unit === 'ca' ? -10 : 15), maxtemp: (unit === 'ca' ? 40 : 100) },
       });
       const renderablePrediction = [
         `${genderPrefix}Body${context.rootState.general.settings.avatar.body}`,
