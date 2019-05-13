@@ -61,14 +61,18 @@ function predictType(gender, targetWeather) {
 
 function quantisize(min, max, resolution) {
   const step = (max - min) / resolution;
-  const mins = _.range(min, max, step);
-  const maxs = _.range(min + step, max, step);
+  const mins = _.range(min, max - step + 0.2, step);
+  const maxs = _.range(min + step, max + 0.2, step);
   const quants = _.zipWith(
     mins,
     maxs,
     (min_, max_) => ({ from: min_, to: max_, avg: (min_ + max_) / 2 }),
   );
-  return point => (quants.filter(q => q.from <= point.apparentTemperature && q.to >= point.apparentTemperature)[0]).avg;
+  console.log(quants);
+  return (point) => {
+    console.log(point);
+    return (quants.filter(q => q.from <= point.apparentTemperature && q.to >= point.apparentTemperature)[0]).avg
+  };
 }
 
 function processWeather(weather, timestart, timestop, resolution, tempstop, tempstart) {
