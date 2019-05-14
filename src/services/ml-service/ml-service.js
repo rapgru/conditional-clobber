@@ -69,13 +69,10 @@ function quantisize(min, max, resolution) {
     (min_, max_) => ({ from: min_, to: max_, avg: (min_ + max_) / 2 }),
   );
   console.log(quants);
-  return (point) => {
-    console.log(point);
-    return (quants.filter(q => q.from <= point.apparentTemperature && q.to >= point.apparentTemperature)[0]).avg
-  };
+  return point => (quants.filter(q => q.from <= point.apparentTemperature && q.to >= point.apparentTemperature)[0]).avg;
 }
 
-function processWeather(weather, timestart, timestop, resolution, tempstop, tempstart) {
+function processWeather(weather, timestart, timestop, resolution, tempstart, tempstop) {
   const timeWeather = weather.hourly.data
     .filter(dp => moment.unix(dp.time).isAfter(timestart))
     .filter(dp => moment.unix(dp.time).isBefore(timestop));
@@ -95,11 +92,13 @@ function processWeather(weather, timestart, timestop, resolution, tempstop, temp
     { avg: null, coll: [] },
   );
 
+  console.log("target degrees");
   console.log(target);
+  console.log(tempstart + "-" + tempstop);
 
   const squish = percent => Math.max(0, Math.min(percent, 100));
   const getPercent = w => w * 100;
-  const calcPercent = w => 1 - ((w - tempstart) / (tempstop - tempstart));
+  const calcPercent = w => 1.0 - ((w - tempstart) / (tempstop - tempstart));
 
   const targetPercent = squish(getPercent(calcPercent(target.avg)));
   return {
