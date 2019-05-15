@@ -75,10 +75,10 @@ import womanHairLongStraightBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Lo
 import womanHairLongStraightBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Straight/Brown.svg';
 import womanHairLongStraightOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Straight/Orange.svg';
 import womanHairLongStraightBlack from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Straight/Black.svg';
-import womanHairLongWavytBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Blond.svg';
-import womanHairLongWavytBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Brown.svg';
-import womanHairLongWavytOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Orange.svg';
-import womanHairLongWavytBlack from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Black.svg';
+import womanHairLongWavyBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Blond.svg';
+import womanHairLongWavyBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Brown.svg';
+import womanHairLongWavyOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Orange.svg';
+import womanHairLongWavyBlack from '!!raw-loader!@/assets/SVGs/Woman/Hair/Long/Wavy/Black.svg';
 import womanHairPigtailBraidBlond from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Braid/Blond.svg';
 import womanHairPigtailBraidBrown from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Braid/Brown.svg';
 import womanHairPigtailBraidOrange from '!!raw-loader!@/assets/SVGs/Woman/Hair/Pigtail/Braid/Orange.svg';
@@ -791,33 +791,33 @@ export const svgs = {
     category: 'hair',
     svg: womanHairLongStraightBlack,
   },
-  womanHairLongWavytBlond: {
-    name: 'womanHairLongWavytBlond',
+  womanHairLongWavyBlond: {
+    name: 'womanHairLongWavyBlond',
     gender: 'female',
     type: 'longWavytHair',
     category: 'hair',
-    svg: womanHairLongWavytBlond,
+    svg: womanHairLongWavyBlond,
   },
-  womanHairLongWavytBrown: {
-    name: 'womanHairLongWavytBrown',
+  womanHairLongWavyBrown: {
+    name: 'womanHairLongWavyBrown',
     gender: 'female',
     type: 'longWavytHair',
     category: 'hair',
-    svg: womanHairLongWavytBrown,
+    svg: womanHairLongWavyBrown,
   },
-  womanHairLongWavytOrange: {
-    name: 'womanHairLongWavytOrange',
+  womanHairLongWavyOrange: {
+    name: 'womanHairLongWavyOrange',
     gender: 'female',
     type: 'longWavytHair',
     category: 'hair',
-    svg: womanHairLongWavytOrange,
+    svg: womanHairLongWavyOrange,
   },
-  womanHairLongWavytBlack: {
-    name: 'womanHairLongWavytBlack',
+  womanHairLongWavyBlack: {
+    name: 'womanHairLongWavyBlack',
     gender: 'female',
     type: 'longWavytHair',
     category: 'hair',
-    svg: womanHairLongWavytBlack,
+    svg: womanHairLongWavyBlack,
   },
   womanHairPigtailBraidBlond: {
     name: 'womanHairPigtailBraidBlond',
