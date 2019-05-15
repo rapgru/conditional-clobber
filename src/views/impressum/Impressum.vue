@@ -1,8 +1,11 @@
 <template>
   <div class="impressum-view-root">
     <div ref="content" class="md-layout md-alignment-center-center">
-      <div class="md-layout-item">
-        <h1 class="md-title">Impressum</h1>
+      <div class="md-layout-item" style="text-align: center;">
+        <p style="margin-bottom: 10px;">Made with</p>
+        <img src="@/assets/heart.svg" style="height: 70px;"/>
+        <p style="font-size: 12px; margin-bottom: 10px; margin-top: 10px;">by the</p>
+        <p style="font-size: 23px;">Conditional Clobber Team</p>
       </div>
     </div>
   </div>

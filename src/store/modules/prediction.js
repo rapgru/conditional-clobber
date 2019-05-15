@@ -58,7 +58,7 @@ export default {
           context.commit('setPic', renderedPicture);
         }); */
       const prediction_ = predict({
-        weather: context.rootState.general.weather.timemachine,
+        weather: context.rootState.general.weather.timemachine.data,
         gender: _.toLower(context.rootState.general.settings.avatar.gender),
         dayInformation: { start: moment().hour(5).minute(30).second(0), stop: moment().hour(19).minute(30).second(0) },
         settings: { resolution: 4, mintemp: (unit === 'ca' ? 0 : 15), maxtemp: (unit === 'ca' ? 35 : 100) },

@@ -96,7 +96,7 @@ export default {
             backgroundColor: 'rgb(243,156,18)',
             fill: false,
             label: 'temperature',
-            data: this.$store.state.general.weather.timemachine.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.temperature })),
+            data: this.$store.state.general.weather.timemachine.data.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.temperature })),
           },
           {
             yAxisID: 'hum',
@@ -104,7 +104,7 @@ export default {
             backgroundColor: 'rgb(52,152,219)',
             label: 'rainfall',
             fill: false,
-            data: this.$store.state.general.weather.timemachine.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.precipIntensity })),
+            data: this.$store.state.general.weather.timemachine.data.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.precipIntensity })),
           },
         ],
       };

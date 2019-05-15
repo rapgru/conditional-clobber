@@ -1,4 +1,5 @@
-import { darkskyForecast, darkskyTimeMachine } from '@/store/modules/darksky-APP_TARGET';
+//import { darkskyForecast, darkskyTimeMachine } from '@/store/modules/darksky-APP_TARGET';
+import { darkskyForecast, darkskyTimeMachine } from '@/store/modules/darksky';
 import { vuexNestedMutations } from 'vuex-nested-mutations';
 import moment from 'moment';
 import _ from 'lodash';
@@ -97,10 +98,10 @@ export default {
         .second(0)
         .minute(0)
         .hour(0)
-        .format());
+        .format(), context.state.settings.unit);
       darkskyForecast((result) => {
         context.commit('weather.setRawForecast', result);
-      }, locationString);
+      }, locationString, context.state.settings.unit);
       context.dispatch('predictToday');
     },
     loadPosition(context) {
