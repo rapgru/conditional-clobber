@@ -3,6 +3,8 @@
     <div ref="content">
       <h1 class="md-title">Settings</h1>
 
+      <location-picker :show="showLocation" @cancel="showLocation = false" @save="setLocation"></location-picker>
+
       <md-list class="main-list">
         <md-list-item>
           <md-card>
@@ -13,23 +15,11 @@
               <div class="md-title">Position</div>
             </md-card-header>
             <md-card-content>
-              <md-list>
-                <md-list-item>
-                  <md-field>
-                    <label>Latitude</label>
-                    <md-input v-model="latitude" type="number"></md-input>
-                  </md-field>
-                </md-list-item>
-                <md-list-item>
-                  <md-field>
-                    <label>Longitude</label>
-                    <md-input v-model="longitude" type="number"></md-input>
-                  </md-field>
-                </md-list-item>
-              </md-list>
+              <p style="white-space: normal; padding-top: 20px;">{{ place.display_name }}</p>
             </md-card-content>
-            <md-card-actions>
+            <md-card-actions md-alignment="left">
               <md-button @click="loadCurrentPosition">Current Position</md-button>
+              <md-button @click="showLocation = true">Search Place</md-button>
             </md-card-actions>
           </md-card>
         </md-list-item>
@@ -45,10 +35,12 @@
             <md-card-content>
               <md-list>
                 <md-list-item>
-                  <md-radio v-model="unit" value="us">°F</md-radio>
+                  <md-radio v-model="unit" value="us"/>
+                  <span class="md-list-item-text">°F</span>
                 </md-list-item>
                 <md-list-item>
-                  <md-radio v-model="unit" value="ca">°C</md-radio>
+                  <md-radio v-model="unit" value="ca"/>
+                  <span class="md-list-item-text">°C</span>
                 </md-list-item>
               </md-list>
             </md-card-content>
@@ -93,12 +85,14 @@
 
 <script>
 import SVGSelector from '@/views/settings/SVGSelector.vue';
+import LocationPicker from '@/views/settings/LocationPicker.vue';
 import _ from 'lodash';
 
 export default {
   name: 'settings',
   components: {
     'svg-selector': SVGSelector,
+    'location-picker': LocationPicker,
   },
   data() {
     return {
@@ -206,6 +200,7 @@ export default {
           svg: 'Icons/Gender/Woman_Symbol.svg',
         },
       ],
+      showLocation: false,
     };
   },
   mounted() {
@@ -215,21 +210,14 @@ export default {
     });
   },
   computed: {
-    latitude: {
+    place: {
       get() {
-        return this.$store.state.general.settings.position.latitude;
+        return this.$store.state.general.settings.place;
       },
       set(val) {
-        this.$store.commit('settings.position.setLatitude', parseFloat(val));
-        this.$store.dispatch('refreshWeather');
-      },
-    },
-    longitude: {
-      get() {
-        return this.$store.state.general.settings.position.longitude;
-      },
-      set(val) {
-        this.$store.commit('settings.position.setLongitude', parseFloat(val));
+        console.log("saved");
+        console.log(val);
+        this.$store.commit('settings.setPlace', val);
         this.$store.dispatch('refreshWeather');
       },
     },
@@ -299,6 +287,11 @@ export default {
     selectGender(id) {
       this.gender = id;
     },
+    setLocation(location) {
+      this.place = location;
+      this.showLocation = false;
+    },
+
   },
 };
 </script>
@@ -318,6 +311,7 @@ export default {
 
   .md-card {
     width: 100%;
+    margin: 0px;
   }
 
   .main-list {

@@ -3,6 +3,7 @@ import { darkskyForecast, darkskyTimeMachine } from '@/store/modules/darksky';
 import { vuexNestedMutations } from 'vuex-nested-mutations';
 import moment from 'moment';
 import _ from 'lodash';
+import { placeToCoords, coordsToPlace } from '@/util/location';
 
 export default {
   state: {
@@ -19,9 +20,10 @@ export default {
       },
     },
     settings: {
-      position: {
-        longitude: 48.477231,
-        latitude: 15.673781,
+      place: {
+        display_name: 'Nowhere',
+        lon: 0,
+        lat: 0,
       },
       unit: 'us',
       avatar: {
@@ -43,13 +45,8 @@ export default {
       },
     },
     settings: {
-      position: {
-        setLatitude(state, lat) {
-          state.settings.position.latitude = lat;
-        },
-        setLongitude(state, long) {
-          state.settings.position.longitude = long;
-        },
+      setPlace(state, place) {
+        state.settings.place = place;
       },
       setUnit(state, unit) {
         if (unit === 'us' || unit === 'ca') {
@@ -90,30 +87,36 @@ export default {
   }),
   actions: {
     refreshWeather(context) {
-      const coords = context.state.settings.position;
-      const locationString = `${coords.latitude},${coords.longitude}`;
-      darkskyTimeMachine((result) => {
-        context.commit('weather.setRawTimeMachine', result);
-      }, locationString, moment()
-        .second(0)
-        .minute(0)
-        .hour(0)
-        .format(), context.state.settings.unit);
-      darkskyForecast((result) => {
-        context.commit('weather.setRawForecast', result);
-      }, locationString, context.state.settings.unit);
-      context.dispatch('predictToday');
+      placeToCoords(context.state.settings.place)
+        .then((coords) => {
+          const locationString = `${coords.lat},${coords.long}`;
+          darkskyTimeMachine((result) => {
+            context.commit('weather.setRawTimeMachine', result);
+            context.dispatch('predictToday');
+          }, locationString, moment()
+            .second(0)
+            .minute(0)
+            .hour(0)
+            .format(), context.state.settings.unit);
+          darkskyForecast((result) => {
+            context.commit('weather.setRawForecast', result);
+          }, locationString, context.state.settings.unit);
+        });
     },
     loadPosition(context) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           if (position !== {} && position !== undefined) {
-            context.commit('settings.position.setLongitude', position.coords.longitude);
-            context.commit('settings.position.setLatitude', position.coords.latitude);
+            console.log('Loading Reverse Place ' + position.coords.longitude + " " + position.coords.latitude);
+            coordsToPlace({ long: position.coords.longitude, lat: position.coords.latitude })
+              .then((value) => {
+                console.log(value);
+                context.commit('settings.setPlace', value);
+                context.dispatch('refreshWeather');
+              });
           }
-          context.dispatch('refreshWeather');
         },
-        e => context.dispatch('submitError', {
+        () => context.dispatch('submitError', {
           id: 'geolocation_not_available',
           msg: 'Can\'t load your current position',
           hasAction: false,

@@ -61,15 +61,26 @@ function predictType(gender, targetWeather) {
 
 function quantisize(min, max, resolution) {
   const step = (max - min) / resolution;
-  const mins = _.range(min, max - step + 0.2, step);
-  const maxs = _.range(min + step, max + 0.2, step);
+  const mins = _.range(min, max - (step - 0.2), step);
+  const maxs = _.range(min + step, max + (step - 0.2), step);
   const quants = _.zipWith(
     mins,
     maxs,
     (min_, max_) => ({ from: min_, to: max_, avg: (min_ + max_) / 2 }),
   );
+  console.log('quants');
+  console.log({ min, max });
   console.log(quants);
-  return point => (quants.filter(q => q.from <= point.apparentTemperature && q.to >= point.apparentTemperature)[0]).avg;
+  return (point) => {
+    console.log('quantizising');
+    console.log(point);
+    const fittingQuants = quants.filter(q => q.from <= point.apparentTemperature && q.to >= point.apparentTemperature);
+    if (fittingQuants.length >= 1) return fittingQuants[0].avg;
+
+    if (Math.abs(point.apparentTemperature - quants[0]) < Math.abs(point.apparentTemperature - quants[resolution - 1])) return quants[0].avg;
+
+    return quants[resolution - 1].avg;
+  };
 }
 
 function processWeather(weather, timestart, timestop, resolution, tempstart, tempstop) {
@@ -153,7 +164,7 @@ export function predict(param) {
     {
       name: 'jacket',
       gender: true,
-      omit: true,
+      omit: false,
     },
     {
       name: 'lowerbody',

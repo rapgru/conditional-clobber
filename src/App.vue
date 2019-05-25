@@ -60,7 +60,7 @@ export default {
   overflow:hidden;
 }
 
-* {margin: 0px; padding: 0px;}
+/* * {margin: 0px; padding: 0px;} */
 
 $switch-percent: 30%;
 $switch-time: .2s;
