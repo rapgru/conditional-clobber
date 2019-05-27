@@ -1,5 +1,6 @@
 <template>
   <div class="main-view-root">
+    <md-icon style="position: absolute; top: 0; right: 0;">refresh</md-icon>
     <div ref="content" class="md-layout md-alignment-center-space-between">
       <div class="md-layout-item main-picture" v-html="mainPicture"></div>
       <div class="md-layout-item sidebar">

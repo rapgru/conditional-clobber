@@ -3,7 +3,7 @@
     <div ref="content">
       <h1 class="md-title">Settings</h1>
 
-      <location-picker :show="showLocation" @cancel="showLocation = false" @save="setLocation"></location-picker>
+      <location-picker-dialog :show="showLocation" @cancel="showLocation = false" @save="setLocation"/>
 
       <md-list class="main-list">
         <md-list-item>
@@ -85,14 +85,14 @@
 
 <script>
 import SVGSelector from '@/views/settings/SVGSelector.vue';
-import LocationPicker from '@/views/settings/LocationPicker.vue';
+import LocationPickerDialog from '@/views/settings/LocationPickerDialog.vue';
 import _ from 'lodash';
 
 export default {
   name: 'settings',
   components: {
     'svg-selector': SVGSelector,
-    'location-picker': LocationPicker,
+    'location-picker-dialog': LocationPickerDialog,
   },
   data() {
     return {
