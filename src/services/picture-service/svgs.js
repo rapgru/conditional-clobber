@@ -1,6 +1,6 @@
 /* eslint-disable import/no-webpack-loader-syntax */
 import womanBodyBlack from '!!raw-loader!@/assets/SVGs/Woman/Body/Black.svg';
-import womanBodyLightYellow from '!!raw-loader!@/assets/SVGs/Woman/Body/LightYellow.svg';
+import womanBodyYellow from '!!raw-loader!@/assets/SVGs/Woman/Body/LightYellow.svg';
 import womanBodyWhite from '!!raw-loader!@/assets/SVGs/Woman/Body/White.svg';
 import womanDressStraplessBlue from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapless/Blue.svg';
 import womanDressStraplessRed from '!!raw-loader!@/assets/SVGs/Woman/Clothes/Dresses/Strapless/Red.svg';
@@ -201,12 +201,12 @@ export const svgs = {
     category: 'body',
     svg: womanBodyBlack,
   },
-  womanBodyLightYellow: {
+  womanBodyYellow: {
     name: 'womanBodyLightYellow',
     gender: 'female',
     type: 'body',
     category: 'body',
-    svg: womanBodyLightYellow,
+    svg: womanBodyYellow,
   },
   womanBodyWhite: {
     name: 'womanBodyWhite',
