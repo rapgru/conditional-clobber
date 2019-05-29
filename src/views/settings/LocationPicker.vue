@@ -41,12 +41,10 @@ export default {
 .picker-list {
   overflow-y: scroll;
   overflow-x: auto;
+  min-height: 0;
 
       flex: 2;
 
-}
-
-.picker-list-div {
 }
 
 .picker-text {
@@ -55,5 +53,6 @@ export default {
 .location-picker-root {
   display: flex;
   flex-flow: column;
+  min-height: 0;
 }
 </style>
