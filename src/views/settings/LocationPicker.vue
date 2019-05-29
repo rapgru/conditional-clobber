@@ -41,10 +41,19 @@ export default {
 .picker-list {
   overflow-y: scroll;
   overflow-x: auto;
-  width: 100%;
-  height: 100%;
+
+      flex: 2;
+
 }
+
+.picker-list-div {
+}
+
 .picker-text {
   white-space: normal !important;
+}
+.location-picker-root {
+  display: flex;
+  flex-flow: column;
 }
 </style>
