@@ -34,6 +34,7 @@ export default {
       },
     },
     errors: [],
+    loading: false,
   },
   mutations: vuexNestedMutations({
     weather: {
@@ -84,14 +85,19 @@ export default {
         _.remove(state.errors, e => e.id === id);
       },
     },
+    setLoading(state, loading) {
+      state.loading = loading;
+    },
   }),
   actions: {
     refreshWeather(context) {
+      context.commit('setLoading', true);
       placeToCoords(context.state.settings.place)
         .then((coords) => {
           const locationString = `${coords.lat},${coords.long}`;
           darkskyTimeMachine((result) => {
             context.commit('weather.setRawTimeMachine', result);
+            context.commit('setLoading', false);
             context.dispatch('predictToday');
           }, locationString, moment()
             .second(0)

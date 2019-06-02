@@ -1,13 +1,14 @@
 <template>
   <div class="main-view-root">
-    <md-icon style="position: absolute; top: 0; right: 0;">refresh</md-icon>
+    <md-button class="md-icon-button" @click="update" style="position: absolute; top: 10px; right: 10px;">
+      <md-icon class="refresh-icon" :class="{'refresh-turn': loading}">refresh</md-icon>
+    </md-button>
     <div ref="content" class="md-layout md-alignment-center-space-between">
       <div class="md-layout-item main-picture" v-html="mainPicture"></div>
       <div class="md-layout-item sidebar">
         <IconWarning :key="icon" v-for="icon in warnings" :icon="icon"></IconWarning>
       </div>
     </div>
-    <!-- <button @click="update">Hello</button> -->
     <Chart class="chart" :chart-data="temp" :options="options"></Chart>
   </div>
 </template>
@@ -88,6 +89,9 @@ export default {
     warnings() {
       return this.$store.state.prediction.warnings;
     },
+    loading() {
+      return this.$store.state.general.loading;
+    },
     temp() {
       return {
         datasets: [
@@ -105,7 +109,7 @@ export default {
             backgroundColor: 'rgb(52,152,219)',
             label: 'rainfall',
             fill: false,
-            data: this.$store.state.general.weather.timemachine.data.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.precipIntensity * 100 })),
+            data: this.$store.state.general.weather.timemachine.data.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.precipProbability * 100 })),
           },
         ],
       };
@@ -160,5 +164,18 @@ export default {
     margin-top: 4px;
   }
 }
+
+/*.refresh-icon {
+  width: $refreshsize !important;
+  min-width: $refreshsize !important;
+  height: $refreshsize !important;
+  font-size: $refreshsize !important;
+}*/
+
+.refresh-turn {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin { 100% { transform:rotate(360deg); } }
 
 </style>

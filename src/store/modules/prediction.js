@@ -30,6 +30,7 @@ export default {
     predictToday(context) {
       const genderPrefix = context.rootState.general.settings.avatar.gender === 'Female' ? 'woman' : 'man';
       const { unit } = context.rootState.general.settings;
+      context.commit('setLoading', true);
       /* prediction.predict({
         weather: context.rootState.general.weather.timemachine,
         gender: _.toLower(context.rootState.general.settings.avatar.gender),
@@ -82,6 +83,7 @@ export default {
       picture.renderPrediction(renderablePrediction)
         .then((renderedPicture) => {
           context.commit('setPic', renderedPicture);
+          context.commit('setLoading', false);
         });
     },
   },
