@@ -24,12 +24,12 @@ export default {
   watch: {
     $route: function r(to, from) {
       if (to.path === '/') {
-        if (from.path === '/travel') this.direction = 'left';
+        if (from.path === '/travel' || from.path === '/travel/result') this.direction = 'left';
         if (from.path === '/settings') this.direction = 'right';
         if (from.path === '/impressum') this.direction = 'up';
       } else if (to.path === '/settings') {
         if (from.path === '/') this.direction = 'left';
-      } else if (to.path === '/travel') {
+      } else if (to.path === '/travel' || to.path === '/travel/result') {
         if (from.path === '/') this.direction = 'right';
       } else if (to.path === '/impressum') {
         if (from.path === '/') this.direction = 'down';

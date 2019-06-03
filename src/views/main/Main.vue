@@ -125,7 +125,7 @@ export default {
       this.$router.push('/settings');
     });
     hammertime.on('swipeleft', () => {
-      this.$router.push('/travel');
+      this.$router.push(this.$store.state.travel.queryMode ? '/travel' : '/travel/result');
     });
   },
   methods: {

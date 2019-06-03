@@ -24,7 +24,7 @@ function getRandomColor(type, category, gender) {
   return _.sample(_.toArray(svgs_).filter(s => s.gender === gender).filter(s => s.category === category).filter(s => s.type === type)).name;
 }
 
-function predictType(gender, targetWeather) {
+function predictType(gender, targetWeather, rawType) {
   function nearest(arr) {
     return arr.reduce((p, c) => {
       const cDiff = Math.abs(c.percentage - targetWeather.target);
@@ -49,12 +49,12 @@ function predictType(gender, targetWeather) {
       }
       const selected = nearest(categoryPieces);
       return {
-        [category.name]: getRandomColor(selected.svg.type, category.name, gender),
+        [category.name]: rawType ? selected.svg.type : getRandomColor(selected.svg.type, category.name, gender),
       };
     }
     const selected = nearest(rangePieces);
     return {
-      [category.name]: getRandomColor(selected.svg.type, category.name, gender),
+      [category.name]: rawType ? selected.svg.type : getRandomColor(selected.svg.type, category.name, gender),
     };
   };
 }
@@ -119,6 +119,22 @@ function processWeather(weather, timestart, timestop, resolution, tempstart, tem
   };
 }
 
+function processDailyWeather(weather, tempstart, tempstop) {
+  const timeWeather = weather;
+
+  const squish = percent => Math.max(0, Math.min(percent, 100));
+  const getPercent = w => w * 100;
+  const calcPercent = w => 1.0 - ((w - tempstart) / (tempstop - tempstart));
+  const avg = (a, b) => (a + b) / 2.0;
+
+  const targetPercent = squish(getPercent(calcPercent(avg(timeWeather.apparentTemperatureHigh, timeWeather.apparentTemperatureLow))));
+  return {
+    target: targetPercent,
+    min: squish(targetPercent - 10),
+    max: squish(targetPercent + 10),
+  };
+}
+
 
 /*
 returns
@@ -144,44 +160,45 @@ settings
   resolution: int
 }
 */
+const categories = [
+  /* {
+    name: 'fullbody',
+    gender: true,
+    omit: false,
+  }, */
+  {
+    name: 'headgear',
+    gender: true,
+    omit: true,
+  },
+  {
+    name: 'gloves',
+    gender: true,
+    omit: true,
+  },
+  {
+    name: 'jacket',
+    gender: true,
+    omit: true,
+  },
+  {
+    name: 'lowerbody',
+    gender: true,
+    omit: false,
+  },
+  {
+    name: 'shoes',
+    gender: true,
+    omit: false,
+  },
+  {
+    name: 'upperbody',
+    gender: true,
+    omit: false,
+  },
+];
+
 export function predict(param) {
-  const categories = [
-    /* {
-      name: 'fullbody',
-      gender: true,
-      omit: false,
-    }, */
-    {
-      name: 'headgear',
-      gender: true,
-      omit: true,
-    },
-    {
-      name: 'gloves',
-      gender: true,
-      omit: true,
-    },
-    {
-      name: 'jacket',
-      gender: true,
-      omit: false,
-    },
-    {
-      name: 'lowerbody',
-      gender: true,
-      omit: false,
-    },
-    {
-      name: 'shoes',
-      gender: true,
-      omit: false,
-    },
-    {
-      name: 'upperbody',
-      gender: true,
-      omit: false,
-    },
-  ];
   const pieces = categories.map(predictType(
     param.gender,
     processWeather(
@@ -192,6 +209,20 @@ export function predict(param) {
       param.settings.mintemp,
       param.settings.maxtemp,
     ),
+    false,
+  ));
+  return _.reduce(pieces, _.extend);
+}
+
+export function predictDay(param) {
+  const pieces = categories.map(predictType(
+    param.gender,
+    processDailyWeather(
+      param.weather,
+      param.settings.mintemp,
+      param.settings.maxtemp,
+    ),
+    true,
   ));
   return _.reduce(pieces, _.extend);
 }

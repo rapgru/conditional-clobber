@@ -18,7 +18,7 @@
               <p style="white-space: normal; padding-top: 20px;">{{ place.display_name }}</p>
             </md-card-content>
             <md-card-actions md-alignment="left">
-              <md-button @click="loadCurrentPosition">Current Position</md-button>
+              <md-button @click="loadCurrentPosition">Current Place</md-button>
               <md-button @click="showLocation = true">Search Place</md-button>
             </md-card-actions>
           </md-card>
