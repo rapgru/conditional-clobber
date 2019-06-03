@@ -1231,7 +1231,7 @@ export const svgs = {
   manLowerbodyWarmMiddleBlack: {
     name: 'manLowerbodyWarmMiddleBlack',
     gender: 'male',
-    type: 'trousersWarm',
+    type: 'trousersWarmMiddle',
     category: 'lowerbody',
     percentage: 30,
     svg: manLowerbodyWarmMiddleBlack,
@@ -1239,7 +1239,7 @@ export const svgs = {
   manLowerbodyWarmMiddleBlue: {
     name: 'manLowerbodyWarmMiddleBlue',
     gender: 'male',
-    type: 'trousersWarm',
+    type: 'trousersWarmMiddle',
     category: 'lowerbody',
     percentage: 30,
     svg: manLowerbodyWarmMiddleBlue,
@@ -1247,7 +1247,7 @@ export const svgs = {
   manLowerbodyWarmMiddleGray: {
     name: 'manLowerbodyWarmMiddleGray',
     gender: 'male',
-    type: 'trousersWarm',
+    type: 'trousersWarmMiddle',
     category: 'lowerbody',
     percentage: 30,
     svg: manLowerbodyWarmMiddleGray,
@@ -1295,7 +1295,7 @@ export const svgs = {
   manShoesSneakers: {
     name: 'manShoesSneakers',
     gender: 'male',
-    type: 'rubberboots',
+    type: 'shoesSneakers',
     category: 'shoes',
     percentage: 30,
     svg: manShoesSneakers,
@@ -1303,7 +1303,7 @@ export const svgs = {
   manShoesWinter: {
     name: 'manShoesWinter',
     gender: 'male',
-    type: 'rubberboots',
+    type: 'shoesCold',
     category: 'shoes',
     percentage: 90,
     svg: manShoesWinter,
