@@ -1,6 +1,6 @@
 <template>
   <md-dialog :md-active.sync="show">
-      <md-dialog-title>Choose Location</md-dialog-title>
+      <md-dialog-title>Settings > Location</md-dialog-title>
 
       <location-picker @select="changed"></location-picker>
 

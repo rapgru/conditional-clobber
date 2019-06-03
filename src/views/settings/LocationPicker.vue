@@ -43,8 +43,7 @@ export default {
   overflow-x: auto;
   min-height: 0;
 
-      flex: 2;
-
+  flex: 2;
 }
 
 .picker-text {
