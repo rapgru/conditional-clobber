@@ -4,6 +4,8 @@ import _ from 'lodash';
 import axios from 'axios';
 import svgs from '@/views/travel/travelsvgs';
 
+// TODO: Save prediction gender
+
 export default {
   state: {
     queryMode: true,

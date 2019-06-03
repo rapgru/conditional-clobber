@@ -18,6 +18,9 @@
               <p class="travel-display"><span>From: </span>{{ departureFormat }}</p>
               <p class="travel-display"><span>To: </span>{{ treturnFormat }}</p>
             </md-card-content>
+            <md-card-actions>
+              <md-button class="md-primary" @click="requery">New Query</md-button>
+            </md-card-actions>
           </md-card>
         </md-list-item>
 
@@ -63,6 +66,10 @@ export default {
       const base = Base64.encode(_.find(svgs, { type, gender: _.toLower(gender) }).svg);
       return `data:image/svg+xml;base64,${base}`;
     },
+    requery() {
+      this.$store.commit('setQueryMode', true);
+      this.$router.push('/travel');
+    }
   },
   computed: {
     destination() {
