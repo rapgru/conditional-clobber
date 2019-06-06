@@ -16,7 +16,7 @@
 <script>
 import IconWarning from '@/views/main/IconWarning.vue';
 import Chart from '@/views/main/Chart.vue';
-import moment from 'moment';
+import moment from 'moment-timezone';
 
 export default {
   name: 'home',
@@ -26,7 +26,42 @@ export default {
   },
   data() {
     return {
-      options: {
+    };
+  },
+  computed: {
+    mainPicture() {
+      return this.$store.state.prediction.renderedPicture.svg;
+    },
+    warnings() {
+      return this.$store.state.general.weather.warnings;
+    },
+    loading() {
+      return this.$store.state.general.loading;
+    },
+    temp() {
+      return {
+        datasets: [
+          {
+            yAxisID: 'temp',
+            borderColor: 'rgb(243,156,18)',
+            backgroundColor: 'rgb(243,156,18)',
+            fill: false,
+            label: 'temperature',
+            data: this.$store.state.general.weather.timemachine.data.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.temperature })),
+          },
+          {
+            yAxisID: 'hum',
+            borderColor: 'rgb(52,152,219)',
+            backgroundColor: 'rgb(52,152,219)',
+            label: 'rainfall',
+            fill: false,
+            data: this.$store.state.general.weather.timemachine.data.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.precipProbability * 100 })),
+          },
+        ],
+      };
+    },
+    options() {
+      return {
         legend: {
           labels: {
             fontColor: '#fff',
@@ -37,9 +72,9 @@ export default {
             type: 'time',
             time: {
               unit: 'hour',
-              min: moment().second(0).minute(0).hour(0)
+              min: moment.tz(this.$store.state.general.settings.timezone).second(0).minute(0).hour(0)
                 .toDate(),
-              max: moment().second(59).minute(59).hour(23)
+              max: moment.tz(this.$store.state.general.settings.timezone).second(59).minute(59).hour(23)
                 .toDate(),
             },
             ticks: {
@@ -79,39 +114,6 @@ export default {
           ],
         },
         maintainAspectRatio: false,
-      },
-    };
-  },
-  computed: {
-    mainPicture() {
-      return this.$store.state.prediction.renderedPicture.svg;
-    },
-    warnings() {
-      return this.$store.state.prediction.warnings;
-    },
-    loading() {
-      return this.$store.state.general.loading;
-    },
-    temp() {
-      return {
-        datasets: [
-          {
-            yAxisID: 'temp',
-            borderColor: 'rgb(243,156,18)',
-            backgroundColor: 'rgb(243,156,18)',
-            fill: false,
-            label: 'temperature',
-            data: this.$store.state.general.weather.timemachine.data.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.temperature })),
-          },
-          {
-            yAxisID: 'hum',
-            borderColor: 'rgb(52,152,219)',
-            backgroundColor: 'rgb(52,152,219)',
-            label: 'rainfall',
-            fill: false,
-            data: this.$store.state.general.weather.timemachine.data.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.precipProbability * 100 })),
-          },
-        ],
       };
     },
   },

@@ -1,6 +1,7 @@
 <template>
-  <div class="md-layout-item md-size-15" :class="{ selected: selected }" @click="select">
+  <div class="md-layout-item md-size-15" @click="select">
     <img :src="`/svg-norender/${path}`" alt="">
+    <img class="selected" style="height: 20px;" v-if="selected" src="@/assets/SVGs/Icons/Selection/Selected.svg" alt="">
   </div>
 </template>
 
@@ -21,13 +22,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  div.selected {
+  /* div.selected {
     background-color: green;
     border-radius: 5%;
-  }
+  } */
 
   .md-layout-item {
     margin: 10px;
-    overflow: hidden;
+    overflow: visible !important;
+  }
+
+  .selected {
+    position: relative;
+    top: 10px;
+    left: -20px;
   }
 </style>

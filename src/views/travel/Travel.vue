@@ -35,7 +35,8 @@
 
 <script>
 import LocationPicker from '@/views/settings/LocationPicker.vue';
-import moment from 'moment';
+import moment from 'moment-timezone';
+import axios from 'axios';
 
 export default {
   name: 'travel',
@@ -114,12 +115,11 @@ export default {
     },
     submit() {
       this.$store.commit('setQueryMode', false);
-      this.$store.commit('setQuery', {
+      this.$store.dispatch('setQuery', {
         departure: this.departure.value,
         destination: this.destination.value,
         treturn: this.treturn.value,
       });
-      this.$store.dispatch('predictTravel');
       this.$router.push('/travel/result');
     },
   },

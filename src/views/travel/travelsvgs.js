@@ -46,6 +46,7 @@ export const svgs = {
     gender: 'female',
     type: 'bikini',
     svg: womanBikini,
+    display: 'bikini',
     holds: Infinity,
   },
   womanBoots: {
@@ -53,6 +54,7 @@ export const svgs = {
     gender: 'female',
     type: 'shoesCold',
     svg: womanBoots,
+    display: 'winter shoes',
     holds: Infinity,
   },
   womanCap: {
@@ -60,6 +62,7 @@ export const svgs = {
     gender: 'female',
     type: 'cap',
     svg: womanCap,
+    display: 'cap',
     holds: Infinity,
   },
   womanCollartop: {
@@ -67,6 +70,7 @@ export const svgs = {
     gender: 'female',
     type: 'collartop',
     svg: womanCollartop,
+    display: 'top with collar',
     holds: 2,
   },
   womanCroptop: {
@@ -74,6 +78,7 @@ export const svgs = {
     gender: 'female',
     type: 'croptop',
     svg: womanCroptop,
+    display: 'croptop',
     holds: 2,
   },
   womanEveryday: {
@@ -81,6 +86,7 @@ export const svgs = {
     gender: 'female',
     type: 'shoesEverday',
     svg: womanEveryday,
+    display: 'sneakers',
     holds: Infinity,
   },
   womanFlat: {
@@ -88,6 +94,7 @@ export const svgs = {
     gender: 'female',
     type: 'shoesWarm',
     svg: womanFlat,
+    display: 'flat shoes',
     holds: Infinity,
   },
   womanGlove: {
@@ -95,6 +102,7 @@ export const svgs = {
     gender: 'female',
     type: 'gloves',
     svg: womanGlove,
+    display: 'gloves',
     holds: Infinity,
   },
   womanPullover: {
@@ -102,6 +110,7 @@ export const svgs = {
     gender: 'female',
     type: 'pullover',
     svg: womanPullover,
+    display: 'pullover',
     holds: 3,
   },
   womanRain: {
@@ -109,6 +118,7 @@ export const svgs = {
     gender: 'female',
     type: 'rubberboots',
     svg: womanRain,
+    display: 'rubberboots',
     holds: Infinity,
   },
   womanSkirt: {
@@ -116,6 +126,7 @@ export const svgs = {
     gender: 'female',
     type: 'skirt',
     svg: womanSkirt,
+    display: 'skirt',
     holds: 3,
   },
   womanSpringAutumn: {
@@ -123,6 +134,7 @@ export const svgs = {
     gender: 'female',
     type: 'jacketSpringAutumn',
     svg: womanSpringAutumn,
+    display: 'light jacket',
     holds: 4,
   },
   womanStrapless: {
@@ -130,6 +142,7 @@ export const svgs = {
     gender: 'female',
     type: 'dressStrapless',
     svg: womanStrapless,
+    display: 'strapless dress',
     holds: 2,
   },
   womanStraplesstop: {
@@ -137,6 +150,7 @@ export const svgs = {
     gender: 'female',
     type: 'straplesstop',
     svg: womanStraplesstop,
+    display: 'strapless top',
     holds: 2,
   },
   womanStraplong: {
@@ -144,6 +158,7 @@ export const svgs = {
     gender: 'female',
     type: 'dressStraplong',
     svg: womanStraplong,
+    display: 'dress',
     holds: 2,
   },
   womanStrapshort: {
@@ -151,6 +166,7 @@ export const svgs = {
     gender: 'female',
     type: 'dressStrapshort',
     svg: womanStrapshort,
+    display: 'dress',
     holds: 2,
   },
   womanStraptop: {
@@ -158,6 +174,7 @@ export const svgs = {
     gender: 'female',
     type: 'straptop',
     svg: womanStraptop,
+    display: 'top with straps',
     holds: 2,
   },
   womanTShirt: {
@@ -165,6 +182,7 @@ export const svgs = {
     gender: 'female',
     type: 't-shirt',
     svg: womanTShirt,
+    display: 't-shirt',
     holds: 2,
   },
   womanTightskirt: {
@@ -172,6 +190,7 @@ export const svgs = {
     gender: 'female',
     type: 'thightskirt',
     svg: womanTightskirt,
+    display: 'tight skirt',
     holds: 3,
   },
   womanTop: {
@@ -179,6 +198,7 @@ export const svgs = {
     gender: 'female',
     type: 'top',
     svg: womanTop,
+    display: 'top',
     holds: 2,
   },
   womanTrouserslong: {
@@ -186,6 +206,7 @@ export const svgs = {
     gender: 'female',
     type: 'trousersCold',
     svg: womanTrouserslong,
+    display: 'long trousers',
     holds: 3,
   },
   womanTrousersshort: {
@@ -193,6 +214,7 @@ export const svgs = {
     gender: 'female',
     type: 'trousersWarm',
     svg: womanTrousersshort,
+    display: 'short trousers',
     holds: 3,
   },
   womanWinter: {
@@ -200,6 +222,7 @@ export const svgs = {
     gender: 'female',
     type: 'jacketWinter',
     svg: womanWinter,
+    display: 'winter jacket',
     holds: Infinity,
   },
   manBikini: {
@@ -207,6 +230,7 @@ export const svgs = {
     gender: 'male',
     type: 'trunk',
     svg: manBikini,
+    display: 'bathing trunks',
     holds: Infinity,
   },
   manBoots: {
@@ -214,6 +238,7 @@ export const svgs = {
     gender: 'male',
     type: 'shoesCold',
     svg: manBoots,
+    display: 'winter shoes',
     holds: Infinity,
   },
   manCap: {
@@ -221,6 +246,7 @@ export const svgs = {
     gender: 'male',
     type: 'cap',
     svg: manCap,
+    display: 'cap',
     holds: Infinity,
   },
   manCollarpullover: {
@@ -228,6 +254,7 @@ export const svgs = {
     gender: 'male',
     type: 'collarpullover',
     svg: manCollarpullover,
+    display: 'pullover with collar',
     holds: 3,
   },
   manGlove: {
@@ -235,6 +262,7 @@ export const svgs = {
     gender: 'male',
     type: 'gloves',
     svg: manGlove,
+    display: 'gloves',
     holds: Infinity,
   },
   manLongshirt: {
@@ -242,6 +270,7 @@ export const svgs = {
     gender: 'male',
     type: 'longshirt',
     svg: manLongshirt,
+    display: 'longshirt',
     holds: 2,
   },
   manRain: {
@@ -249,6 +278,7 @@ export const svgs = {
     gender: 'male',
     type: 'rubberboots',
     svg: manRain,
+    display: 'rubberboots',
     holds: Infinity,
   },
   manSneakers: {
@@ -256,6 +286,7 @@ export const svgs = {
     gender: 'male',
     type: 'shoesSneakers',
     svg: manSneakers,
+    display: 'sneakers',
     holds: Infinity,
   },
   manSpringAutumn: {
@@ -263,6 +294,7 @@ export const svgs = {
     gender: 'male',
     type: 'jacketSpringAutumn',
     svg: manSpringAutumn,
+    display: 'light jacket',
     holds: 5,
   },
   manTShirtU: {
@@ -270,6 +302,7 @@ export const svgs = {
     gender: 'male',
     type: 'TshirtU',
     svg: manTShirtU,
+    display: 't-shirt',
     holds: 2,
   },
   manStraptop: {
@@ -277,6 +310,7 @@ export const svgs = {
     gender: 'male',
     type: 'straptop',
     svg: manStraptop,
+    display: 'tanktop',
     holds: 2,
   },
   manTShirtV: {
@@ -284,6 +318,7 @@ export const svgs = {
     gender: 'male',
     type: 'TshirtV',
     svg: manTShirtV,
+    display: 't-shirt',
     holds: 2,
   },
   manTrousersLong: {
@@ -291,6 +326,7 @@ export const svgs = {
     gender: 'male',
     type: 'trousersCold',
     svg: manTrousersLong,
+    display: 'long trousers',
     holds: 3,
   },
   manTrousersMiddle: {
@@ -298,6 +334,7 @@ export const svgs = {
     gender: 'male',
     type: 'trousersWarmMiddle',
     svg: manTrousersMiddle,
+    display: 'medium length trousers',
     holds: 3,
   },
   manTrousersShort: {
@@ -305,6 +342,7 @@ export const svgs = {
     gender: 'male',
     type: 'trousersWarm',
     svg: manTrousersShort,
+    display: 'short trousers',
     holds: 3,
   },
   manWinter: {
@@ -312,6 +350,7 @@ export const svgs = {
     gender: 'male',
     type: 'jacketWinter',
     svg: manWinter,
+    display: 'winter jacket',
     holds: Infinity,
   },
 };

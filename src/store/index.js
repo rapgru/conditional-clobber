@@ -11,7 +11,6 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    settings: {},
   },
   modules: {
     general,

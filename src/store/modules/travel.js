@@ -1,10 +1,8 @@
 import { predictDay } from '@/services/ml-service/ml-service';
-import moment from 'moment';
+import moment from 'moment-timezone';
 import _ from 'lodash';
 import axios from 'axios';
 import svgs from '@/views/travel/travelsvgs';
-
-// TODO: Save prediction gender
 
 export default {
   state: {
@@ -34,6 +32,19 @@ export default {
     },
   },
   actions: {
+    setQuery(context, query) {
+      axios
+        .get(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/5fe65e2763d6ddcef87f821ebaf028be/${query.destination.lat},${query.destination.lon}`)
+        .then((v) => {
+          const { timezone } = v.data;
+          context.commit('setQuery', {
+            departure: moment.tz([query.departure.getFullYear(), query.departure.getMonth(), query.departure.getDate()], timezone).format(),
+            destination: query.destination,
+            treturn: moment.tz([query.treturn.getFullYear(), query.treturn.getMonth(), query.treturn.getDate()], timezone).format(),
+          });
+          context.dispatch('predictTravel');
+        });
+    },
     predictTravel(context) {
       context.commit('setTravelLoading', true);
 
@@ -77,6 +88,7 @@ export default {
         types.map((t) => {
           const gender = _.toLower(context.rootState.general.settings.avatar.gender);
           const svg = _.find(svgs, { type: t.type, gender });
+          t.display = svg.display;
           if (svg.holds === Infinity) {
             t.count = 1;
             return t;

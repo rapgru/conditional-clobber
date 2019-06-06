@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import svgs_ from '@/services/picture-service/svgs';
-import moment from 'moment';
+import moment from 'moment-timezone';
 
 /*
 svg.js

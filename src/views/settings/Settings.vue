@@ -215,10 +215,8 @@ export default {
         return this.$store.state.general.settings.place;
       },
       set(val) {
-        console.log("saved");
-        console.log(val);
         this.$store.commit('settings.setPlace', val);
-        this.$store.dispatch('refreshWeather');
+        this.$store.dispatch('loadTimezone');
       },
     },
     unit: {
@@ -264,10 +262,9 @@ export default {
       set(val) {
         this.$store.commit('settings.avatar.setGender', val);
         const gender = _.toLower(val);
-        console.log(gender);
-        console.log((this.hairTypes[gender][0]).id);
         this.$store.commit('settings.avatar.setHairType', (this.hairTypes[gender][0]).id);
         this.$store.dispatch('refreshWeather');
+        this.$store.dispatch('predictTravel');
       },
     },
   },

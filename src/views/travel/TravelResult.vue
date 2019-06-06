@@ -2,30 +2,29 @@
 <template>
   <div class="travel-view-root">
     <div ref="content">
-      <h1 class="md-title">Travel > Result</h1>
-      <md-list>
-        <md-list-item>
-          <md-card>
-            <md-card-header>
-              <md-avatar>
-                <md-icon>my_location</md-icon>
-              </md-avatar>
-              <div class="md-title">Your Query</div>
-              <div class="md-subhead">Review your inputs</div>
-            </md-card-header>
-            <md-card-content>
-              <p class="travel-display"><span>Destination: </span>{{ destination.display_name }}</p>
-              <p class="travel-display"><span>From: </span>{{ departureFormat }}</p>
-              <p class="travel-display"><span>To: </span>{{ treturnFormat }}</p>
-            </md-card-content>
-            <md-card-actions>
-              <md-button class="md-primary" @click="requery">New Query</md-button>
-            </md-card-actions>
-          </md-card>
-        </md-list-item>
+      <h1 class="md-heading">Travel > Result</h1>
+      <md-card>
+        <md-card-header>
+          <md-avatar>
+            <md-icon>my_location</md-icon>
+          </md-avatar>
+          <div class="md-title">Your Query</div>
+          <div class="md-subhead">Review your inputs</div>
+        </md-card-header>
+        <md-card-content>
+          <p class="travel-display"><span>Destination: </span>{{ destination.display_name }}</p>
+          <p class="travel-display"><span>From: </span>{{ departureFormat }}</p>
+          <p class="travel-display"><span>To: </span>{{ treturnFormat }}</p>
+        </md-card-content>
+        <md-card-actions>
+          <md-button class="md-primary" @click="requery">New Query</md-button>
+        </md-card-actions>
+      </md-card>
 
-        <md-list-item>
-          <md-card>
+      <h1 class="md-title">Take with you</h1>
+      <md-list>
+        <md-list-item v-for="type in result" :key="type.type">
+          <!--<md-card>
             <md-card-header>
               <md-avatar>
                 <md-icon>card_travel</md-icon>
@@ -36,6 +35,18 @@
               <md-progress-spinner v-if="loading" md-mode="indeterminate"></md-progress-spinner>
               <p class="cloth" v-for="type in result" :key="type.type">{{type.count}}x <img :src="imgFactory(type.type)"/></p>
             </md-card-content>
+          </md-card>-->
+          <md-card class="cloth-card">
+            <md-card-header>
+              <md-card-header-text>
+                <div class="md-title">{{type.count}}x</div>
+                <div class="md-subhead">{{type.display}}</div>
+              </md-card-header-text>
+
+              <md-card-media md-medium>
+                <img :src="imgFactory(type.type)" :alt="type.display">
+              </md-card-media>
+            </md-card-header>
           </md-card>
         </md-list-item>
       </md-list>
@@ -44,7 +55,7 @@
 </template>
 
 <script>
-import moment from 'moment';
+import moment from 'moment-timezone';
 import _ from 'lodash';
 import svgs from '@/views/travel/travelsvgs';
 import { Base64 } from 'js-base64';
@@ -69,7 +80,7 @@ export default {
     requery() {
       this.$store.commit('setQueryMode', true);
       this.$router.push('/travel');
-    }
+    },
   },
   computed: {
     destination() {
@@ -105,10 +116,11 @@ export default {
   .md-layout {
     height: 100%;
   }
-
-  .md-card {
-    width: 100%;
-    margin: 0px;
+  .md-list {
+    .md-card {
+      width: 100%;
+      margin: 0px;
+    }
   }
 }
 .travel-display {
@@ -125,7 +137,18 @@ export default {
 
   img {
     width: 50%;
+    max-height: 100px;
     padding-left: 40px;
+  }
+}
+.cloth-card {
+  .md-subhead {
+    width: 50%;
+    white-space: normal !important;
+  }
+
+  img {
+    height: 100%;
   }
 }
 </style>

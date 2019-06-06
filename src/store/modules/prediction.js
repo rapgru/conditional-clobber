@@ -2,7 +2,7 @@ import pictureService from 'workerize-loader!@/services/picture-service/picture-
 import predictionService from 'workerize-loader!@/services/ml-service/ml-service';
 import { predict } from '@/services/ml-service/ml-service';
 import _ from 'lodash';
-import moment from 'moment';
+import moment from 'moment-timezone';
 
 const picture = pictureService();
 const prediction = predictionService();
@@ -16,10 +16,6 @@ export default {
     renderedPicture: {
       svg: '',
     },
-    warnings: [
-      'ice',
-      'rain',
-    ],
   },
   mutations: {
     setPic(state, pic) {
@@ -61,7 +57,7 @@ export default {
       const prediction_ = predict({
         weather: context.rootState.general.weather.timemachine.data,
         gender: _.toLower(context.rootState.general.settings.avatar.gender),
-        dayInformation: { start: moment().hour(5).minute(30).second(0), stop: moment().hour(19).minute(30).second(0) },
+        dayInformation: { start: moment.tz(context.rootState.general.settings.timezone).hour(5).minute(30).second(0), stop: moment.tz(context.rootState.general.settings.timezone).hour(19).minute(30).second(0) },
         settings: { resolution: 4, mintemp: (unit === 'ca' ? 0 : 15), maxtemp: (unit === 'ca' ? 35 : 100) },
       });
       const renderablePrediction = [

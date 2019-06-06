@@ -3,9 +3,11 @@
     <div ref="content" class="md-layout md-alignment-center-center">
       <div class="md-layout-item" style="text-align: center;">
         <p style="margin-bottom: 10px;">Made with</p>
-        <img src="@/assets/heart.svg" style="height: 70px;"/>
+        <img class="heart" src="@/assets/heart.svg" style="height: 70px;"/>
         <p style="font-size: 12px; margin-bottom: 10px; margin-top: 10px;">by the</p>
         <p style="font-size: 23px;">Conditional Clobber Team</p>
+        <p style="font-size: 10px;"><a href="https://darksky.net/poweredby/"><img style="height: 40px;" src="@/assets/poweredby-darkbackground.png" alt=""></a></p>
+        <p><img style="height: 60px;" src="@/assets/cordova_logo_normal_large.png" alt=""></p>
       </div>
     </div>
   </div>
@@ -35,5 +37,14 @@ export default {
     .md-layout {
       height: 100%;
     }
+  }
+
+  .heart {
+    animation: beat 1.5s alternate infinite ease-in-out;
+  }
+
+  @keyframes beat {
+  0%   {transform: scale(1);}
+  100% {transform: scale(0.8);}
   }
 </style>
