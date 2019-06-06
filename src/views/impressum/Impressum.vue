@@ -7,7 +7,6 @@
         <p style="font-size: 12px; margin-bottom: 10px; margin-top: 10px;">by the</p>
         <p style="font-size: 23px;">Conditional Clobber Team</p>
         <p style="font-size: 10px;"><a href="https://darksky.net/poweredby/"><img style="height: 40px;" src="@/assets/poweredby-darkbackground.png" alt=""></a></p>
-        <p><img style="height: 60px;" src="@/assets/cordova_logo_normal_large.png" alt=""></p>
       </div>
     </div>
   </div>
