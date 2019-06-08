@@ -1,13 +1,13 @@
 {
   "name": "conditionalclobber",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --mode web",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "deploy:dev": "npm run build && surge ./dist condc-dev.surge.sh"
+    "deploy:dev": "npm run build && surge ./dist condc-test.surge.sh"
   },
   "dependencies": {
     "axios": "^0.18.0",
