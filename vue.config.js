@@ -13,4 +13,10 @@ module.exports = {
       },
     ]);
   },
+  pwa: {
+    appleMobileWebAppStatusBarStyle: 'black-translucent',
+    themeColor: '#424242',
+    appleMobileWebAppCapable: 'yes',
+    name: 'Conditional Clobber',
+  },
 };

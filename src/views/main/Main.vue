@@ -108,6 +108,7 @@ export default {
               },
               ticks: {
                 fontColor: '#fff',
+                max: 100,
                 beginAtZero: true,
               },
             },
@@ -166,13 +167,6 @@ export default {
     margin-top: 4px;
   }
 }
-
-/*.refresh-icon {
-  width: $refreshsize !important;
-  min-width: $refreshsize !important;
-  height: $refreshsize !important;
-  font-size: $refreshsize !important;
-}*/
 
 .refresh-turn {
   animation: spin 2s linear infinite;

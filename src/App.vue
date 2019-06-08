@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" ref="app">
     <md-app md-mode="fixed" style="height:100vh;">
       <md-app-content>
         <transition :name="'switch-' + direction" mode="out-in">
@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+
 export default {
   data() {
     return {
@@ -42,6 +44,7 @@ export default {
     },
   },
   mounted() {
+    disableBodyScroll(this.$refs.app);
     this.$store.dispatch('refreshWeather');
   },
 };

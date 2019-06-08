@@ -1,61 +1,25 @@
-#language: node_js
-#node_js: "8"
-#os:
-#  - linux
-#  - osx
+os: linux
+language: node_js
+node_js: "8"
 
-#os:
-#  - linux
-#  - osx
-
-#language:
-#  - android
-
-matrix:
-  include:
-    - name: "iOS App Build"
-      os: osx
-      env: MODE=OSX
-      language: node_js
-      node_js: "8"
-    - name: "Android App Build"
-      os: linux
-      language: android
-      env: MODE=LINUX
-      android:
-        components:
-          - android-28
-    - name: "General Unit Tests"
-      os: linux
-      language: node_js
-      node_js: "8"
-      env: MODE=TEST
-
-before_install:
-  - |
-    if [ "$MODE" == "LINUX" ]; then      
-      curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && sudo apt-get install -y nodejs
-    else
-      echo "not installing node"
-    fi
-
-    
 install:
   - npm install
 
 script: 
-  - |
-    if [ "$MODE" == "LINUX" ]; then
-      npm run cordova-build-android
-    else
-      if [ "$MODE" == "OSX" ]; then
-        npm run cordova-build-ios
-      else
-        npm run test:unit
-      fi
-    fi
-#script:
-#  - npm run electron:publish
+  - npm run build
+
+deploy:
+  - provider: surge
+    project: ./dist/
+    domain: condc-dev.surge.sh
+    on: development
+    skip_cleanup: true
+  - provider: surge
+    project: ./dist/
+    domain: condc.surge.sh
+    on: master
+    skip_cleanup: true
+
 
 cache:
   directories:
