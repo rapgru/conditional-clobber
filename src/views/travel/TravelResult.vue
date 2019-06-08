@@ -24,30 +24,7 @@
       <h1 class="md-title">Take with you</h1>
       <md-list>
         <md-list-item v-for="type in result" :key="type.type">
-          <!--<md-card>
-            <md-card-header>
-              <md-avatar>
-                <md-icon>card_travel</md-icon>
-              </md-avatar>
-              <div class="md-title">Take with you</div>
-            </md-card-header>
-            <md-card-content>
-              <md-progress-spinner v-if="loading" md-mode="indeterminate"></md-progress-spinner>
-              <p class="cloth" v-for="type in result" :key="type.type">{{type.count}}x <img :src="imgFactory(type.type)"/></p>
-            </md-card-content>
-          </md-card>-->
-          <md-card class="cloth-card">
-            <md-card-header>
-              <md-card-header-text>
-                <div class="md-title">{{type.count}}x</div>
-                <div class="md-subhead">{{type.display}}</div>
-              </md-card-header-text>
-
-              <md-card-media md-medium>
-                <img :src="imgFactory(type.type)" :alt="type.display">
-              </md-card-media>
-            </md-card-header>
-          </md-card>
+          <cloth-card :type="type"></cloth-card>
         </md-list-item>
       </md-list>
     </div>
@@ -56,14 +33,11 @@
 
 <script>
 import moment from 'moment-timezone';
-import _ from 'lodash';
-import svgs from '@/views/travel/travelsvgs';
-import { Base64 } from 'js-base64';
-
+import ClothCard from '@/views/travel/ClothCard.vue';
 
 export default {
   name: 'travel-result',
-  components: {},
+  components: { 'cloth-card': ClothCard },
   mounted() {
     const hammertime = new Hammer(this.$refs.content, {});
     hammertime.on('swiperight', () => {
@@ -71,12 +45,6 @@ export default {
     });
   },
   methods: {
-    imgFactory(type) {
-      console.log(`searching svg ${type}`);
-      const { gender } = this.$store.state.general.settings.avatar;
-      const base = Base64.encode(_.find(svgs, { type, gender: _.toLower(gender) }).svg);
-      return `data:image/svg+xml;base64,${base}`;
-    },
     requery() {
       this.$store.commit('setQueryMode', true);
       this.$router.push('/travel');
@@ -141,14 +109,5 @@ export default {
     padding-left: 40px;
   }
 }
-.cloth-card {
-  .md-subhead {
-    width: 50%;
-    white-space: normal !important;
-  }
 
-  img {
-    height: 100%;
-  }
-}
 </style>

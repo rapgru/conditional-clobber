@@ -15,25 +15,29 @@ export default {
   state: {
     weather: {
       timemachine: {
-        hourly: {
-          data: [
-            {
-              temperature: 49,
-              precipProbability: 1,
-              time: 1,
-            },
-          ],
+        data: {
+          hourly: {
+            data: [
+              {
+                temperature: 49,
+                precipProbability: 1,
+                time: 1,
+              },
+            ],
+          },
         },
       },
       forecast: {
-        hourly: {
-          data: [
-            {
-              temperature: 49,
-              precipProbability: 1,
-              time: 1,
-            },
-          ],
+        data: {
+          hourly: {
+            data: [
+              {
+                temperature: 49,
+                precipProbability: 1,
+                time: 1,
+              },
+            ],
+          },
         },
       },
       warnings: [

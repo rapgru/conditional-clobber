@@ -2,7 +2,7 @@ const webpack = require('webpack');
 
 module.exports = {
   lintOnSave: false,
-  publicPath: '',
+  publicPath: '/',
   chainWebpack: (config) => {
     config.output
       .globalObject('this');

@@ -75,10 +75,10 @@ function quantisize(min, max, resolution) {
     console.log('quantizising');
     console.log(point);
     const fittingQuants = quants.filter(q => q.from <= point.apparentTemperature && q.to >= point.apparentTemperature);
-    if (fittingQuants.length >= 1) return fittingQuants[0].avg;
-
-    if (Math.abs(point.apparentTemperature - quants[0]) < Math.abs(point.apparentTemperature - quants[resolution - 1])) return quants[0].avg;
-
+    if (fittingQuants.length >= 1)
+      return fittingQuants[0].avg;
+    if (Math.abs(point.apparentTemperature - quants[0]) < Math.abs(point.apparentTemperature - quants[resolution - 1]))
+      return quants[0].avg;
     return quants[resolution - 1].avg;
   };
 }
@@ -203,8 +203,8 @@ export function predict(param) {
     param.gender,
     processWeather(
       param.weather,
-      param.dayInformation.start,
-      param.dayInformation.stop,
+      moment(param.dayInformation.start),
+      moment(param.dayInformation.stop),
       param.settings.resolution,
       param.settings.mintemp,
       param.settings.maxtemp,

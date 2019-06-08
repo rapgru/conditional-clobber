@@ -1,46 +1,48 @@
+import axios from 'axios';
+
 /* eslint-disable import/no-webpack-loader-syntax */
-import womanBikini from '!!raw-loader!@/assets/SVGs/Travel/Woman/Bikini.svg';
-import womanBoots from '!!raw-loader!@/assets/SVGs/Travel/Woman/Boots.svg';
-import womanCap from '!!raw-loader!@/assets/SVGs/Travel/Woman/Cap.svg';
-import womanCollartop from '!!raw-loader!@/assets/SVGs/Travel/Woman/Collartop.svg';
-import womanCroptop from '!!raw-loader!@/assets/SVGs/Travel/Woman/Croptop.svg';
-import womanEveryday from '!!raw-loader!@/assets/SVGs/Travel/Woman/Everyday.svg';
-import womanFlat from '!!raw-loader!@/assets/SVGs/Travel/Woman/Flat.svg';
-import womanGlove from '!!raw-loader!@/assets/SVGs/Travel/Woman/Glove.svg';
-import womanPullover from '!!raw-loader!@/assets/SVGs/Travel/Woman/Pullover.svg';
-import womanRain from '!!raw-loader!@/assets/SVGs/Travel/Woman/Rain.svg';
-import womanSkirt from '!!raw-loader!@/assets/SVGs/Travel/Woman/Skirt.svg';
-import womanSpringAutumn from '!!raw-loader!@/assets/SVGs/Travel/Woman/SpringAutumn.svg';
-import womanStrapless from '!!raw-loader!@/assets/SVGs/Travel/Woman/Strapless.svg';
-import womanStraplesstop from '!!raw-loader!@/assets/SVGs/Travel/Woman/Straplesstop.svg';
-import womanStraplong from '!!raw-loader!@/assets/SVGs/Travel/Woman/Straplong.svg';
-import womanStrapshort from '!!raw-loader!@/assets/SVGs/Travel/Woman/Strapshort.svg';
-import womanStraptop from '!!raw-loader!@/assets/SVGs/Travel/Woman/Straptop.svg';
-import womanTShirt from '!!raw-loader!@/assets/SVGs/Travel/Woman/T-Shirt.svg';
-import womanTightskirt from '!!raw-loader!@/assets/SVGs/Travel/Woman/Thightskirt.svg';
-import womanTop from '!!raw-loader!@/assets/SVGs/Travel/Woman/Top.svg';
-import womanTrouserslong from '!!raw-loader!@/assets/SVGs/Travel/Woman/Trouserslong.svg';
-import womanTrousersshort from '!!raw-loader!@/assets/SVGs/Travel/Woman/Trousersshort.svg';
-import womanWinter from '!!raw-loader!@/assets/SVGs/Travel/Woman/Winter.svg';
+const womanBikini = '/img/svgs/Travel/Woman/Bikini.svg';
+const womanBoots = '/img/svgs/Travel/Woman/Boots.svg';
+const womanCap = '/img/svgs/Travel/Woman/Cap.svg';
+const womanCollartop = '/img/svgs/Travel/Woman/Collartop.svg';
+const womanCroptop = '/img/svgs/Travel/Woman/Croptop.svg';
+const womanEveryday = '/img/svgs/Travel/Woman/Everyday.svg';
+const womanFlat = '/img/svgs/Travel/Woman/Flat.svg';
+const womanGlove = '/img/svgs/Travel/Woman/Glove.svg';
+const womanPullover = '/img/svgs/Travel/Woman/Pullover.svg';
+const womanRain = '/img/svgs/Travel/Woman/Rain.svg';
+const womanSkirt = '/img/svgs/Travel/Woman/Skirt.svg';
+const womanSpringAutumn = '/img/svgs/Travel/Woman/SpringAutumn.svg';
+const womanStrapless = '/img/svgs/Travel/Woman/Strapless.svg';
+const womanStraplesstop = '/img/svgs/Travel/Woman/Straplesstop.svg';
+const womanStraplong = '/img/svgs/Travel/Woman/Straplong.svg';
+const womanStrapshort = '/img/svgs/Travel/Woman/Strapshort.svg';
+const womanStraptop = '/img/svgs/Travel/Woman/Straptop.svg';
+const womanTShirt = '/img/svgs/Travel/Woman/T-Shirt.svg';
+const womanTightskirt = '/img/svgs/Travel/Woman/Thightskirt.svg';
+const womanTop = '/img/svgs/Travel/Woman/Top.svg';
+const womanTrouserslong = '/img/svgs/Travel/Woman/Trouserslong.svg';
+const womanTrousersshort = '/img/svgs/Travel/Woman/Trousersshort.svg';
+const womanWinter = '/img/svgs/Travel/Woman/Winter.svg';
 
-import manBikini from '!!raw-loader!@/assets/SVGs/Travel/Man/Bikini.svg';
-import manBoots from '!!raw-loader!@/assets/SVGs/Travel/Man/Boots.svg';
-import manCap from '!!raw-loader!@/assets/SVGs/Travel/Man/Cap.svg';
-import manCollarpullover from '!!raw-loader!@/assets/SVGs/Travel/Man/Collarpullover.svg';
-import manGlove from '!!raw-loader!@/assets/SVGs/Travel/Man/Glove.svg';
-import manLongshirt from '!!raw-loader!@/assets/SVGs/Travel/Man/Longshirt.svg';
-import manRain from '!!raw-loader!@/assets/SVGs/Travel/Man/Rain.svg';
-import manSneakers from '!!raw-loader!@/assets/SVGs/Travel/Man/Sneakers.svg';
-import manSpringAutumn from '!!raw-loader!@/assets/SVGs/Travel/Man/SpringAutumn.svg';
-import manStraptop from '!!raw-loader!@/assets/SVGs/Travel/Man/Straptop.svg';
-import manTShirtU from '!!raw-loader!@/assets/SVGs/Travel/Man/T-ShirtU.svg';
-import manTShirtV from '!!raw-loader!@/assets/SVGs/Travel/Man/T-Shirtv.svg';
-import manTrousersLong from '!!raw-loader!@/assets/SVGs/Travel/Man/Trouserslong.svg';
-import manTrousersMiddle from '!!raw-loader!@/assets/SVGs/Travel/Man/Trousersmiddle.svg';
-import manTrousersShort from '!!raw-loader!@/assets/SVGs/Travel/Man/Trousersshort.svg';
-import manWinter from '!!raw-loader!@/assets/SVGs/Travel/Man/Winter.svg';
+const manBikini = '/img/svgs/Travel/Man/Bikini.svg';
+const manBoots = '/img/svgs/Travel/Man/Boots.svg';
+const manCap = '/img/svgs/Travel/Man/Cap.svg';
+const manCollarpullover = '/img/svgs/Travel/Man/Collarpullover.svg';
+const manGlove = '/img/svgs/Travel/Man/Glove.svg';
+const manLongshirt = '/img/svgs/Travel/Man/Longshirt.svg';
+const manRain = '/img/svgs/Travel/Man/Rain.svg';
+const manSneakers = '/img/svgs/Travel/Man/Sneakers.svg';
+const manSpringAutumn = '/img/svgs/Travel/Man/SpringAutumn.svg';
+const manStraptop = '/img/svgs/Travel/Man/Straptop.svg';
+const manTShirtU = '/img/svgs/Travel/Man/T-ShirtU.svg';
+const manTShirtV = '/img/svgs/Travel/Man/T-Shirtv.svg';
+const manTrousersLong = '/img/svgs/Travel/Man/Trouserslong.svg';
+const manTrousersMiddle = '/img/svgs/Travel/Man/Trousersmiddle.svg';
+const manTrousersShort = '/img/svgs/Travel/Man/Trousersshort.svg';
+const manWinter = '/img/svgs/Travel/Man/Winter.svg';
 
-export const svgs = {
+const svgs = {
   womanBikini: {
     name: 'womanBikini',
     gender: 'female',
@@ -355,8 +357,14 @@ export const svgs = {
   },
 };
 
-export function getSVGString(name) {
-  return svgs[name].svg;
+export async function getSVGString(name) {
+  console.log(`axios get ${svgs[name].svg}`);
+  const axRet = await axios.get(svgs[name].svg, {
+    responseType: 'text',
+    transformResponse: undefined,
+  });
+  const ret = await axRet.data;
+  return ret;
 }
 
 export function getSVGType(name) {
