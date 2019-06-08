@@ -1,13 +1,16 @@
 import convertXML from 'xml-js';
 import { getSVGString } from '@/services/picture-service/svgs';
 import jsonQ from 'jsonq';
+import _ from 'lodash';
 
 export async function renderPrediction(prediction) {
   // This is the SVG all other will get merged in
   let mainSVG = "<?xml version='1.0' encoding='utf-8'?> <svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 200 600' style='enable-background:new 0 0 200 600;' xml:space='preserve'>";
 
+  const sortPrediction = _.zip(_.range(prediction.length), prediction).map(x => ({ number: x[0], prediction: x[1] }));
+
   // The following forEach swaps all class names for unique class names
-  const processed = prediction.map(async (svgName) => {
+  const processed = sortPrediction.map(async (svgName) => {
     let currentSvg = await getSVGString(svgName);
     let svgJSON = JSON.parse(convertXML.xml2json(currentSvg));
     svgJSON = jsonQ(svgJSON);
@@ -26,12 +29,12 @@ export async function renderPrediction(prediction) {
     const svgTagEndPosition = currentSvg.indexOf('>', svgTagStartPosition);
     const svgTag = currentSvg.substring(svgTagStartPosition, svgTagEndPosition + 1);
     currentSvg = currentSvg.replace(svgTag, '');
-    mainSVG += currentSvg;
+    return { number: svgName.number, svg: currentSvg };
   });
 
   const res = await Promise.all(processed);
 
-  mainSVG += res.join();
+  mainSVG += _.sortBy(res, 'number').map(x => x.svg).join();
   mainSVG += '</svg>';
 
   return mainSVG;

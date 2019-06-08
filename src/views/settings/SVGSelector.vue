@@ -1,7 +1,7 @@
 <template>
   <div class="md-layout-item md-size-15" @click="select">
     <img :src="`/img/svgs/${path}`" alt="">
-    <img class="selected" style="height: 20px;" v-if="selected" src="@/assets/SVGs/Icons/Selection/Selected.svg" alt="">
+    <img class="selected" style="height: 20px;" v-if="selected" src="/img/svgs/Icons/Selection/Selected.svg" alt="">
   </div>
 </template>
 
