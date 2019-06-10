@@ -44,7 +44,7 @@ export default {
     },
   },
   mounted() {
-    disableBodyScroll(this.$refs.app);
+    // disableBodyScroll(this.$refs.app);
     this.$store.dispatch('refreshWeather');
   },
 };

@@ -11,14 +11,14 @@ export async function renderPrediction(prediction) {
 
   // The following forEach swaps all class names for unique class names
   const processed = sortPrediction.map(async (svgName) => {
-    let currentSvg = await getSVGString(svgName);
+    let currentSvg = await getSVGString(svgName.prediction);
     let svgJSON = JSON.parse(convertXML.xml2json(currentSvg));
     svgJSON = jsonQ(svgJSON);
 
     const array = svgJSON.find('class').unique();
     array.forEach((element) => {
       const tmp = new RegExp(element, 'g');
-      currentSvg = currentSvg.replace(tmp, element + svgName);
+      currentSvg = currentSvg.replace(tmp, element + svgName.prediction);
     });
 
     // Next comes the code for merging the current SVG into the main svg
