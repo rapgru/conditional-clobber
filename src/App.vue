@@ -1,12 +1,20 @@
 <template>
-  <div id="app" ref="app">
+  <div id="app">
     <!--<md-app md-mode="fixed" style="height:100vh;">
-      <md-app-content>-->
+      <md-app-content>
         <transition :name="'switch-' + direction" mode="out-in">
           <router-view/>
         </transition>
-      <!--</md-app-content>
+      </md-app-content>
     </md-app>-->
+
+    <div class="swipeViews" ref="swipe">
+      <Settings></Settings>
+      <Main></Main>
+      <Travel v-if="travelMode"></Travel>
+      <TravelResult v-if="!travelMode"></TravelResult>
+    </div>
+
     <md-snackbar v-for="error in errors" :key="error.id" md-position="center" :md-duration="Infinity" :md-active="true" md-persistent>
       <span>{{error.msg}}</span>
       <md-button v-if="error.hasAction" class="md-primary" @click="error.action">{{error.btn}}</md-button>
@@ -15,7 +23,10 @@
 </template>
 
 <script>
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import Travel from '@/views/travel/Travel.vue';
+import TravelResult from '@/views/travel/TravelResult.vue';
+import Settings from '@/views/settings/Settings.vue';
+import Main from '@/views/main/Main.vue';
 
 export default {
   data() {
@@ -23,28 +34,25 @@ export default {
       direction: 'up',
     };
   },
+  components: {
+    Travel,
+    TravelResult,
+    Main,
+    Settings,
+  },
   watch: {
-    $route: function r(to, from) {
-      if (to.path === '/') {
-        if (from.path === '/travel' || from.path === '/travel/result') this.direction = 'left';
-        if (from.path === '/settings') this.direction = 'right';
-        if (from.path === '/impressum') this.direction = 'up';
-      } else if (to.path === '/settings') {
-        if (from.path === '/') this.direction = 'left';
-      } else if (to.path === '/travel' || to.path === '/travel/result') {
-        if (from.path === '/') this.direction = 'right';
-      } else if (to.path === '/impressum') {
-        if (from.path === '/') this.direction = 'down';
-      }
-    },
   },
   computed: {
     errors() {
       return this.$store.state.general.errors;
     },
+    travelMode() {
+      return this.$store.state.travel.queryMode;
+    },
   },
   mounted() {
     // disableBodyScroll(this.$refs.app);
+    this.$refs.swipe.scrollLeft = window.innerWidth * 1;
     this.$store.dispatch('refreshWeather');
   },
 };
@@ -54,83 +62,28 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
-//@import "~vue-material/dist/theme/engine";
-
 #app {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   height: 100vh;
-  width: 100vw;
-  padding: 20px;
+}
+
+.swipeViews {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  will-change: transform;
+  align-content: center;
+  overflow-x: auto;
+  scroll-snap-coordinate: 0 0;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  >div {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    padding: 20px;
+  }
 }
 
 /* * {margin: 0px; padding: 0px;} */
-
-$switch-percent: 30%;
-$switch-time: .2s;
-
-%switch-enter-active {
-    transition: all $switch-time ease;
-}
-%switch-leave-active {
-    transition: all $switch-time ease;
-}
-%switch-enter {
-    transform: translateX(-$switch-percent);
-    opacity: 0;
-}
-%switch-leave-to {
-    transform: translateX($switch-percent);
-    opacity: 0;
-}
-
-.switch-up-enter-active,
-.switch-down-enter-active,
-.switch-left-enter-active,
-.switch-right-enter-active {
-    @extend %switch-enter-active;
-}
-
-.switch-up-leave-active,
-.switch-down-leave-active,
-.switch-left-leave-active,
-.switch-right-leave-active {
-    @extend %switch-leave-active;
-}
-
-.switch-up-enter {
-    @extend %switch-enter;
-    transform: translateY(-$switch-percent);
-}
-.switch-up-leave-to {
-    @extend %switch-leave-to;
-    transform: translateY($switch-percent);
-}
-
-.switch-down-enter {
-    @extend %switch-enter;
-    transform: translateY($switch-percent);
-}
-.switch-down-leave-to {
-    @extend %switch-leave-to;
-    transform: translateY(-$switch-percent);
-}
-
-.switch-left-enter {
-    @extend %switch-enter;
-    transform: translateX(-$switch-percent);
-}
-.switch-left-leave-to {
-    @extend %switch-leave-to;
-    transform: translateX($switch-percent);
-}
-
-.switch-right-enter {
-    @extend %switch-enter;
-    transform: translateX($switch-percent);
-}
-.switch-right-leave-to {
-    @extend %switch-leave-to;
-    transform: translateX(-$switch-percent);
-}
-
 </style>

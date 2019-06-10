@@ -17,7 +17,6 @@
 
 <script>
 import svgs, { getSVGString } from '@/views/travel/travelsvgs';
-import axios from 'axios';
 import _ from 'lodash';
 import { Base64 } from 'js-base64';
 

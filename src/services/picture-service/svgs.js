@@ -1291,7 +1291,7 @@ const svgs = {
     gender: 'male',
     type: 'rubberboots',
     category: 'shoes',
-    percentage: 0,
+    percentage: 100,
     svg: manShoesRubberboots,
   },
   manShoesSneakers: {

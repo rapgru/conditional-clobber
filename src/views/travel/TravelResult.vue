@@ -41,10 +41,7 @@ export default {
   name: 'travel-result',
   components: { 'cloth-card': ClothCard },
   mounted() {
-    const hammertime = new Hammer(this.$refs.content, {});
-    hammertime.on('swiperight', () => {
-      this.$router.push('/');
-    });
+
   },
   methods: {
     requery() {
@@ -80,8 +77,8 @@ export default {
 
 <style lang="scss" scoped>
 .travel-view-root {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 
   .md-layout {
     height: 100%;

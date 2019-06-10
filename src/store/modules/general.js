@@ -29,6 +29,7 @@ export default {
       },
       forecast: {
         data: {
+          time: 1,
           hourly: {
             data: [
               {
@@ -71,6 +72,9 @@ export default {
       setRawForecast(state, raw) {
         state.weather.forecast = raw;
       },
+      setWarnings(state, warnings) {
+        state.weather.warnings = warnings;
+      }
     },
     settings: {
       setTimezone(state, zone) {
@@ -174,26 +178,33 @@ export default {
       }, 4000);
     },
     generateInfo(context) {
-      let warnings = [];
-      const icon = context.state.weather.forecast.data.daily.data[0].icon;
+      const { unit } = context.state.settings;
+      const warnings = [];
+      const { icon, temperatureHigh } = context.state.weather.forecast.data.daily.data[0];
       switch (icon) {
         case 'rain':
-          warnings.push('rain');
+          warnings.push('/img/svgs/Weather/Prediction/Rain.svg');
+          warnings.push('/img/svgs/Weather/Tools/Umbrella.svg');
           break;
         case 'snow':
-          warnings.push('snow');
+          warnings.push('/img/svgs/Weather/Prediction/Snow.svg');
           break;
         case 'thunderstorm':
-          warnings.push('thunderstorm');
+          warnings.push('/img/svgs/Weather/Prediction/Thunderstorm.svg');
           break;
+        case 'partly-cloudy-day':
         case 'clear-day':
-          warnings.push('sun');
+          warnings.push('/img/svgs/Weather/Prediction/Sun.svg');
           break;
         case 'hail':
-          warnings.push('hail');
+          warnings.push('/img/svgs/Weather/Prediction/Hail.svg');
           break;
         default: break;
       }
+      if ((icon === 'clear-day' || icon === 'partly-cloudy-day') && temperatureHigh >= (unit === 'ca' ? 28 : 82)) {
+        warnings.push('/img/svgs/Weather/Tools/Suncreme.svg');
+      }
+      context.commit('weather.setWarnings', warnings);
     },
   },
 };

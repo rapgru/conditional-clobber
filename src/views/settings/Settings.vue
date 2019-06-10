@@ -79,6 +79,20 @@
               </md-card-content>
             </md-card>
           </md-list-item>
+
+          <md-list-item>
+            <md-card>
+              <md-card-header>
+                <md-avatar>
+                  <md-icon>info</md-icon>
+                </md-avatar>
+                <div class="md-title">Info</div>
+              </md-card-header>
+              <md-card-content>
+                <Impressum></Impressum>
+              </md-card-content>
+            </md-card>
+          </md-list-item>
         </md-list>
       </div>
     </div>
@@ -89,12 +103,14 @@
 import SVGSelector from '@/views/settings/SVGSelector.vue';
 import LocationPickerDialog from '@/views/settings/LocationPickerDialog.vue';
 import _ from 'lodash';
+import Impressum from '@/views/impressum/Impressum.vue';
 
 export default {
   name: 'settings',
   components: {
     'svg-selector': SVGSelector,
     'location-picker-dialog': LocationPickerDialog,
+    Impressum,
   },
   data() {
     return {
@@ -206,10 +222,7 @@ export default {
     };
   },
   mounted() {
-    const hammertime = new Hammer(this.$refs.content, {});
-    hammertime.on('swipeleft', () => {
-      this.$router.push('/');
-    });
+
   },
   computed: {
     place: {
@@ -297,8 +310,8 @@ export default {
 
 <style lang="scss" scoped>
 .settings-view-root {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 
   .md-layout {
     height: 100%;
@@ -315,6 +328,10 @@ export default {
    .md-card-actions {
      flex-wrap: wrap;
      justify-content: center;
+   }
+
+   .md-card-header {
+     margin-bottom: 8px;
    }
   }
 

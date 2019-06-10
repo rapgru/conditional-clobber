@@ -1,35 +1,33 @@
 <template>
   <div class="travel-view-root">
-    <div ref="content">
-      <h1 class="md-title">Travel > Query</h1>
-      <md-steppers md-vertical md-linear :md-active-step.sync="active">
-        <md-step id="destination" :md-error="destination.error" :md-done="destination.done" md-label="Pick travel destination">
-          <location-picker @select="changed"/>
-          <md-button class="md-primary md-raised" @click="destinationNext">Next</md-button>
-        </md-step>
+    <h1 class="md-title">Travel > Query</h1>
+    <md-steppers md-vertical md-linear :md-active-step.sync="active">
+      <md-step id="destination" :md-error="destination.error" :md-done="destination.done" md-label="Pick travel destination" class="">
+        <location-picker @select="changed" class="location-picker"/>
+        <md-button class="md-primary md-raised" @click="destinationNext">Next</md-button>
+      </md-step>
 
-        <md-step id="departure" :md-error="departure.error" :md-done="departure.done" md-label="Pick departure date">
-          <md-datepicker md-immediately v-model="departure.value">
-            <label>Pick date</label>
-          </md-datepicker>
-          <md-button class="md-primary md-raised" @click="departureNext">Next</md-button>
-        </md-step>
+      <md-step id="departure" :md-error="departure.error" :md-done="departure.done" md-label="Pick departure date">
+        <md-datepicker md-immediately v-model="departure.value">
+          <label>Pick date</label>
+        </md-datepicker>
+        <md-button class="md-primary md-raised" @click="departureNext">Next</md-button>
+      </md-step>
 
-        <md-step id="treturn" :md-error="treturn.error" :md-done="treturn.done" md-label="Pick return date">
-          <md-datepicker md-immediately :md-disabled-dates="disabled" v-model="treturn.value">
-            <label>Pick date</label>
-          </md-datepicker>
-          <md-button class="md-primary md-raised" @click="treturnNext">Next</md-button>
-        </md-step>
+      <md-step id="treturn" :md-error="treturn.error" :md-done="treturn.done" md-label="Pick return date">
+        <md-datepicker md-immediately :md-disabled-dates="disabled" v-model="treturn.value">
+          <label>Pick date</label>
+        </md-datepicker>
+        <md-button class="md-primary md-raised" @click="treturnNext">Next</md-button>
+      </md-step>
 
-        <md-step id="check" md-label="Resulting query">
-          <p v-if='treturn.done' class="travel-display"><span>Destination: </span>{{ destination.value.display_name }}</p>
-          <p v-if='treturn.done' class="travel-display"><span>From: </span>{{ departureFormat }}</p>
-          <p v-if='treturn.done' class="travel-display"><span>To: </span>{{ treturnFormat }}</p>
-          <md-button class="md-primary md-raised" @click="submit">Show Result</md-button>
-        </md-step>
-      </md-steppers>
-    </div>
+      <md-step id="check" md-label="Resulting query">
+        <p v-if='treturn.done' class="travel-display"><span>Destination: </span>{{ destination.value.display_name }}</p>
+        <p v-if='treturn.done' class="travel-display"><span>From: </span>{{ departureFormat }}</p>
+        <p v-if='treturn.done' class="travel-display"><span>To: </span>{{ treturnFormat }}</p>
+        <md-button class="md-primary md-raised" @click="submit">Show Result</md-button>
+      </md-step>
+    </md-steppers>
   </div>
 </template>
 
@@ -64,10 +62,7 @@ export default {
     };
   },
   mounted() {
-    const hammertime = new Hammer(this.$refs.content, {});
-    hammertime.on('swiperight', () => {
-      this.$router.push('/');
-    });
+
   },
   computed: {
     departureFormat() {
@@ -128,8 +123,8 @@ export default {
 
 <style lang="scss" scoped>
 .travel-view-root {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 
   .md-layout {
     height: 100%;

@@ -1,8 +1,10 @@
 <template>
   <div class="main-view-root">
-    <md-button class="md-icon-button" @click="update" style="position: absolute; top: 10px; right: 10px;">
-      <md-icon class="refresh-icon" :class="{'refresh-turn': loading}">refresh</md-icon>
-    </md-button>
+    <div style="font-size: 10px; display: flex; justify-content: flex-end; align-items: center;">
+      <md-button class="md-icon-button" @click="update">
+        <md-icon class="refresh-icon" :class="{'refresh-turn': loading}">refresh</md-icon>
+      </md-button>
+    </div>
     <div ref="content" class="md-layout md-alignment-center-space-between">
       <div class="md-layout-item main-picture" v-html="mainPicture"></div>
       <div class="md-layout-item sidebar">
@@ -29,6 +31,9 @@ export default {
     };
   },
   computed: {
+    ago() {
+      return moment.utc(this.$store.state.general.weather.forecast.data.time).fromNow();
+    },
     mainPicture() {
       return this.$store.state.prediction.renderedPicture.svg;
     },
@@ -119,17 +124,7 @@ export default {
     },
   },
   mounted() {
-    const hammertime = new Hammer(this.$refs.content, {});
-    hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
-    hammertime.on('swipe', (ev) => {
-      if (ev.direction === Hammer.DIRECTION_UP) this.$router.push('/impressum');
-    });
-    hammertime.on('swiperight', () => {
-      this.$router.push('/settings');
-    });
-    hammertime.on('swipeleft', () => {
-      this.$router.push(this.$store.state.travel.queryMode ? '/travel' : '/travel/result');
-    });
+    
   },
   methods: {
     update() {
@@ -144,8 +139,8 @@ export default {
   .md-layout {
     height: calc(100% - 200px);
   }
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 .main-picture {
