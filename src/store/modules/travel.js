@@ -85,8 +85,13 @@ export default {
             }
           });
         });
+        const gender = _.toLower(context.rootState.general.settings.avatar.gender);
+        if(gender === 'female') {
+          types.push({ type: 'bra', count: diff });
+        }
+        types.push({ type: 'underwear', count: diff });
+        types.push({ type: 'sock', count: diff });
         types.map((t) => {
-          const gender = _.toLower(context.rootState.general.settings.avatar.gender);
           const svg = _.find(svgs, { type: t.type, gender });
           t.display = svg.display;
           if (svg.holds === Infinity) {

@@ -24,6 +24,9 @@ const womanTop = '/img/svgs/Travel/Woman/Top.svg';
 const womanTrouserslong = '/img/svgs/Travel/Woman/Trouserslong.svg';
 const womanTrousersshort = '/img/svgs/Travel/Woman/Trousersshort.svg';
 const womanWinter = '/img/svgs/Travel/Woman/Winter.svg';
+const womanSock = '/img/svgs/Travel/Woman/Sock.svg';
+const womanUnderwear = '/img/svgs/Travel/Woman/Underwear.svg';
+const womanBra = '/img/svgs/Travel/Woman/BH.svg';
 
 const manBikini = '/img/svgs/Travel/Man/Bikini.svg';
 const manBoots = '/img/svgs/Travel/Man/Boots.svg';
@@ -41,6 +44,8 @@ const manTrousersLong = '/img/svgs/Travel/Man/Trouserslong.svg';
 const manTrousersMiddle = '/img/svgs/Travel/Man/Trousersmiddle.svg';
 const manTrousersShort = '/img/svgs/Travel/Man/Trousersshort.svg';
 const manWinter = '/img/svgs/Travel/Man/Winter.svg';
+const manSock = '/img/svgs/Travel/Man/Sock.svg';
+const manUnderwear = '/img/svgs/Travel/Man/Boxershort.svg';
 
 const svgs = {
   womanBikini: {
@@ -227,6 +232,30 @@ const svgs = {
     display: 'winter jacket',
     holds: Infinity,
   },
+  womanSock: {
+    name: 'womanSock',
+    gender: 'female',
+    type: 'sock',
+    svg: womanSock,
+    display: 'socks',
+    holds: 1,
+  },
+  womanUnderwear: {
+    name: 'womanUnderwear',
+    gender: 'female',
+    type: 'underwear',
+    svg: womanUnderwear,
+    display: 'underwear',
+    holds: 1,
+  },
+  womanBra: {
+    name: 'womanBra',
+    gender: 'female',
+    type: 'bra',
+    svg: womanBra,
+    display: 'bra',
+    holds: 1,
+  },
   manBikini: {
     name: 'manBikini',
     gender: 'male',
@@ -354,6 +383,22 @@ const svgs = {
     svg: manWinter,
     display: 'winter jacket',
     holds: Infinity,
+  },
+  manSock: {
+    name: 'manSock',
+    gender: 'male',
+    type: 'sock',
+    svg: manSock,
+    display: 'socks',
+    holds: 1,
+  },
+  manUnderwear: {
+    name: 'manUnderwear',
+    gender: 'male',
+    type: 'underwear',
+    svg: manUnderwear,
+    display: 'underwear',
+    holds: 1,
   },
 };
 
