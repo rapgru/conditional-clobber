@@ -1605,7 +1605,7 @@ const svgs = {
 };
 
 export async function getSVGString(name) {
-  console.log(`getting svg ${name}`);
+  console.log(`getting svg ${svgs[name].svg}`);
   const axRet = await axios.get(svgs[name].svg, {
     responseType: 'text',
     transformResponse: undefined,

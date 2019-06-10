@@ -1,84 +1,86 @@
 <template>
   <div class="settings-view-root">
-    <div ref="content">
-      <h1 class="md-title">Settings</h1>
-
+    <div ref="content" class="content">
       <location-picker-dialog :show="showLocation" @cancel="showLocation = false" @save="setLocation"/>
 
-      <md-list class="main-list">
-        <md-list-item>
-          <md-card>
-            <md-card-header>
-              <md-avatar>
-                <md-icon>my_location</md-icon>
-              </md-avatar>
-              <div class="md-title">Position</div>
-            </md-card-header>
-            <md-card-content>
-              <p style="white-space: normal; padding-top: 20px;">{{ place.display_name }}</p>
-            </md-card-content>
-            <md-card-actions md-alignment="left">
-              <md-button class="md-primary" @click="loadCurrentPosition">Current Place</md-button>
-              <md-button class="md-primary" @click="showLocation = true">Search Place</md-button>
-            </md-card-actions>
-          </md-card>
-        </md-list-item>
-
-        <md-list-item>
-          <md-card>
-            <md-card-header>
-              <md-avatar>
-                <md-icon>ac_unit</md-icon>
-              </md-avatar>
-              <div class="md-title">Unit</div>
-            </md-card-header>
-            <md-card-content>
-              <md-list>
-                <md-list-item>
-                  <md-radio v-model="unit" value="us"/>
-                  <span class="md-list-item-text">°F</span>
-                </md-list-item>
-                <md-list-item>
-                  <md-radio v-model="unit" value="ca"/>
-                  <span class="md-list-item-text">°C</span>
-                </md-list-item>
-              </md-list>
-            </md-card-content>
-          </md-card>
-        </md-list-item>
-
-        <md-list-item>
-          <md-card>
-            <md-card-header>
-              <md-avatar>
-                <md-icon>person</md-icon>
-              </md-avatar>
-              <div class="md-title">Avatar</div>
-            </md-card-header>
-            <md-card-content>
-                <div class="md-caption">Gender</div>
-                <div class="md-layout md-alignment-center-center">
-                  <svg-selector @selectItem="selectGender" v-for="genderit in genders" :path="genderit.svg" :selected="genderit.id === gender" :id="genderit.id" :key="genderit.id"></svg-selector>
-                </div>
-                <div class="md-caption">Hair Color</div>
-                <div class="md-layout md-alignment-center-center">
-                  <svg-selector @selectItem="selectHair" v-for="color in hairColors" :path="color.svg" :selected="color.id === hair" :id="color.id" :key="color.id"></svg-selector>
-                </div>
-                <div class="md-caption">Hair type</div>
-                <div class="md-layout md-alignment-center-center" v-if="gender == 'Male'">
-                  <svg-selector @selectItem="selectHairType" v-for="type in hairTypes.male" :path="`${type.svg}/${hair}.svg`" :selected="type.id === hairType" :id="type.id" :key="type.id"></svg-selector>
-                </div>
-                <div class="md-layout md-alignment-center-center" v-if="gender == 'Female'">
-                  <svg-selector @selectItem="selectHairType" v-for="type in hairTypes.female" :path="`${type.svg}/${hair}.svg`" :selected="type.id === hairType" :id="type.id" :key="type.id"></svg-selector>
-                </div>
-                <div class="md-caption">Body Color</div>
-                <div class="md-layout md-alignment-center-center">
-                  <svg-selector @selectItem="selectBody" v-for="bodyit in bodyColors" :path="bodyit.svg" :selected="bodyit.id === body" :id="bodyit.id" :key="bodyit.id"></svg-selector>
-                </div>
-            </md-card-content>
-          </md-card>
-        </md-list-item>
-      </md-list>
+      <div class="flex">
+        <h1 class="md-title">Settings</h1>
+  
+        <md-list class="main-list">
+          <md-list-item>
+            <md-card>
+              <md-card-header>
+                <md-avatar>
+                  <md-icon>my_location</md-icon>
+                </md-avatar>
+                <div class="md-title">Position</div>
+              </md-card-header>
+              <md-card-content>
+                <p style="white-space: normal; padding-top: 20px;">{{ place.display_name }}</p>
+              </md-card-content>
+              <md-card-actions>
+                <md-button class="md-primary" @click="loadCurrentPosition">Current Place</md-button>
+                <md-button class="md-primary" @click="showLocation = true">Search Place</md-button>
+              </md-card-actions>
+            </md-card>
+          </md-list-item>
+  
+          <md-list-item>
+            <md-card>
+              <md-card-header>
+                <md-avatar>
+                  <md-icon>ac_unit</md-icon>
+                </md-avatar>
+                <div class="md-title">Unit</div>
+              </md-card-header>
+              <md-card-content>
+                <md-list>
+                  <md-list-item>
+                    <md-radio v-model="unit" value="us"/>
+                    <span class="md-list-item-text">°F</span>
+                  </md-list-item>
+                  <md-list-item>
+                    <md-radio v-model="unit" value="ca"/>
+                    <span class="md-list-item-text">°C</span>
+                  </md-list-item>
+                </md-list>
+              </md-card-content>
+            </md-card>
+          </md-list-item>
+  
+          <md-list-item>
+            <md-card>
+              <md-card-header>
+                <md-avatar>
+                  <md-icon>person</md-icon>
+                </md-avatar>
+                <div class="md-title">Avatar</div>
+              </md-card-header>
+              <md-card-content>
+                  <div class="md-caption">Gender</div>
+                  <div class="md-layout md-alignment-center-center">
+                    <svg-selector @selectItem="selectGender" v-for="genderit in genders" :path="genderit.svg" :selected="genderit.id === gender" :id="genderit.id" :key="genderit.id"></svg-selector>
+                  </div>
+                  <div class="md-caption">Hair Color</div>
+                  <div class="md-layout md-alignment-center-center">
+                    <svg-selector @selectItem="selectHair" v-for="color in hairColors" :path="color.svg" :selected="color.id === hair" :id="color.id" :key="color.id"></svg-selector>
+                  </div>
+                  <div class="md-caption">Hair type</div>
+                  <div class="md-layout md-alignment-center-center" v-if="gender == 'Male'">
+                    <svg-selector @selectItem="selectHairType" v-for="type in hairTypes.male" :path="`${type.svg}/${hair}.svg`" :selected="type.id === hairType" :id="type.id" :key="type.id"></svg-selector>
+                  </div>
+                  <div class="md-layout md-alignment-center-center" v-if="gender == 'Female'">
+                    <svg-selector @selectItem="selectHairType" v-for="type in hairTypes.female" :path="`${type.svg}/${hair}.svg`" :selected="type.id === hairType" :id="type.id" :key="type.id"></svg-selector>
+                  </div>
+                  <div class="md-caption">Body Color</div>
+                  <div class="md-layout md-alignment-center-center">
+                    <svg-selector @selectItem="selectBody" v-for="bodyit in bodyColors" :path="bodyit.svg" :selected="bodyit.id === body" :id="bodyit.id" :key="bodyit.id"></svg-selector>
+                  </div>
+              </md-card-content>
+            </md-card>
+          </md-list-item>
+        </md-list>
+      </div>
     </div>
   </div>
 </template>
@@ -309,10 +311,31 @@ export default {
   .md-card {
     width: 100%;
     margin: 0px;
+
+   .md-card-actions {
+     flex-wrap: wrap;
+     justify-content: center;
+   }
   }
 
   .main-list {
     margin-top: 10px;
+  }
+
+  .flex {
+    flex-flow: column;
+    display: flex;
+
+    height: 100%;
+
+    .md-list {
+      overflow: scroll;
+      flex: 2;
+    }
+  }
+
+  .content {
+    height: 100%;
   }
 }
 </style>

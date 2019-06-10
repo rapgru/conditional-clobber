@@ -1,32 +1,34 @@
 
 <template>
   <div class="travel-view-root">
-    <div ref="content">
+    <div ref="content" class="content">
       <h1 class="md-heading">Travel > Result</h1>
-      <md-card>
-        <md-card-header>
-          <md-avatar>
-            <md-icon>my_location</md-icon>
-          </md-avatar>
-          <div class="md-title">Your Query</div>
-          <div class="md-subhead">Review your inputs</div>
-        </md-card-header>
-        <md-card-content>
-          <p class="travel-display"><span>Destination: </span>{{ destination.display_name }}</p>
-          <p class="travel-display"><span>From: </span>{{ departureFormat }}</p>
-          <p class="travel-display"><span>To: </span>{{ treturnFormat }}</p>
-        </md-card-content>
-        <md-card-actions>
-          <md-button class="md-primary" @click="requery">New Query</md-button>
-        </md-card-actions>
-      </md-card>
-
-      <h1 class="md-title">Take with you</h1>
-      <md-list>
-        <md-list-item v-for="type in result" :key="type.type">
-          <cloth-card :type="type"></cloth-card>
-        </md-list-item>
-      </md-list>
+      <div class="scroll">
+        <md-card>
+          <md-card-header>
+            <md-avatar>
+              <md-icon>my_location</md-icon>
+            </md-avatar>
+            <div class="md-title">Your Query</div>
+            <div class="md-subhead">Review your inputs</div>
+          </md-card-header>
+          <md-card-content>
+            <p class="travel-display"><span>Destination: </span>{{ destination.display_name }}</p>
+            <p class="travel-display"><span>From: </span>{{ departureFormat }}</p>
+            <p class="travel-display"><span>To: </span>{{ treturnFormat }}</p>
+          </md-card-content>
+          <md-card-actions>
+            <md-button class="md-primary" @click="requery">New Query</md-button>
+          </md-card-actions>
+        </md-card>
+  
+        <h1 class="md-title">Take with you</h1>
+        <md-list>
+          <md-list-item v-for="type in result" :key="type.type">
+            <cloth-card :type="type"></cloth-card>
+          </md-list-item>
+        </md-list>
+      </div>
     </div>
   </div>
 </template>
@@ -90,6 +92,16 @@ export default {
       margin: 0px;
     }
   }
+  .content {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+
+    .scroll {
+      flex: 2;
+      overflow: scroll;
+    }
+  }
 }
 .travel-display {
   white-space: normal;
@@ -99,15 +111,4 @@ export default {
     font-size: 18px;
   }
 }
-.cloth {
-  font-size: 30px;
-  text-align: center;
-
-  img {
-    width: 50%;
-    max-height: 100px;
-    padding-left: 40px;
-  }
-}
-
 </style>

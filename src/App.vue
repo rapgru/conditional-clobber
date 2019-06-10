@@ -1,12 +1,12 @@
 <template>
   <div id="app" ref="app">
-    <md-app md-mode="fixed" style="height:100vh;">
-      <md-app-content>
+    <!--<md-app md-mode="fixed" style="height:100vh;">
+      <md-app-content>-->
         <transition :name="'switch-' + direction" mode="out-in">
           <router-view/>
         </transition>
-      </md-app-content>
-    </md-app>
+      <!--</md-app-content>
+    </md-app>-->
     <md-snackbar v-for="error in errors" :key="error.id" md-position="center" :md-duration="Infinity" :md-active="true" md-persistent>
       <span>{{error.msg}}</span>
       <md-button v-if="error.hasAction" class="md-primary" @click="error.action">{{error.btn}}</md-button>
@@ -60,7 +60,7 @@ export default {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   height: 100vh;
   width: 100vw;
-  overflow:hidden;
+  padding: 20px;
 }
 
 /* * {margin: 0px; padding: 0px;} */
