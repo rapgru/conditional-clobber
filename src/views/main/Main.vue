@@ -1,6 +1,6 @@
 <template>
-  <div class="main-view-root">
-    <div style="font-size: 10px; display: flex; justify-content: flex-end; align-items: center;">
+  <div class="main-view-root" style="text-align: right;">
+    <div style="position: absolute; display: flex; justify-content: flex-end; width: 93%;">
       <md-button class="md-icon-button" @click="update">
         <md-icon class="refresh-icon" :class="{'refresh-turn': loading}">refresh</md-icon>
       </md-button>
@@ -31,9 +31,6 @@ export default {
     };
   },
   computed: {
-    ago() {
-      return moment.utc(this.$store.state.general.weather.forecast.data.time).fromNow();
-    },
     mainPicture() {
       return this.$store.state.prediction.renderedPicture.svg;
     },
