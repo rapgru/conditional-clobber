@@ -15,7 +15,7 @@
       <TravelResult v-if="!travelMode"></TravelResult>
     </div>
 
-    <md-snackbar v-for="error in errors" :key="error.id" md-position="center" :md-duration="Infinity" :md-active="true" md-persistent>
+    <md-snackbar :md-duration="4000" md-position="center" :md-active="error.active" md-persistent>
       <span>{{error.msg}}</span>
       <md-button v-if="error.hasAction" class="md-primary" @click="error.action">{{error.btn}}</md-button>
     </md-snackbar>
@@ -43,8 +43,8 @@ export default {
   watch: {
   },
   computed: {
-    errors() {
-      return this.$store.state.general.errors;
+    error() {
+      return this.$store.state.general.error;
     },
     travelMode() {
       return this.$store.state.travel.queryMode;

@@ -61,7 +61,9 @@ export default {
         gender: 'Male',
       },
     },
-    errors: [],
+    error: {
+      active: false,
+    },
     loading: false,
   },
   mutations: vuexNestedMutations({
@@ -74,7 +76,7 @@ export default {
       },
       setWarnings(state, warnings) {
         state.weather.warnings = warnings;
-      }
+      },
     },
     settings: {
       setTimezone(state, zone) {
@@ -110,13 +112,8 @@ export default {
       },
     },
     error: {
-      addError(state, error) {
-        if (state.errors.indexOf(error) === -1) {
-          state.errors.push(error);
-        }
-      },
-      removeError(state, id) {
-        _.remove(state.errors, e => e.id === id);
+      setError(state, error) {
+        state.error = error;
       },
     },
     setLoading(state, loading) {
@@ -160,7 +157,7 @@ export default {
               .then((value) => {
                 console.log(value);
                 context.commit('settings.setPlace', value);
-                context.dispatch('loadTimezone')
+                context.dispatch('loadTimezone');
               });
           }
         },
@@ -168,13 +165,16 @@ export default {
           id: 'geolocation_not_available',
           msg: 'Can\'t load your current position',
           hasAction: false,
+          active: true,
         }),
       );
     },
     submitError(context, error) {
-      context.commit('error.addError', error);
+      context.commit('error.setError', error);
       setTimeout(() => {
-        context.commit('error.removeError', error.id);
+        const tmp = error;
+        tmp.active = false;
+        context.commit('error.setError', tmp);
       }, 4000);
     },
     generateInfo(context) {
