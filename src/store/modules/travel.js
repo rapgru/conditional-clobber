@@ -38,9 +38,17 @@ export default {
         .then((v) => {
           const { timezone } = v.data;
           context.commit('setQuery', {
-            departure: moment.tz([query.departure.getFullYear(), query.departure.getMonth(), query.departure.getDate()], timezone).format(),
+            departure: moment.tz([
+              query.departure.getFullYear(),
+              query.departure.getMonth(),
+              query.departure.getDate(),
+            ], timezone).format(),
             destination: query.destination,
-            treturn: moment.tz([query.treturn.getFullYear(), query.treturn.getMonth(), query.treturn.getDate()], timezone).format(),
+            treturn: moment.tz([
+              query.treturn.getFullYear(),
+              query.treturn.getMonth(),
+              query.treturn.getDate(),
+            ], timezone).format(),
           });
           context.dispatch('predictTravel');
         });
@@ -54,7 +62,7 @@ export default {
       const days = _.range(0, diff + 1, 1).map(i => start.add(i, 'd'));
 
       const { unit } = context.rootState.general.settings;
-      
+
       const weather = days.map((d) => {
         const locationString = `${context.state.query.destination.lat},${context.state.query.destination.lon}`;
         const time = d
@@ -63,7 +71,7 @@ export default {
           .second(0)
           .format();
         return axios
-          .get(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/5fe65e2763d6ddcef87f821ebaf028be/${locationString},${time}?units=${unit}`)
+          .get(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/5fe65e2763d6ddcef87f821ebaf028be/${locationString},${time}?units=${unit}`);
       });
       Promise.all(weather).then((res) => {
         const preds = res.map(w => predictDay({
@@ -74,7 +82,7 @@ export default {
         console.log(preds);
         const types = [];
         _.forEach(preds, (v) => {
-          _.forEach(v, (value, key) => {
+          _.forEach(v, (value) => {
             if (value !== '') {
               const a = _.find(types, { type: value });
               if (a) {
@@ -86,7 +94,7 @@ export default {
           });
         });
         const gender = _.toLower(context.rootState.general.settings.avatar.gender);
-        if(gender === 'female') {
+        if (gender === 'female') {
           types.push({ type: 'bra', count: diff });
         }
         types.push({ type: 'underwear', count: diff });

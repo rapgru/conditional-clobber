@@ -17,7 +17,9 @@
 
     <md-snackbar :md-duration="4000" md-position="center" :md-active="error.active" md-persistent>
       <span>{{error.msg}}</span>
-      <md-button v-if="error.hasAction" class="md-primary" @click="error.action">{{error.btn}}</md-button>
+      <md-button v-if="error.hasAction" class="md-primary" @click="error.action">
+        {{error.btn}}
+      </md-button>
     </md-snackbar>
   </div>
 </template>
@@ -65,6 +67,14 @@ export default {
 #app {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   height: 100vh;
+}
+
+html, body, .app {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .swipeViews {
