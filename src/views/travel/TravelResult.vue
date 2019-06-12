@@ -46,7 +46,6 @@ export default {
   methods: {
     requery() {
       this.$store.commit('setQueryMode', true);
-      this.$router.push('/travel');
     },
   },
   computed: {

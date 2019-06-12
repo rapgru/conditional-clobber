@@ -21,6 +21,7 @@ headgear
 */
 
 function getRandomColor(type, category, gender) {
+  console.log("type " + type + "category " + category + "gender" + gender);
   return _.sample(_.toArray(svgs_).filter(s => s.gender === gender).filter(s => s.category === category).filter(s => s.type === type)).name;
 }
 
@@ -120,7 +121,7 @@ function processWeather(weather, timestart, timestop, resolution, tempstart, tem
 
   const targetPercent = squish(getPercent(calcPercent(target.avg)));
 
-  const raining = weather.daily.data[0].precipProbability > 0.1;
+  const raining = weather.daily.data[0].precipProbability > 0.25;
 
   return {
     target: targetPercent,
@@ -138,11 +139,14 @@ function processDailyWeather(weather, tempstart, tempstop) {
   const calcPercent = w => 1.0 - ((w - tempstart) / (tempstop - tempstart));
   const avg = (a, b) => (a + b) / 2.0;
 
+  const raining = weather.precipProbability > 0.25;
+
   const targetPercent = squish(getPercent(calcPercent(avg(timeWeather.apparentTemperatureHigh, timeWeather.apparentTemperatureLow))));
   return {
     target: targetPercent,
     min: squish(targetPercent - 10),
     max: squish(targetPercent + 10),
+    raining,
   };
 }
 
@@ -188,17 +192,20 @@ const categories = [
     omit: true,
   },
   {
+    name: 'shoes',
+    gender: true,
+    omit: false,
+  },
+];
+
+const nCategories = [
+  {
     name: 'jacket',
     gender: true,
     omit: true,
   },
   {
     name: 'lowerbody',
-    gender: true,
-    omit: false,
-  },
-  {
-    name: 'shoes',
     gender: true,
     omit: false,
   },
@@ -210,30 +217,80 @@ const categories = [
 ];
 
 export function predict(param) {
+  const weather = processWeather(
+    param.weather,
+    moment(param.dayInformation.start),
+    moment(param.dayInformation.stop),
+    param.settings.resolution,
+    param.settings.mintemp,
+    param.settings.maxtemp,
+  );
+
   const pieces = categories.map(predictType(
     param.gender,
-    processWeather(
-      param.weather,
-      moment(param.dayInformation.start),
-      moment(param.dayInformation.stop),
-      param.settings.resolution,
-      param.settings.mintemp,
-      param.settings.maxtemp,
-    ),
+    weather,
     false,
   ));
-  return _.reduce(pieces, _.extend);
+  const nPieces = nCategories.map(predictType(
+    param.gender,
+    weather,
+    false,
+  ));
+  const fullbody = predictType(
+    param.gender,
+    weather,
+    false,
+  )({
+    name: 'fullbody',
+    gender: true,
+    omit: false,
+  });
+
+  console.log('fullbody');
+  console.log(_.map(nPieces, x => x[_.keys(x)[0]]).filter(x => x !== ''));
+  console.log(fullbody);
+  console.log(_.map(_.map(nPieces, x => x[_.keys(x)[0]]).filter(x => x !== ''), p => _.toArray(svgs_).filter(s => s.name === p)[0].percentage));
+  console.log(_.mean(_.map(_.map(nPieces, x => x[_.keys(x)[0]]).filter(x => x !== ''), p => _.toArray(svgs_).filter(s => s.name === p)[0].percentage)));
+  console.log(_.toArray(svgs_).filter(s => s.name === fullbody.fullbody)[0].percentage);
+
+  if (Math.abs(_.mean(_.map(_.map(nPieces, x => x[_.keys(x)[0]]).filter(x => x !== ''), p => _.toArray(svgs_).filter(s => s.name === p)[0].percentage)) - weather.target) < Math.abs(_.toArray(svgs_).filter(s => s.name === fullbody.fullbody)[0].percentage - weather.target)) {
+    return _.reduce(_.flatten([pieces, [{ type: 'seperate' }], nPieces, [{ fullbody: '' }]]), _.extend);
+  }
+  return _.reduce(_.flatten([pieces, [{ type: 'fullbody' }], [fullbody], _.map(nCategories, x => ({ [x.name]: '' }))]), _.extend);
 }
 
 export function predictDay(param) {
+  const weather = processDailyWeather(
+    param.weather,
+    param.settings.mintemp,
+    param.settings.maxtemp,
+  );
+
   const pieces = categories.map(predictType(
     param.gender,
-    processDailyWeather(
-      param.weather,
-      param.settings.mintemp,
-      param.settings.maxtemp,
-    ),
+    weather,
     true,
   ));
-  return _.reduce(pieces, _.extend);
+  const nPieces = nCategories.map(predictType(
+    param.gender,
+    weather,
+    true,
+  ));
+  const fullbody = predictType(
+    param.gender,
+    weather,
+    true,
+  )({
+    name: 'fullbody',
+    gender: true,
+    omit: false,
+  });
+
+  console.log(fullbody);
+  console.log(_.map(nPieces, x => x[_.keys(x)[0]]).filter(x => x !== ''));
+
+  if (Math.abs(_.mean(_.map(_.map(nPieces, x => x[_.keys(x)[0]]).filter(x => x !== ''), p => _.toArray(svgs_).filter(s => s.type === p)[0].percentage)) - weather.target) < Math.abs(_.toArray(svgs_).filter(s => s.type === fullbody.fullbody)[0].percentage - weather.target)) {
+    return _.reduce(_.flatten([pieces, nPieces, [{ fullbody: '' }]]), _.extend);
+  }
+  return _.reduce(_.flatten([pieces, [fullbody], _.map(nCategories, x => ({ [x.name]: '' }))]), _.extend);
 }

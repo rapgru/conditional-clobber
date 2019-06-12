@@ -254,7 +254,7 @@ const svgs = {
     type: 'bra',
     svg: womanBra,
     display: 'bra',
-    holds: 1,
+    holds: 2,
   },
   manBikini: {
     name: 'manBikini',

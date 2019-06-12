@@ -115,7 +115,6 @@ export default {
         destination: this.destination.value,
         treturn: this.treturn.value,
       });
-      this.$router.push('/travel/result');
     },
   },
 };
