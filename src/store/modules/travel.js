@@ -79,7 +79,6 @@ export default {
           gender: _.toLower(context.rootState.general.settings.avatar.gender),
           settings: { mintemp: (unit === 'ca' ? 0 : 15), maxtemp: (unit === 'ca' ? 35 : 100) },
         }));
-        console.log(preds);
         const types = [];
         _.forEach(preds, (v) => {
           _.forEach(v, (value) => {
@@ -112,7 +111,6 @@ export default {
         });
         context.commit('setTravelLoading', false);
         context.commit('setResult', types);
-        console.log(types);
       });
     },
   },

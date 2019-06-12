@@ -15,7 +15,6 @@ export default {
   },
   watch: {
     options() {
-      console.log("Updating Chart");
       this.renderChart(this.chartData, this.options);
     },
   },

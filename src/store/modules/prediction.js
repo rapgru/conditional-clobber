@@ -33,7 +33,6 @@ export default {
         settings: { resolution: 4, mintemp: (unit === 'ca' ? 0 : 15), maxtemp: (unit === 'ca' ? 35 : 100) },
       })
         .then((prediction_) => {
-          console.log(prediction_);
           const renderablePrediction = [
             `${genderPrefix}Body${context.rootState.general.settings.avatar.body}`,
           ];
@@ -49,7 +48,6 @@ export default {
           checkAndPush(renderablePrediction, prediction_.shoes);
           checkAndPush(renderablePrediction, `${genderPrefix}Hair${context.rootState.general.settings.avatar.hairType.replace(/\//g, '')}${context.rootState.general.settings.avatar.hair}`);
           checkAndPush(renderablePrediction, prediction_.headgear);
-          console.log(renderablePrediction);
           return picture.renderPrediction(renderablePrediction);
         })
         .then((renderedPicture) => {

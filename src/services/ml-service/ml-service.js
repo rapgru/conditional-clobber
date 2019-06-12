@@ -21,7 +21,6 @@ headgear
 */
 
 function getRandomColor(type, category, gender) {
-  console.log("type " + type + "category " + category + "gender" + gender);
   return _.sample(_.toArray(svgs_).filter(s => s.gender === gender).filter(s => s.category === category).filter(s => s.type === type)).name;
 }
 
@@ -35,7 +34,6 @@ function predictType(gender, targetWeather, rawType) {
       return p;
     }, { diff: Infinity, svg: '' });
   }
-  console.log(targetWeather);
   return function pc(category) {
     const genderPieces = _.toArray(svgs_).filter(s => s.gender === gender);
     const categoryPieces = genderPieces.filter(s => s.category === category.name);
@@ -76,12 +74,7 @@ function quantisize(min, max, resolution) {
     maxs,
     (min_, max_) => ({ from: min_, to: max_, avg: (min_ + max_) / 2 }),
   );
-  console.log('quants');
-  console.log({ min, max });
-  console.log(quants);
   return (point) => {
-    console.log('quantizising');
-    console.log(point);
     const fittingQuants = quants.filter(q => q.from <= point.apparentTemperature && q.to >= point.apparentTemperature);
     if (fittingQuants.length >= 1)
       return fittingQuants[0].avg;
@@ -110,10 +103,6 @@ function processWeather(weather, timestart, timestop, resolution, tempstart, tem
     (p, val, key) => (val.length > p.coll.length ? { avg: key, coll: val } : p),
     { avg: null, coll: [] },
   );
-
-  console.log("target degrees");
-  console.log(target);
-  console.log(tempstart + "-" + tempstop);
 
   const squish = percent => Math.max(0, Math.min(percent, 100));
   const getPercent = w => w * 100;
@@ -246,13 +235,6 @@ export function predict(param) {
     omit: false,
   });
 
-  console.log('fullbody');
-  console.log(_.map(nPieces, x => x[_.keys(x)[0]]).filter(x => x !== ''));
-  console.log(fullbody);
-  console.log(_.map(_.map(nPieces, x => x[_.keys(x)[0]]).filter(x => x !== ''), p => _.toArray(svgs_).filter(s => s.name === p)[0].percentage));
-  console.log(_.mean(_.map(_.map(nPieces, x => x[_.keys(x)[0]]).filter(x => x !== ''), p => _.toArray(svgs_).filter(s => s.name === p)[0].percentage)));
-  console.log(_.toArray(svgs_).filter(s => s.name === fullbody.fullbody)[0].percentage);
-
   if (Math.abs(_.mean(_.map(_.map(nPieces, x => x[_.keys(x)[0]]).filter(x => x !== ''), p => _.toArray(svgs_).filter(s => s.name === p)[0].percentage)) - weather.target) < Math.abs(_.toArray(svgs_).filter(s => s.name === fullbody.fullbody)[0].percentage - weather.target)) {
     return _.reduce(_.flatten([pieces, [{ type: 'seperate' }], nPieces, [{ fullbody: '' }]]), _.extend);
   }
@@ -285,9 +267,6 @@ export function predictDay(param) {
     gender: true,
     omit: false,
   });
-
-  console.log(fullbody);
-  console.log(_.map(nPieces, x => x[_.keys(x)[0]]).filter(x => x !== ''));
 
   if (Math.abs(_.mean(_.map(_.map(nPieces, x => x[_.keys(x)[0]]).filter(x => x !== ''), p => _.toArray(svgs_).filter(s => s.type === p)[0].percentage)) - weather.target) < Math.abs(_.toArray(svgs_).filter(s => s.type === fullbody.fullbody)[0].percentage - weather.target)) {
     return _.reduce(_.flatten([pieces, nPieces, [{ fullbody: '' }]]), _.extend);

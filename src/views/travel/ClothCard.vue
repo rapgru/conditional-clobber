@@ -30,7 +30,6 @@ export default {
     };
   },
   mounted() {
-    console.log(`searching svg ${this.type}`);
     const { gender } = this.$store.state.general.settings.avatar;
     getSVGString(_.find(svgs, { type: this.type.type, gender: _.toLower(gender) }).name).then((svg) => {
       const base = Base64.encode(svg);

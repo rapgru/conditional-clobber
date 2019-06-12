@@ -18,7 +18,6 @@ export default {
     };
   },
   mounted() {
-    console.log(this.icon);
     axios.get(this.icon, {
       transformResponse: undefined,
       responseType: 'text',

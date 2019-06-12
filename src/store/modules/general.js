@@ -122,10 +122,6 @@ export default {
     refreshWeather(context) {
       context.commit('setLoading', true);
 
-      console.log(moment.tz(context.state.settings.timezone)
-        .startOf('day')
-        .format());
-
       const coords = context.state.settings.place;
       const locationString = `${coords.lat},${coords.lon}`;
       darkskyTimeMachine((result) => {
