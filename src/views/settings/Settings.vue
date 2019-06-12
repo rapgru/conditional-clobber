@@ -93,6 +93,20 @@
               </md-card-content>
             </md-card>
           </md-list-item>
+
+          <md-list-item>
+            <md-card>
+              <md-card-header>
+                <md-avatar>
+                  <md-icon>code</md-icon>
+                </md-avatar>
+                <div class="md-title">Version</div>
+              </md-card-header>
+              <md-card-content>
+                <p>Conditional Clobber v1.0.0</p>
+              </md-card-content>
+            </md-card>
+          </md-list-item>
         </md-list>
       </div>
     </div>
