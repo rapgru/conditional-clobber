@@ -38,8 +38,15 @@ function predictType(gender, targetWeather, rawType) {
   return function pc(category) {
     const genderPieces = _.toArray(svgs_).filter(s => s.gender === gender);
     const categoryPieces = genderPieces.filter(s => s.category === category.name);
-    const rangePieces = categoryPieces.filter(
-      s => s.percentage > targetWeather.min && s.percentage < targetWeather.max,
+    const rainPieces = categoryPieces.filter(s => (_.has(s, 'rainOnly') ? s.rainOnly === true && targetWeather.raining === false : false));
+    const rangePieces = rainPieces.filter(
+      (s) => {
+        if (_.has(s, 'min') && _.has(s, 'max')) {
+          const percentVary = _.range(s.min, s.max, 1);
+          return _.some(percentVary, p => p >= targetWeather.min && p <= targetWeather.max);
+        }
+        return s.percentage >= targetWeather.min && s.percentage <= targetWeather.max;
+      },
     );
     if (rangePieces.length === 0 || !rangePieces) {
       if (category.omit) {
@@ -112,10 +119,14 @@ function processWeather(weather, timestart, timestop, resolution, tempstart, tem
   const calcPercent = w => 1.0 - ((w - tempstart) / (tempstop - tempstart));
 
   const targetPercent = squish(getPercent(calcPercent(target.avg)));
+
+  const raining = weather.daily.data[0].precipProbability > 0.1;
+
   return {
     target: targetPercent,
     min: squish(targetPercent - 10),
     max: squish(targetPercent + 10),
+    raining,
   };
 }
 

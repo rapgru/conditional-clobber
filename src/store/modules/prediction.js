@@ -48,6 +48,7 @@ export default {
           checkAndPush(renderablePrediction, prediction_.gloves);
           checkAndPush(renderablePrediction, prediction_.shoes);
           checkAndPush(renderablePrediction, `${genderPrefix}Hair${context.rootState.general.settings.avatar.hairType.replace(/\//g, '')}${context.rootState.general.settings.avatar.hair}`);
+          checkAndPush(renderablePrediction, prediction_.headgear);
           console.log(renderablePrediction);
           return picture.renderPrediction(renderablePrediction);
         })

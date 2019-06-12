@@ -350,7 +350,7 @@ const svgs = {
     gender: 'female',
     type: 'gloves',
     category: 'gloves',
-    percentage: 100,
+    percentage: 98,
     svg: womanExtraGloveBlack,
   },
   womanExtraGloveBlue: {
@@ -358,7 +358,7 @@ const svgs = {
     gender: 'female',
     type: 'gloves',
     category: 'gloves',
-    percentage: 100,
+    percentage: 98,
     svg: womanExtraGloveBlue,
   },
   womanExtraGloveRed: {
@@ -366,7 +366,7 @@ const svgs = {
     gender: 'female',
     type: 'gloves',
     category: 'gloves',
-    percentage: 100,
+    percentage: 98,
     svg: womanExtraGloveRed,
   },
   womanJacketSpringautumnBlack: {
@@ -374,7 +374,7 @@ const svgs = {
     gender: 'female',
     type: 'jacketSpringAutumn',
     category: 'jacket',
-    percentage: 40,
+    percentage: 50,
     svg: womanJacketSpringautumnBlack,
   },
   womanJacketSpringautumnGrayblue: {
@@ -382,7 +382,7 @@ const svgs = {
     gender: 'female',
     type: 'jacketSpringAutumn',
     category: 'jacket',
-    percentage: 40,
+    percentage: 50,
     svg: womanJacketSpringautumnGrayblue,
   },
   womanJacketWinterBlue: {
@@ -391,6 +391,8 @@ const svgs = {
     type: 'jacketWinter',
     category: 'jacket',
     percentage: 100,
+    max: 100,
+    min: 70,
     svg: womanJacketWinterBlue,
   },
   womanJacketWinterGreen: {
@@ -399,6 +401,8 @@ const svgs = {
     type: 'jacketWinter',
     category: 'jacket',
     percentage: 100,
+    max: 100,
+    min: 70,
     svg: womanJacketWinterGreen,
   },
   womanLowerbodyColdTrousersBlue: {
@@ -534,7 +538,8 @@ const svgs = {
     gender: 'female',
     type: 'rubberboots',
     category: 'shoes',
-    percentage: 0,
+    percentage: 65,
+    rainOnly: true,
     svg: womanShoeRain,
   },
   womanShoeWarm: {
@@ -1155,7 +1160,7 @@ const svgs = {
     gender: 'male',
     type: 'gloves',
     category: 'gloves',
-    percentage: 100,
+    percentage: 98,
     svg: manExtraGloveViolet,
   },
   manExtraGloveBlue: {
@@ -1163,7 +1168,7 @@ const svgs = {
     gender: 'male',
     type: 'gloves',
     category: 'gloves',
-    percentage: 100,
+    percentage: 98,
     svg: manExtraGloveBlue,
   },
   manExtraJacketBlue: {
@@ -1171,7 +1176,7 @@ const svgs = {
     gender: 'male',
     type: 'jacketSpringAutumn',
     category: 'jacket',
-    percentage: 50,
+    percentage: 60,
     svg: manExtraJacketBlue,
   },
   manExtraJacketWhite: {
@@ -1179,7 +1184,7 @@ const svgs = {
     gender: 'male',
     type: 'jacketSpringAutumn',
     category: 'jacket',
-    percentage: 50,
+    percentage: 60,
     svg: manExtraJacketWhite,
   },
   manExtraWinterjacketBlack: {
@@ -1188,6 +1193,8 @@ const svgs = {
     type: 'jacketWinter',
     category: 'jacket',
     percentage: 100,
+    max: 100,
+    min: 70,
     svg: manExtraWinterjacketBlack,
   },
   manExtraWinterjacketBlue: {
@@ -1196,6 +1203,8 @@ const svgs = {
     type: 'jacketWinter',
     category: 'jacket',
     percentage: 100,
+    max: 100,
+    min: 70,
     svg: manExtraWinterjacketBlue,
   },
   manLowerbodyColdBlack: {
@@ -1203,7 +1212,7 @@ const svgs = {
     gender: 'male',
     type: 'trousersCold',
     category: 'lowerbody',
-    percentage: 60,
+    percentage: 55,
     svg: manLowerbodyColdBlack,
   },
   manLowerbodyColdBlue: {
@@ -1211,7 +1220,7 @@ const svgs = {
     gender: 'male',
     type: 'trousersCold',
     category: 'lowerbody',
-    percentage: 60,
+    percentage: 55,
     svg: manLowerbodyColdBlue,
   },
   manLowerbodyColdGray: {
@@ -1291,7 +1300,8 @@ const svgs = {
     gender: 'male',
     type: 'rubberboots',
     category: 'shoes',
-    percentage: 100,
+    percentage: 65,
+    rainOnly: true,
     svg: manShoesRubberboots,
   },
   manShoesSneakers: {

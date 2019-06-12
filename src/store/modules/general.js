@@ -199,7 +199,8 @@ export default {
           break;
         default: break;
       }
-      if ((icon === 'clear-day' || icon === 'partly-cloudy-day') && temperatureHigh >= (unit === 'ca' ? 28 : 82)) {
+      const border = (unit === 'ca' ? 28 : 82)
+      if ((icon === 'clear-day' || icon === 'partly-cloudy-day') && temperatureHigh >= border) {
         warnings.push('/img/svgs/Weather/Tools/Suncreme.svg');
       }
       context.commit('weather.setWarnings', warnings);
