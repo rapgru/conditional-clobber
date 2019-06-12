@@ -50,7 +50,7 @@ export default {
         lon: 0,
         lat: 0,
       },
-      timezone: null,
+      timezone: 'Europe/Vienna',
       unit: 'us',
       avatar: {
         hair: 'Black',
