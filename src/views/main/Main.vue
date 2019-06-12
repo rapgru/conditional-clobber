@@ -11,7 +11,7 @@
         <IconWarning :key="icon" v-for="icon in warnings" :icon="icon"></IconWarning>
       </div>
     </div>
-    <Chart class="chart" :chart-data="temp" :options="options"></Chart>
+    <Chart class="chart" :chart-data="datasets" :options="options"></Chart>
   </div>
 </template>
 
@@ -26,10 +26,6 @@ export default {
     IconWarning,
     Chart,
   },
-  data() {
-    return {
-    };
-  },
   computed: {
     mainPicture() {
       return this.$store.state.prediction.renderedPicture.svg;
@@ -40,7 +36,10 @@ export default {
     loading() {
       return this.$store.state.general.loading;
     },
-    temp() {
+    timezone() {
+      return this.$store.state.general.settings.timezone;
+    },
+    datasets() {
       return {
         datasets: [
           {
@@ -49,7 +48,7 @@ export default {
             backgroundColor: 'rgb(243,156,18)',
             fill: false,
             label: 'temperature',
-            data: this.$store.state.general.weather.timemachine.data.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.temperature })),
+            data: this.tempData,
           },
           {
             yAxisID: 'hum',
@@ -57,10 +56,16 @@ export default {
             backgroundColor: 'rgb(52,152,219)',
             label: 'rainfall',
             fill: false,
-            data: this.$store.state.general.weather.timemachine.data.hourly.data.map(h => ({ x: moment.unix(h.time).toDate(), y: h.precipProbability * 100 })),
+            data: this.rainData,
           },
         ],
       };
+    },
+    min() {
+      return moment().tz(this.timezone).startOf('day').format();
+    },
+    max() {
+      return moment().tz(this.timezone).endOf('day').subtract(1, 'hour').format();
     },
     options() {
       return {
@@ -74,10 +79,8 @@ export default {
             type: 'time',
             time: {
               unit: 'hour',
-              min: moment.tz(this.$store.state.general.settings.timezone).second(0).minute(0).hour(0)
-                .toDate(),
-              max: moment.tz(this.$store.state.general.settings.timezone).second(59).minute(59).hour(23)
-                .toDate(),
+              min: this.min,
+              max: this.max,
             },
             ticks: {
               fontColor: '#fff',
@@ -119,9 +122,15 @@ export default {
         maintainAspectRatio: false,
       };
     },
-  },
-  mounted() {
-    
+    weather() {
+      return this.$store.state.general.weather.timemachine.data.hourly.data;
+    },
+    tempData() {
+      return this.weather.map(h => ({ x: moment.unix(h.time).tz(this.timezone).format(), y: h.temperature }));
+    },
+    rainData() {
+      return this.weather.map(h => ({ x: moment.unix(h.time).tz(this.timezone).format(), y: h.precipProbability * 100 }));
+    },
   },
   methods: {
     update() {

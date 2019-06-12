@@ -1,8 +1,6 @@
-//import { darkskyForecast, darkskyTimeMachine } from '@/store/modules/darksky-APP_TARGET';
 import { darkskyForecast, darkskyTimeMachine } from '@/store/modules/darksky';
 import { vuexNestedMutations } from 'vuex-nested-mutations';
 import moment from 'moment-timezone';
-import _ from 'lodash';
 import axios from 'axios';
 
 function coordsToPlace(coords) {
@@ -124,6 +122,10 @@ export default {
     refreshWeather(context) {
       context.commit('setLoading', true);
 
+      console.log(moment.tz(context.state.settings.timezone)
+        .startOf('day')
+        .format());
+
       const coords = context.state.settings.place;
       const locationString = `${coords.lat},${coords.lon}`;
       darkskyTimeMachine((result) => {
@@ -132,9 +134,7 @@ export default {
         context.dispatch('predictToday');
         context.dispatch('generateInfo');
       }, locationString, moment.tz(context.state.settings.timezone)
-        .second(0)
-        .minute(0)
-        .hour(0)
+        .startOf('day')
         .format(), context.state.settings.unit);
       darkskyForecast((result) => {
         context.commit('weather.setRawForecast', result);
@@ -152,10 +152,8 @@ export default {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           if (position !== {} && position !== undefined) {
-            console.log('Loading Reverse Place ' + position.coords.longitude + " " + position.coords.latitude);
             coordsToPlace({ lon: position.coords.longitude, lat: position.coords.latitude })
               .then((value) => {
-                console.log(value);
                 context.commit('settings.setPlace', value);
                 context.dispatch('loadTimezone');
               });
