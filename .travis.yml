@@ -16,7 +16,7 @@ deploy:
     skip_cleanup: true
   - provider: surge
     project: ./dist/
-    domain: https://condc.surge.sh
+    domain: https://condc-app.surge.sh
     on: master
     skip_cleanup: true
 
