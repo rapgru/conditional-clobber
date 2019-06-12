@@ -132,12 +132,12 @@ export default {
         context.commit('weather.setRawTimeMachine', result);
         context.commit('setLoading', false);
         context.dispatch('predictToday');
-        context.dispatch('generateInfo');
       }, locationString, moment.tz(context.state.settings.timezone)
-        .startOf('day')
-        .format(), context.state.settings.unit);
+      .startOf('day')
+      .format(), context.state.settings.unit);
       darkskyForecast((result) => {
         context.commit('weather.setRawForecast', result);
+        context.dispatch('generateInfo');
       }, locationString, context.state.settings.unit);
     },
     loadTimezone(context) {
